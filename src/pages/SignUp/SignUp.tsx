@@ -1,44 +1,39 @@
-import {
-  Card,
-  Col,
-  Grid,
-  Text,
-  TextInput,
-  Button,
-  MediaQuery,
-  BackgroundImage,
-  Box,
-  Center,
-  Group,
-} from '@mantine/core';
+import { Card, Col, Grid, Text, TextInput, Button, MediaQuery, BackgroundImage, Box, Center } from '@mantine/core';
 import React from 'react';
 import { useForm, isEmail, isNotEmpty } from '@mantine/form';
 import { useNavigate } from 'react-router-dom';
 import ROUTER from '../../config/router';
 import { useAppDispatch } from '../../hooks/use-app-dispatch';
 import { UserAction } from '../../reducers/user/user.action';
+import { UserRole } from '../../types/models/Customer';
 
-const Login = () => {
-  const dispatch = useAppDispatch();
+const SignUp = () => {
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
   const form = useForm({
     initialValues: {
+      email: '',
       username: '',
+      fullname: '',
       password: '',
     },
     validate: {
-      username: isNotEmpty('Bạn chưa nhập tên email'),
+      email: isEmail('Bạn cần nhập email hợp lệ') && isNotEmpty('Bạn chưa nhập tên email'),
       password: isNotEmpty('Bạn chưa nhập mật khẩu'),
+      username: isNotEmpty('Bạn chưa nhập tên đăng nhập'),
+      fullname: isNotEmpty('Bạn chưa nhập họ tên'),
     },
   });
 
   const handleSubmit = (values: any) => {
-    console.log(values);
     dispatch(
-      UserAction.Login(
+      UserAction.SignUp(
         {
           username: values.username,
           password: values.password,
+          fullname: values.fullname,
+          email: values.email,
+          role: UserRole.CUSTOMER,
         },
         navigate
       )
@@ -67,10 +62,21 @@ const Login = () => {
               <Grid>
                 <Col span={12}>
                   <Text align="center" weight={700} size="xl">
-                    KunMade
+                    Đăng kí tài khoản
                   </Text>
                 </Col>
 
+                <Col span={12}>
+                  <TextInput radius="lg" placeholder="Email" label="Email" {...form.getInputProps('email')}></TextInput>
+                </Col>
+                <Col span={12}>
+                  <TextInput
+                    radius="lg"
+                    placeholder="Họ Tên"
+                    label="Họ Tên"
+                    {...form.getInputProps('fullname')}
+                  ></TextInput>
+                </Col>
                 <Col span={12}>
                   <TextInput
                     radius="lg"
@@ -84,24 +90,19 @@ const Login = () => {
                     radius="lg"
                     placeholder="Mật khẩu"
                     label="Mật khẩu"
-                    {...form.getInputProps('password')}
                     type="password"
+                    {...form.getInputProps('password')}
                   ></TextInput>
                 </Col>
                 <Col sx={{ marginTop: '10px' }} span={12}>
                   <Button type="submit" fullWidth color="dark" radius="lg">
-                    Đăng nhập
+                    Đăng Ký
                   </Button>
                 </Col>
                 <Col span={12}>
-                  <Group position={'apart'}>
-                    <Text onClick={() => navigate(ROUTER.AUTH.SIGNUP)} sx={{ cursor: 'pointer' }}>
-                      Đăng ký
-                    </Text>
-                    <Text onClick={() => navigate(ROUTER.AUTH.FORGOTPASSWORD)} sx={{ cursor: 'pointer' }}>
-                      Quên mật khẩu
-                    </Text>
-                  </Group>
+                  <Button onClick={() => navigate(ROUTER.AUTH.LOGIN)} color="black" fullWidth variant="white">
+                    Bạn đã có tài khoản? Đăng nhập
+                  </Button>
                 </Col>
               </Grid>
             </form>
@@ -112,4 +113,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;

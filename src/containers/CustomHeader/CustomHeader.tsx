@@ -1,4 +1,5 @@
 import {
+  Badge,
   Box,
   Burger,
   Button,
@@ -8,6 +9,7 @@ import {
   Drawer,
   Group,
   Header,
+  Menu,
   ScrollArea,
   Text,
   ThemeIcon,
@@ -25,9 +27,15 @@ import {
   IconFingerprint,
   IconNotification,
   IconShirtSport,
+  IconShoppingCart,
+  IconUser,
+  IconArticle,
+  IconPackage,
+  IconLogout,
 } from '@tabler/icons-react';
 import ROUTER from '../../config/router';
-import User from './User';
+import { useNavigate } from 'react-router-dom';
+import User from './User/User';
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -85,6 +93,10 @@ const useStyles = createStyles((theme) => ({
       display: 'none',
     },
   },
+
+  userIcon: {
+    cursor: 'pointer',
+  },
 }));
 
 const mockdata = [
@@ -124,6 +136,7 @@ const CustomHeader = () => {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const { classes, theme } = useStyles();
+  const navigate = useNavigate();
 
   const links = mockdata.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
@@ -147,12 +160,17 @@ const CustomHeader = () => {
     <Box>
       <Header height={60} px="md">
         <Group position="apart" sx={{ height: '100%' }}>
-          <IconShirtSport size={30} />
+          <Group>
+            <IconShirtSport size={30} />
+            <Text weight={'bolder'} size={24}>
+              KolMade
+            </Text>
+          </Group>
           <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
             <a href={ROUTER.HOME.INDEX} className={classes.link}>
               Trang chủ
             </a>
-            <a href={ROUTER.PRODUCT.PRODUCTS_LIST} className={classes.link}>
+            <a href={ROUTER.PRODUCT.ALL_PRODUCTS} className={classes.link}>
               Sản phẩm
             </a>
             <a href="#" className={classes.link}>
@@ -165,8 +183,16 @@ const CustomHeader = () => {
 
           <Group className={classes.hiddenMobile}>
             <User />
-            <Button variant="default">Đăng Nhập</Button>
-            <Button>Đăng Ký</Button>
+            <Button
+              radius="lg"
+              sx={{ margin: '10px' }}
+              leftIcon={<IconShoppingCart />}
+              // onClick={() => navigate('/cart')}
+              variant="filled"
+              color="dark"
+            >
+              <Badge color={'dark'}>3</Badge>
+            </Button>
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />

@@ -4,14 +4,29 @@ const ROUTER = {
   },
   AUTH: {
     LOGIN: '/login',
-    PROFILE: '/profile',
+    SIGNUP: '/signup',
+    FORGOTPASSWORD: '/forgot-password',
+    RESETPASSWORD: '/reset-password',
+    ACTIVE_USER: '/active-user',
+  },
+  PROFILE: {
+    ORDER: '/order',
+    INFO: '/profile/info',
+    ORDERS: '/profile/orders',
+    VOUCHER_WALLET: '/profile/voucher-wallet',
   },
   CART: {
     INDEX: '/cart',
   },
   PRODUCT: {
-    PRODUCTS_LIST: '/products',
-    ITEM: '/product/:id',
+    ALL_PRODUCTS: '/all-products',
+    PRODUCT_DETAILS: '/product/:id',
+  },
+  CATEGORY: {
+    SHIRT: '/shirt',
+    PANTS: '/pants',
+    UNDERWEAR: '/underwear',
+    ACCESSORIES: '/accessories',
   },
 };
 
