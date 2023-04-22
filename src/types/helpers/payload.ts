@@ -19,3 +19,10 @@ export interface UpdateProfilePayload {
   district: string;
   ward: string;
 }
+
+export interface addCartPayload {
+  productId: number;
+  color: string;
+  size: string;
+  quantity: number;
+}

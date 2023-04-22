@@ -5,6 +5,8 @@ import { Properties } from '../types/models/Product';
 import { CitiesArr } from '../json/cities';
 import { DistrictsArr } from '../json/districts';
 import { WardsArr } from '../json/wards';
+import { useSelector } from 'react-redux';
+import { RootState } from '../redux/reducer';
 
 export const randomArray = (number: number): number[] => Array.from({ length: number }, (_, i) => i + 1);
 
@@ -115,4 +117,14 @@ export const findCodeFromCityName = (name: string) => {
 export const findCodeFromDistrictName = (name: string) => {
   const district = _.find(DistrictsArr, { name_with_type: name });
   return district ? district.code : null;
+};
+
+export const getColorImagePath = (color: string) => {
+  const item = items.find((item) => item.color === color);
+  return item ? item.imagePath : null;
+};
+
+export const getNumberProductInCart = () => {
+  const cart = useSelector((state: RootState) => state.cart.cart);
+  return cart?.products.length;
 };

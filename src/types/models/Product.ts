@@ -3,7 +3,6 @@ import { Review } from './Review';
 
 export interface Product extends BaseModel {
   name: string;
-  image: string;
   price: number;
   description: string;
   rating: number;

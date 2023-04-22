@@ -1,6 +1,7 @@
 import { Card, Center, Col, Grid, Text, createStyles } from '@mantine/core';
-
-const sizes = ['S', 'M', 'L', 'XXl'];
+import { addCartPayload } from '../../types/helpers/payload';
+import { useAppDispatch } from '../../hooks/use-app-dispatch';
+import { CartAction } from '../../reducers/cart/cart.action';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -14,17 +15,27 @@ const useStyles = createStyles((theme) => ({
 interface Props {
   productId: number;
   color: string;
+  sizes: string[];
 }
-export const SideSelector = ({ productId, color }: Props) => {
+
+export const SideSelector = ({ productId, color, sizes }: Props) => {
   const { classes } = useStyles();
+  const dispatch = useAppDispatch();
 
   const handleAddToCart = (size: string) => {
-    console.log({
+    const payload: addCartPayload = {
       productId: productId,
       color: color,
       size: size,
       quantity: 1,
-    });
+    };
+    dispatch(
+      CartAction.AddCart(payload, {
+        onSuccess: () => {
+          dispatch(CartAction.GetCart());
+        },
+      })
+    );
   };
 
   return (

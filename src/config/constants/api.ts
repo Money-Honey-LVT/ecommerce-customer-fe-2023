@@ -78,4 +78,24 @@ export const API_URLS = {
       headers: HEADERS.header(),
     }),
   },
+
+  CART: {
+    addCart: () => ({
+      endPoint: `${Schemas.CartSchema}`,
+      method: 'POST',
+      headers: HEADERS.authHeader(),
+    }),
+
+    getCart: () => ({
+      endPoint: `${Schemas.CartSchema}`,
+      method: 'GET',
+      headers: HEADERS.authHeader(),
+    }),
+
+    deleteCart: (productId: number) => ({
+      endPoint: `${Schemas.CartSchema}/${productId}`,
+      method: 'DELETE',
+      headers: HEADERS.authHeader(),
+    }),
+  },
 };

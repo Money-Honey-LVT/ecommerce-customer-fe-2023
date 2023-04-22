@@ -38,6 +38,7 @@ import { useNavigate } from 'react-router-dom';
 import User from './User/User';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/reducer';
+import { getNumberProductInCart } from '../../utils/helpers';
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -141,6 +142,7 @@ const CustomHeader = () => {
   const navigate = useNavigate();
 
   const { categories, isFetching } = useSelector((state: RootState) => state.categories);
+  const parentsCategories = categories?.filter((category) => category.categoryParentID === 0);
 
   const links = mockdata.map((item, index) => (
     <UnstyledButton className={classes.subLink} key={index}>
@@ -174,9 +176,12 @@ const CustomHeader = () => {
             <a href={ROUTER.HOME.INDEX} className={classes.link}>
               Trang chủ
             </a>
+            <a href={ROUTER.PRODUCT.ALL_PRODUCTS} className={classes.link}>
+              Tất cả
+            </a>
 
-            {categories?.map((category, index) => (
-              <a href={`${ROUTER.PRODUCT.ALL_PRODUCTS}/${category.id}`} className={classes.link}>
+            {parentsCategories?.map((category, index) => (
+              <a key={index} href={`${ROUTER.PRODUCT.ALL_PRODUCTS}/${category.id}`} className={classes.link}>
                 {category.name}
               </a>
             ))}
@@ -188,11 +193,11 @@ const CustomHeader = () => {
               radius="lg"
               sx={{ margin: '10px' }}
               leftIcon={<IconShoppingCart />}
-              // onClick={() => navigate('/cart')}
+              onClick={() => navigate(ROUTER.CART.INDEX)}
               variant="filled"
               color="dark"
             >
-              <Badge color={'dark'}>3</Badge>
+              <Badge color={'dark'}>{getNumberProductInCart()}</Badge>
             </Button>
           </Group>
 

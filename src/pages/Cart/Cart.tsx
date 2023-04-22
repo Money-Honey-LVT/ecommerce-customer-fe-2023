@@ -12,6 +12,8 @@ import {
   formatWardsJson,
 } from '../../utils/helpers';
 import { City, District, Ward } from '../Account/UserInfo/UserInfo';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/reducer';
 
 interface Props {
   user: User | null;
@@ -57,9 +59,13 @@ const Cart = ({ user }: Props) => {
   const handleWardChange = (value: string) => {
     setSelectedWard(value);
   };
+
+  const cart = useSelector((state: RootState) => state.cart.cart);
+  console.log(cart);
+
   return (
     <Grid>
-      <Col span={6} sx={{}} pr={50}>
+      <Col sm={12} lg={6} sx={{}} pr={50}>
         <Text size={28} weight={700} mb={30}>
           Thông tin vận chuyển
         </Text>
@@ -107,16 +113,14 @@ const Cart = ({ user }: Props) => {
           Hình thức thanh toán
         </Text>
       </Col>
-      <Divider orientation="vertical" />
-      <Col span={5} ml={20}>
+
+      <Col sm={12} lg={5}>
         <Text size={28} weight={700}>
           Giỏ hàng
         </Text>
-        <CartItemCard />
-        <CartItemCard />
-        <CartItemCard />
-        <CartItemCard />
-        <CartItemCard />
+        {cart?.products.map((product, index) => (
+          <CartItemCard key={index} product={product} />
+        ))}
       </Col>
     </Grid>
   );

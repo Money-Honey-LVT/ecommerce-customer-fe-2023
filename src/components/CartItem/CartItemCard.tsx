@@ -10,76 +10,99 @@ import {
   NumberInputHandlers,
   rem,
   NumberInput,
+  Grid,
+  Col,
 } from '@mantine/core';
 import { IconX } from '@tabler/icons-react';
 import { useState, useRef } from 'react';
-const size = [
-  { value: 'X', label: 'X' },
-  { value: 'M', label: 'M' },
-  { value: 'L', label: 'L' },
-];
+import { ProductInCart } from '../../types/models/Cart';
+import { formatCurrency } from '../../utils/helpers';
+import { useAppDispatch } from '../../hooks/use-app-dispatch';
+import { CartAction } from '../../reducers/cart/cart.action';
 
-const color = [
-  { value: 'RED', label: 'RED' },
-  { value: 'BLUE', label: 'BLUE' },
-  { value: 'GREEN', label: 'GREEN' },
-];
+interface Props {
+  product: ProductInCart;
+}
 
-const CartItemCard = () => {
-  const [value, setValue] = useState<number | ''>(0);
+const CartItemCard = ({ product }: Props) => {
+  const [value, setValue] = useState<number | ''>(product?.quantity);
   const handlers = useRef<NumberInputHandlers>();
 
+  const [color, setColor] = useState(product?.color);
+  const [size, setSize] = useState(product?.size);
+
+  const dispatch = useAppDispatch();
+  const handleDeleteItem = () => {
+    dispatch(
+      CartAction.DeleteCart(product.cartDetailID, {
+        onSuccess: () => {
+          dispatch(CartAction.GetCart());
+        },
+      })
+    );
+  };
   return (
     <Card mt={10}>
-      <Flex align={'center'} justify={'space-between'}>
-        <Image width={120} height={180} withPlaceholder />
-        <Stack h={180} justify="space-between">
-          <Text size={'sm'} weight={'bold'}>
-            Áo thun chạy bộ nam Essential Fast & Free Run
-          </Text>
-          <Group>
+      <Grid>
+        <Col span={5}>
+          <Image width={120} height={180} withPlaceholder src={product?.imagePath} />
+        </Col>
+        <Col span={5}>
+          <Stack h={180} justify="space-between">
+            <Text size={'sm'} weight={'bold'}>
+              {product?.name}
+            </Text>
+            <Text size={'sm'}>
+              {product?.color} / {product?.size}
+            </Text>
+            <Text size={'sm'}>{formatCurrency(product?.price)}</Text>
+
+            {/* <Group>
             <Select data={color} w={100} />
             <Select data={size} w={70} />
-          </Group>
-          <Group spacing={5}>
-            <ActionIcon
-              size={20}
-              radius="lg"
-              variant="filled"
-              color="dark"
-              onClick={() => handlers?.current?.decrement()}
-            >
-              –
-            </ActionIcon>
-            <NumberInput
-              size="xs"
-              hideControls
-              value={value}
-              onChange={(val) => setValue(val)}
-              handlersRef={handlers}
-              max={10}
-              min={1}
-              step={1}
-              styles={{
-                input: { width: 54, textAlign: 'center' },
-              }}
-              radius="lg"
-            />
-            <ActionIcon
-              size={20}
-              radius="lg"
-              variant="filled"
-              color="dark"
-              onClick={() => handlers?.current?.increment()}
-            >
-              +
-            </ActionIcon>
-          </Group>
-        </Stack>
-        <Stack h={180}>
-          <IconX cursor={'pointer'} />
-        </Stack>
-      </Flex>
+          </Group> */}
+            <Group spacing={5}>
+              <ActionIcon
+                size={20}
+                radius="lg"
+                variant="filled"
+                color="dark"
+                onClick={() => handlers?.current?.decrement()}
+              >
+                –
+              </ActionIcon>
+              <NumberInput
+                size="xs"
+                hideControls
+                value={value}
+                onChange={(val) => setValue(val)}
+                handlersRef={handlers}
+                max={10}
+                min={1}
+                step={1}
+                styles={{
+                  input: { width: 54, textAlign: 'center' },
+                }}
+                radius="lg"
+              />
+              <ActionIcon
+                size={20}
+                radius="lg"
+                variant="filled"
+                color="dark"
+                onClick={() => handlers?.current?.increment()}
+              >
+                +
+              </ActionIcon>
+            </Group>
+          </Stack>
+        </Col>
+        <Col span={1}>
+          <Stack h={180}>
+            <IconX cursor={'pointer'} onClick={handleDeleteItem} />
+          </Stack>
+        </Col>
+      </Grid>
     </Card>
   );
 };
