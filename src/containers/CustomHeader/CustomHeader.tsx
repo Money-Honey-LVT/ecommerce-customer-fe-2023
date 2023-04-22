@@ -36,6 +36,8 @@ import {
 import ROUTER from '../../config/router';
 import { useNavigate } from 'react-router-dom';
 import User from './User/User';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/reducer';
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -138,8 +140,10 @@ const CustomHeader = () => {
   const { classes, theme } = useStyles();
   const navigate = useNavigate();
 
-  const links = mockdata.map((item) => (
-    <UnstyledButton className={classes.subLink} key={item.title}>
+  const { categories, isFetching } = useSelector((state: RootState) => state.categories);
+
+  const links = mockdata.map((item, index) => (
+    <UnstyledButton className={classes.subLink} key={index}>
       <Group noWrap align="flex-start">
         <ThemeIcon size={34} variant="default" radius="md">
           <item.icon size={rem(22)} color={theme.fn.primaryColor()} />
@@ -170,15 +174,12 @@ const CustomHeader = () => {
             <a href={ROUTER.HOME.INDEX} className={classes.link}>
               Trang chủ
             </a>
-            <a href={ROUTER.PRODUCT.ALL_PRODUCTS} className={classes.link}>
-              Sản phẩm
-            </a>
-            <a href="#" className={classes.link}>
-              Learn
-            </a>
-            <a href="#" className={classes.link}>
-              Academy
-            </a>
+
+            {categories?.map((category, index) => (
+              <a href={`${ROUTER.PRODUCT.ALL_PRODUCTS}/${category.id}`} className={classes.link}>
+                {category.name}
+              </a>
+            ))}
           </Group>
 
           <Group className={classes.hiddenMobile}>

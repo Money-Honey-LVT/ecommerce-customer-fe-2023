@@ -1,10 +1,13 @@
 import { NavigateFunction } from 'react-router-dom';
-import { UserActionType, UserThunkAction } from './user.types';
+import { UpdateProfileActionSuccess, UserActionType, UserThunkAction } from './user.types';
 import { AppDispatch } from '../../redux/store';
 import { API_URLS } from '../../config/constants/api';
 import { useCallApi } from '../../utils/api';
 import ROUTER from '../../config/router';
 import { notiType, renderNotification } from '../../utils/helpers';
+import { Callback } from '../../types/helpers/callback';
+import { IconArrowWaveLeftDown } from '@tabler/icons-react';
+import { UpdateProfilePayload } from '../../types/helpers/payload';
 
 const Login =
   (payload: any, navigate: NavigateFunction): UserThunkAction =>
@@ -23,7 +26,6 @@ const Login =
         type: UserActionType.LOGIN_SUCCESS,
         payload: data,
       });
-      console.log(data);
       localStorage.setItem('token', data.Token);
       navigate(ROUTER.HOME.INDEX);
       renderNotification('Thông báo', 'Đăng nhập thành công', notiType.SUCCESS);
@@ -51,7 +53,7 @@ const SignUp =
       dispatch({
         type: UserActionType.SIGNUP_SUCCESS,
       });
-      console.log(data);
+
       navigate(ROUTER.AUTH.LOGIN);
       renderNotification('Thông báo', 'Đăng kí tài khoản thành công', notiType.SUCCESS);
     } else {
@@ -84,6 +86,7 @@ const ActiveUser =
       renderNotification('Thông báo', error.response.data.devMsg, notiType.ERROR);
     }
   };
+
 const ForgotPassword =
   (payload: any, navigate: NavigateFunction): UserThunkAction =>
   async (dispatch: AppDispatch) => {
@@ -131,10 +134,62 @@ const ResetPassword =
     }
   };
 
+const GetProfile =
+  (cb?: Callback): UserThunkAction =>
+  async (dispatch: AppDispatch) => {
+    dispatch({ type: UserActionType.GET_PROFILE_PENDING });
+
+    const api = API_URLS.USER.getProfile();
+
+    const { response, error } = await useCallApi({ ...api });
+
+    if (!error && response?.status === 200) {
+      const { data } = response;
+      dispatch({
+        type: UserActionType.GET_PROFILE_SUCCESS,
+        payload: data,
+      });
+      cb?.onSuccess?.(data);
+      console.log(data);
+    } else {
+      dispatch({
+        type: UserActionType.GET_PROFILE_FAIL,
+      });
+      renderNotification('Thông báo', error.response.data.devMsg, notiType.ERROR);
+    }
+  };
+
+const UpdateProfile =
+  (payload: UpdateProfilePayload, cb?: Callback): UserThunkAction =>
+  async (dispatch: AppDispatch) => {
+    dispatch({ type: UserActionType.UPDATE_PROFILE_PENDING });
+
+    const api = API_URLS.USER.updateProfile();
+
+    const { response, error } = await useCallApi({ ...api, payload });
+
+    if (!error && response?.status === 200) {
+      const { data } = response.data;
+      dispatch({
+        type: UserActionType.UPDATE_PROFILE_SUCCESS,
+        payload: data,
+      });
+      cb?.onSuccess?.(data);
+      console.log(data);
+    } else {
+      dispatch({
+        type: UserActionType.UPDATE_PROFILE_FAIL,
+      });
+      renderNotification('Thông báo', error.response.data.devMsg, notiType.ERROR);
+    }
+  };
+
 export const UserAction = {
   Login,
   SignUp,
   ActiveUser,
   ForgotPassword,
   ResetPassword,
+  GetProfile,
+  UpdateProfile,
 };

@@ -1,6 +1,6 @@
 export const DistrictsArr = [
   {
-    value: 'Long Xuyên',
+    name: 'Long Xuyên',
     type: 'thanh-pho',
     slug: 'long-xuyen',
     name_with_type: 'Thành phố Long Xuyên',
@@ -10,7 +10,7 @@ export const DistrictsArr = [
     parent_code: '89',
   },
   {
-    value: 'Châu Đốc',
+    name: 'Châu Đốc',
     type: 'thanh-pho',
     slug: 'chau-doc',
     name_with_type: 'Thành phố Châu Đốc',
@@ -20,7 +20,7 @@ export const DistrictsArr = [
     parent_code: '89',
   },
   {
-    value: 'An Phú',
+    name: 'An Phú',
     type: 'huyen',
     slug: 'an-phu',
     name_with_type: 'Huyện An Phú',
@@ -30,7 +30,7 @@ export const DistrictsArr = [
     parent_code: '89',
   },
   {
-    value: 'Tân Châu',
+    name: 'Tân Châu',
     type: 'thi-xa',
     slug: 'tan-chau',
     name_with_type: 'Thị xã Tân Châu',
@@ -40,7 +40,7 @@ export const DistrictsArr = [
     parent_code: '89',
   },
   {
-    value: 'Phú Tân',
+    name: 'Phú Tân',
     type: 'huyen',
     slug: 'phu-tan',
     name_with_type: 'Huyện Phú Tân',
@@ -50,7 +50,7 @@ export const DistrictsArr = [
     parent_code: '89',
   },
   {
-    value: 'Châu Phú',
+    name: 'Châu Phú',
     type: 'huyen',
     slug: 'chau-phu',
     name_with_type: 'Huyện Châu Phú',
@@ -60,7 +60,7 @@ export const DistrictsArr = [
     parent_code: '89',
   },
   {
-    value: 'Tịnh Biên',
+    name: 'Tịnh Biên',
     type: 'huyen',
     slug: 'tinh-bien',
     name_with_type: 'Huyện Tịnh Biên',
@@ -70,7 +70,7 @@ export const DistrictsArr = [
     parent_code: '89',
   },
   {
-    value: 'Tri Tôn',
+    name: 'Tri Tôn',
     type: 'huyen',
     slug: 'tri-ton',
     name_with_type: 'Huyện Tri Tôn',
@@ -80,7 +80,7 @@ export const DistrictsArr = [
     parent_code: '89',
   },
   {
-    value: 'Châu Thành',
+    name: 'Châu Thành',
     type: 'huyen',
     slug: 'chau-thanh',
     name_with_type: 'Huyện Châu Thành',
@@ -90,7 +90,7 @@ export const DistrictsArr = [
     parent_code: '89',
   },
   {
-    value: 'Chợ Mới',
+    name: 'Chợ Mới',
     type: 'huyen',
     slug: 'cho-moi',
     name_with_type: 'Huyện Chợ Mới',
@@ -100,7 +100,7 @@ export const DistrictsArr = [
     parent_code: '89',
   },
   {
-    value: 'Thoại Sơn',
+    name: 'Thoại Sơn',
     type: 'huyen',
     slug: 'thoai-son',
     name_with_type: 'Huyện Thoại Sơn',
@@ -110,7 +110,7 @@ export const DistrictsArr = [
     parent_code: '89',
   },
   {
-    value: 'Kon Tum',
+    name: 'Kon Tum',
     type: 'thanh-pho',
     slug: 'kon-tum',
     name_with_type: 'Thành phố Kon Tum',
@@ -120,7 +120,7 @@ export const DistrictsArr = [
     parent_code: '62',
   },
   {
-    value: 'Đắk Glei',
+    name: 'Đắk Glei',
     type: 'huyen',
     slug: 'dak-glei',
     name_with_type: 'Huyện Đắk Glei',
@@ -130,7 +130,7 @@ export const DistrictsArr = [
     parent_code: '62',
   },
   {
-    value: 'Ngọc Hồi',
+    name: 'Ngọc Hồi',
     type: 'huyen',
     slug: 'ngoc-hoi',
     name_with_type: 'Huyện Ngọc Hồi',
@@ -140,7 +140,7 @@ export const DistrictsArr = [
     parent_code: '62',
   },
   {
-    value: 'Đắk Tô',
+    name: 'Đắk Tô',
     type: 'huyen',
     slug: 'dak-to',
     name_with_type: 'Huyện Đắk Tô',
@@ -150,7 +150,7 @@ export const DistrictsArr = [
     parent_code: '62',
   },
   {
-    value: 'Kon Plông',
+    name: 'Kon Plông',
     type: 'huyen',
     slug: 'kon-plong',
     name_with_type: 'Huyện Kon Plông',
@@ -160,7 +160,7 @@ export const DistrictsArr = [
     parent_code: '62',
   },
   {
-    value: 'Kon Rẫy',
+    name: 'Kon Rẫy',
     type: 'huyen',
     slug: 'kon-ray',
     name_with_type: 'Huyện Kon Rẫy',
@@ -170,7 +170,7 @@ export const DistrictsArr = [
     parent_code: '62',
   },
   {
-    value: 'Đắk Hà',
+    name: 'Đắk Hà',
     type: 'huyen',
     slug: 'dak-ha',
     name_with_type: 'Huyện Đắk Hà',
@@ -180,7 +180,7 @@ export const DistrictsArr = [
     parent_code: '62',
   },
   {
-    value: 'Sa Thầy',
+    name: 'Sa Thầy',
     type: 'huyen',
     slug: 'sa-thay',
     name_with_type: 'Huyện Sa Thầy',
@@ -190,7 +190,7 @@ export const DistrictsArr = [
     parent_code: '62',
   },
   {
-    value: 'Tu Mơ Rông',
+    name: 'Tu Mơ Rông',
     type: 'huyen',
     slug: 'tu-mo-rong',
     name_with_type: 'Huyện Tu Mơ Rông',
@@ -200,7 +200,7 @@ export const DistrictsArr = [
     parent_code: '62',
   },
   {
-    value: 'Ia H Drai',
+    name: 'Ia H Drai',
     type: 'huyen',
     slug: 'ia-h-drai',
     name_with_type: 'Huyện Ia H Drai',
@@ -210,7 +210,7 @@ export const DistrictsArr = [
     parent_code: '62',
   },
   {
-    value: 'Gia Nghĩa',
+    name: 'Gia Nghĩa',
     type: 'thi-xa',
     slug: 'gia-nghia',
     name_with_type: 'Thị xã Gia Nghĩa',
@@ -220,7 +220,7 @@ export const DistrictsArr = [
     parent_code: '67',
   },
   {
-    value: 'Đăk Glong',
+    name: 'Đăk Glong',
     type: 'huyen',
     slug: 'dak-glong',
     name_with_type: 'Huyện Đăk Glong',
@@ -230,7 +230,7 @@ export const DistrictsArr = [
     parent_code: '67',
   },
   {
-    value: 'Cư Jút',
+    name: 'Cư Jút',
     type: 'huyen',
     slug: 'cu-jut',
     name_with_type: 'Huyện Cư Jút',
@@ -240,7 +240,7 @@ export const DistrictsArr = [
     parent_code: '67',
   },
   {
-    value: 'Đắk Mil',
+    name: 'Đắk Mil',
     type: 'huyen',
     slug: 'dak-mil',
     name_with_type: 'Huyện Đắk Mil',
@@ -250,7 +250,7 @@ export const DistrictsArr = [
     parent_code: '67',
   },
   {
-    value: 'Krông Nô',
+    name: 'Krông Nô',
     type: 'huyen',
     slug: 'krong-no',
     name_with_type: 'Huyện Krông Nô',
@@ -260,7 +260,7 @@ export const DistrictsArr = [
     parent_code: '67',
   },
   {
-    value: 'Đắk Song',
+    name: 'Đắk Song',
     type: 'huyen',
     slug: 'dak-song',
     name_with_type: 'Huyện Đắk Song',
@@ -270,7 +270,7 @@ export const DistrictsArr = [
     parent_code: '67',
   },
   {
-    value: 'Đắk RLấp',
+    name: 'Đắk RLấp',
     type: 'huyen',
     slug: 'dak-r-lap',
     name_with_type: 'Huyện Đắk RLấp',
@@ -280,7 +280,7 @@ export const DistrictsArr = [
     parent_code: '67',
   },
   {
-    value: 'Tuy Đức',
+    name: 'Tuy Đức',
     type: 'huyen',
     slug: 'tuy-duc',
     name_with_type: 'Huyện Tuy Đức',
@@ -290,7 +290,7 @@ export const DistrictsArr = [
     parent_code: '67',
   },
   {
-    value: 'Sóc Trăng',
+    name: 'Sóc Trăng',
     type: 'thanh-pho',
     slug: 'soc-trang',
     name_with_type: 'Thành phố Sóc Trăng',
@@ -300,7 +300,7 @@ export const DistrictsArr = [
     parent_code: '94',
   },
   {
-    value: 'Châu Thành',
+    name: 'Châu Thành',
     type: 'huyen',
     slug: 'chau-thanh',
     name_with_type: 'Huyện Châu Thành',
@@ -310,7 +310,7 @@ export const DistrictsArr = [
     parent_code: '94',
   },
   {
-    value: 'Kế Sách',
+    name: 'Kế Sách',
     type: 'huyen',
     slug: 'ke-sach',
     name_with_type: 'Huyện Kế Sách',
@@ -320,7 +320,7 @@ export const DistrictsArr = [
     parent_code: '94',
   },
   {
-    value: 'Mỹ Tú',
+    name: 'Mỹ Tú',
     type: 'huyen',
     slug: 'my-tu',
     name_with_type: 'Huyện Mỹ Tú',
@@ -330,7 +330,7 @@ export const DistrictsArr = [
     parent_code: '94',
   },
   {
-    value: 'Cù Lao Dung',
+    name: 'Cù Lao Dung',
     type: 'huyen',
     slug: 'cu-lao-dung',
     name_with_type: 'Huyện Cù Lao Dung',
@@ -340,7 +340,7 @@ export const DistrictsArr = [
     parent_code: '94',
   },
   {
-    value: 'Long Phú',
+    name: 'Long Phú',
     type: 'huyen',
     slug: 'long-phu',
     name_with_type: 'Huyện Long Phú',
@@ -350,7 +350,7 @@ export const DistrictsArr = [
     parent_code: '94',
   },
   {
-    value: 'Mỹ Xuyên',
+    name: 'Mỹ Xuyên',
     type: 'huyen',
     slug: 'my-xuyen',
     name_with_type: 'Huyện Mỹ Xuyên',
@@ -360,7 +360,7 @@ export const DistrictsArr = [
     parent_code: '94',
   },
   {
-    value: 'Ngã Năm',
+    name: 'Ngã Năm',
     type: 'thi-xa',
     slug: 'nga-nam',
     name_with_type: 'Thị xã Ngã Năm',
@@ -370,7 +370,7 @@ export const DistrictsArr = [
     parent_code: '94',
   },
   {
-    value: 'Thạnh Trị',
+    name: 'Thạnh Trị',
     type: 'huyen',
     slug: 'thanh-tri',
     name_with_type: 'Huyện Thạnh Trị',
@@ -380,7 +380,7 @@ export const DistrictsArr = [
     parent_code: '94',
   },
   {
-    value: 'Vĩnh Châu',
+    name: 'Vĩnh Châu',
     type: 'thi-xa',
     slug: 'vinh-chau',
     name_with_type: 'Thị xã Vĩnh Châu',
@@ -390,7 +390,7 @@ export const DistrictsArr = [
     parent_code: '94',
   },
   {
-    value: 'Trần Đề',
+    name: 'Trần Đề',
     type: 'huyen',
     slug: 'tran-de',
     name_with_type: 'Huyện Trần Đề',
@@ -400,7 +400,7 @@ export const DistrictsArr = [
     parent_code: '94',
   },
   {
-    value: 'Phước Long',
+    name: 'Phước Long',
     type: 'thi-xa',
     slug: 'phuoc-long',
     name_with_type: 'Thị xã Phước Long',
@@ -410,7 +410,7 @@ export const DistrictsArr = [
     parent_code: '70',
   },
   {
-    value: 'Đồng Xoài',
+    name: 'Đồng Xoài',
     type: 'thi-xa',
     slug: 'dong-xoai',
     name_with_type: 'Thị xã Đồng Xoài',
@@ -420,7 +420,7 @@ export const DistrictsArr = [
     parent_code: '70',
   },
   {
-    value: 'Bình Long',
+    name: 'Bình Long',
     type: 'thi-xa',
     slug: 'binh-long',
     name_with_type: 'Thị xã Bình Long',
@@ -430,7 +430,7 @@ export const DistrictsArr = [
     parent_code: '70',
   },
   {
-    value: 'Bù Gia Mập',
+    name: 'Bù Gia Mập',
     type: 'huyen',
     slug: 'bu-gia-map',
     name_with_type: 'Huyện Bù Gia Mập',
@@ -440,7 +440,7 @@ export const DistrictsArr = [
     parent_code: '70',
   },
   {
-    value: 'Lộc Ninh',
+    name: 'Lộc Ninh',
     type: 'huyen',
     slug: 'loc-ninh',
     name_with_type: 'Huyện Lộc Ninh',
@@ -450,7 +450,7 @@ export const DistrictsArr = [
     parent_code: '70',
   },
   {
-    value: 'Bù Đốp',
+    name: 'Bù Đốp',
     type: 'huyen',
     slug: 'bu-dop',
     name_with_type: 'Huyện Bù Đốp',
@@ -460,7 +460,7 @@ export const DistrictsArr = [
     parent_code: '70',
   },
   {
-    value: 'Hớn Quản',
+    name: 'Hớn Quản',
     type: 'huyen',
     slug: 'hon-quan',
     name_with_type: 'Huyện Hớn Quản',
@@ -470,7 +470,7 @@ export const DistrictsArr = [
     parent_code: '70',
   },
   {
-    value: 'Đồng Phú',
+    name: 'Đồng Phú',
     type: 'huyen',
     slug: 'dong-phu',
     name_with_type: 'Huyện Đồng Phú',
@@ -480,7 +480,7 @@ export const DistrictsArr = [
     parent_code: '70',
   },
   {
-    value: 'Bù Đăng',
+    name: 'Bù Đăng',
     type: 'huyen',
     slug: 'bu-dang',
     name_with_type: 'Huyện Bù Đăng',
@@ -490,7 +490,7 @@ export const DistrictsArr = [
     parent_code: '70',
   },
   {
-    value: 'Chơn Thành',
+    name: 'Chơn Thành',
     type: 'huyen',
     slug: 'chon-thanh',
     name_with_type: 'Huyện Chơn Thành',
@@ -500,7 +500,7 @@ export const DistrictsArr = [
     parent_code: '70',
   },
   {
-    value: 'Phú Riềng',
+    name: 'Phú Riềng',
     type: 'huyen',
     slug: 'phu-rieng',
     name_with_type: 'Huyện Phú Riềng',
@@ -510,7 +510,7 @@ export const DistrictsArr = [
     parent_code: '70',
   },
   {
-    value: 'Hưng Yên',
+    name: 'Hưng Yên',
     type: 'thanh-pho',
     slug: 'hung-yen',
     name_with_type: 'Thành phố Hưng Yên',
@@ -520,7 +520,7 @@ export const DistrictsArr = [
     parent_code: '33',
   },
   {
-    value: 'Văn Lâm',
+    name: 'Văn Lâm',
     type: 'huyen',
     slug: 'van-lam',
     name_with_type: 'Huyện Văn Lâm',
@@ -530,7 +530,7 @@ export const DistrictsArr = [
     parent_code: '33',
   },
   {
-    value: 'Văn Giang',
+    name: 'Văn Giang',
     type: 'huyen',
     slug: 'van-giang',
     name_with_type: 'Huyện Văn Giang',
@@ -540,7 +540,7 @@ export const DistrictsArr = [
     parent_code: '33',
   },
   {
-    value: 'Yên Mỹ',
+    name: 'Yên Mỹ',
     type: 'huyen',
     slug: 'yen-my',
     name_with_type: 'Huyện Yên Mỹ',
@@ -550,7 +550,7 @@ export const DistrictsArr = [
     parent_code: '33',
   },
   {
-    value: 'Mỹ Hào',
+    name: 'Mỹ Hào',
     type: 'huyen',
     slug: 'my-hao',
     name_with_type: 'Huyện Mỹ Hào',
@@ -560,7 +560,7 @@ export const DistrictsArr = [
     parent_code: '33',
   },
   {
-    value: 'Ân Thi',
+    name: 'Ân Thi',
     type: 'huyen',
     slug: 'an-thi',
     name_with_type: 'Huyện Ân Thi',
@@ -570,7 +570,7 @@ export const DistrictsArr = [
     parent_code: '33',
   },
   {
-    value: 'Khoái Châu',
+    name: 'Khoái Châu',
     type: 'huyen',
     slug: 'khoai-chau',
     name_with_type: 'Huyện Khoái Châu',
@@ -580,7 +580,7 @@ export const DistrictsArr = [
     parent_code: '33',
   },
   {
-    value: 'Kim Động',
+    name: 'Kim Động',
     type: 'huyen',
     slug: 'kim-dong',
     name_with_type: 'Huyện Kim Động',
@@ -590,7 +590,7 @@ export const DistrictsArr = [
     parent_code: '33',
   },
   {
-    value: 'Tiên Lữ',
+    name: 'Tiên Lữ',
     type: 'huyen',
     slug: 'tien-lu',
     name_with_type: 'Huyện Tiên Lữ',
@@ -600,7 +600,7 @@ export const DistrictsArr = [
     parent_code: '33',
   },
   {
-    value: 'Phù Cừ',
+    name: 'Phù Cừ',
     type: 'huyen',
     slug: 'phu-cu',
     name_with_type: 'Huyện Phù Cừ',
@@ -610,7 +610,7 @@ export const DistrictsArr = [
     parent_code: '33',
   },
   {
-    value: 'Thanh Hóa',
+    name: 'Thanh Hóa',
     type: 'thanh-pho',
     slug: 'thanh-hoa',
     name_with_type: 'Thành phố Thanh Hóa',
@@ -620,7 +620,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Bỉm Sơn',
+    name: 'Bỉm Sơn',
     type: 'thi-xa',
     slug: 'bim-son',
     name_with_type: 'Thị xã Bỉm Sơn',
@@ -630,7 +630,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Sầm Sơn',
+    name: 'Sầm Sơn',
     type: 'thanh-pho',
     slug: 'sam-son',
     name_with_type: 'Thành phố Sầm Sơn',
@@ -640,7 +640,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Mường Lát',
+    name: 'Mường Lát',
     type: 'huyen',
     slug: 'muong-lat',
     name_with_type: 'Huyện Mường Lát',
@@ -650,7 +650,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Quan Hóa',
+    name: 'Quan Hóa',
     type: 'huyen',
     slug: 'quan-hoa',
     name_with_type: 'Huyện Quan Hóa',
@@ -660,7 +660,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Bá Thước',
+    name: 'Bá Thước',
     type: 'huyen',
     slug: 'ba-thuoc',
     name_with_type: 'Huyện Bá Thước',
@@ -670,7 +670,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Quan Sơn',
+    name: 'Quan Sơn',
     type: 'huyen',
     slug: 'quan-son',
     name_with_type: 'Huyện Quan Sơn',
@@ -680,7 +680,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Lang Chánh',
+    name: 'Lang Chánh',
     type: 'huyen',
     slug: 'lang-chanh',
     name_with_type: 'Huyện Lang Chánh',
@@ -690,7 +690,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Ngọc Lặc',
+    name: 'Ngọc Lặc',
     type: 'huyen',
     slug: 'ngoc-lac',
     name_with_type: 'Huyện Ngọc Lặc',
@@ -700,7 +700,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Cẩm Thủy',
+    name: 'Cẩm Thủy',
     type: 'huyen',
     slug: 'cam-thuy',
     name_with_type: 'Huyện Cẩm Thủy',
@@ -710,7 +710,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Thạch Thành',
+    name: 'Thạch Thành',
     type: 'huyen',
     slug: 'thach-thanh',
     name_with_type: 'Huyện Thạch Thành',
@@ -720,7 +720,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Hà Trung',
+    name: 'Hà Trung',
     type: 'huyen',
     slug: 'ha-trung',
     name_with_type: 'Huyện Hà Trung',
@@ -730,7 +730,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Vĩnh Lộc',
+    name: 'Vĩnh Lộc',
     type: 'huyen',
     slug: 'vinh-loc',
     name_with_type: 'Huyện Vĩnh Lộc',
@@ -740,7 +740,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Yên Định',
+    name: 'Yên Định',
     type: 'huyen',
     slug: 'yen-dinh',
     name_with_type: 'Huyện Yên Định',
@@ -750,7 +750,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Thọ Xuân',
+    name: 'Thọ Xuân',
     type: 'huyen',
     slug: 'tho-xuan',
     name_with_type: 'Huyện Thọ Xuân',
@@ -760,7 +760,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Thường Xuân',
+    name: 'Thường Xuân',
     type: 'huyen',
     slug: 'thuong-xuan',
     name_with_type: 'Huyện Thường Xuân',
@@ -770,7 +770,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Triệu Sơn',
+    name: 'Triệu Sơn',
     type: 'huyen',
     slug: 'trieu-son',
     name_with_type: 'Huyện Triệu Sơn',
@@ -780,7 +780,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Thiệu Hóa',
+    name: 'Thiệu Hóa',
     type: 'huyen',
     slug: 'thieu-hoa',
     name_with_type: 'Huyện Thiệu Hóa',
@@ -790,7 +790,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Hoằng Hóa',
+    name: 'Hoằng Hóa',
     type: 'huyen',
     slug: 'hoang-hoa',
     name_with_type: 'Huyện Hoằng Hóa',
@@ -800,7 +800,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Hậu Lộc',
+    name: 'Hậu Lộc',
     type: 'huyen',
     slug: 'hau-loc',
     name_with_type: 'Huyện Hậu Lộc',
@@ -810,7 +810,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Nga Sơn',
+    name: 'Nga Sơn',
     type: 'huyen',
     slug: 'nga-son',
     name_with_type: 'Huyện Nga Sơn',
@@ -820,7 +820,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Như Xuân',
+    name: 'Như Xuân',
     type: 'huyen',
     slug: 'nhu-xuan',
     name_with_type: 'Huyện Như Xuân',
@@ -830,7 +830,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Như Thanh',
+    name: 'Như Thanh',
     type: 'huyen',
     slug: 'nhu-thanh',
     name_with_type: 'Huyện Như Thanh',
@@ -840,7 +840,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Nông Cống',
+    name: 'Nông Cống',
     type: 'huyen',
     slug: 'nong-cong',
     name_with_type: 'Huyện Nông Cống',
@@ -850,7 +850,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Đông Sơn',
+    name: 'Đông Sơn',
     type: 'huyen',
     slug: 'dong-son',
     name_with_type: 'Huyện Đông Sơn',
@@ -860,7 +860,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Quảng Xương',
+    name: 'Quảng Xương',
     type: 'huyen',
     slug: 'quang-xuong',
     name_with_type: 'Huyện Quảng Xương',
@@ -870,7 +870,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Tĩnh Gia',
+    name: 'Tĩnh Gia',
     type: 'huyen',
     slug: 'tinh-gia',
     name_with_type: 'Huyện Tĩnh Gia',
@@ -880,7 +880,7 @@ export const DistrictsArr = [
     parent_code: '38',
   },
   {
-    value: 'Đông Hà',
+    name: 'Đông Hà',
     type: 'thanh-pho',
     slug: 'dong-ha',
     name_with_type: 'Thành phố Đông Hà',
@@ -890,7 +890,7 @@ export const DistrictsArr = [
     parent_code: '45',
   },
   {
-    value: 'Quảng Trị',
+    name: 'Quảng Trị',
     type: 'thi-xa',
     slug: 'quang-tri',
     name_with_type: 'Thị xã Quảng Trị',
@@ -900,7 +900,7 @@ export const DistrictsArr = [
     parent_code: '45',
   },
   {
-    value: 'Vĩnh Linh',
+    name: 'Vĩnh Linh',
     type: 'huyen',
     slug: 'vinh-linh',
     name_with_type: 'Huyện Vĩnh Linh',
@@ -910,7 +910,7 @@ export const DistrictsArr = [
     parent_code: '45',
   },
   {
-    value: 'Hướng Hóa',
+    name: 'Hướng Hóa',
     type: 'huyen',
     slug: 'huong-hoa',
     name_with_type: 'Huyện Hướng Hóa',
@@ -920,7 +920,7 @@ export const DistrictsArr = [
     parent_code: '45',
   },
   {
-    value: 'Gio Linh',
+    name: 'Gio Linh',
     type: 'huyen',
     slug: 'gio-linh',
     name_with_type: 'Huyện Gio Linh',
@@ -930,7 +930,7 @@ export const DistrictsArr = [
     parent_code: '45',
   },
   {
-    value: 'Đa Krông',
+    name: 'Đa Krông',
     type: 'huyen',
     slug: 'da-krong',
     name_with_type: 'Huyện Đa Krông',
@@ -940,7 +940,7 @@ export const DistrictsArr = [
     parent_code: '45',
   },
   {
-    value: 'Cam Lộ',
+    name: 'Cam Lộ',
     type: 'huyen',
     slug: 'cam-lo',
     name_with_type: 'Huyện Cam Lộ',
@@ -950,7 +950,7 @@ export const DistrictsArr = [
     parent_code: '45',
   },
   {
-    value: 'Triệu Phong',
+    name: 'Triệu Phong',
     type: 'huyen',
     slug: 'trieu-phong',
     name_with_type: 'Huyện Triệu Phong',
@@ -960,7 +960,7 @@ export const DistrictsArr = [
     parent_code: '45',
   },
   {
-    value: 'Hải Lăng',
+    name: 'Hải Lăng',
     type: 'huyen',
     slug: 'hai-lang',
     name_with_type: 'Huyện Hải Lăng',
@@ -970,7 +970,7 @@ export const DistrictsArr = [
     parent_code: '45',
   },
   {
-    value: 'Tuyên Quang',
+    name: 'Tuyên Quang',
     type: 'thanh-pho',
     slug: 'tuyen-quang',
     name_with_type: 'Thành phố Tuyên Quang',
@@ -980,7 +980,7 @@ export const DistrictsArr = [
     parent_code: '08',
   },
   {
-    value: 'Lâm Bình',
+    name: 'Lâm Bình',
     type: 'huyen',
     slug: 'lam-binh',
     name_with_type: 'Huyện Lâm Bình',
@@ -990,7 +990,7 @@ export const DistrictsArr = [
     parent_code: '08',
   },
   {
-    value: 'Nà Hang',
+    name: 'Nà Hang',
     type: 'huyen',
     slug: 'na-hang',
     name_with_type: 'Huyện Nà Hang',
@@ -1000,7 +1000,7 @@ export const DistrictsArr = [
     parent_code: '08',
   },
   {
-    value: 'Chiêm Hóa',
+    name: 'Chiêm Hóa',
     type: 'huyen',
     slug: 'chiem-hoa',
     name_with_type: 'Huyện Chiêm Hóa',
@@ -1010,7 +1010,7 @@ export const DistrictsArr = [
     parent_code: '08',
   },
   {
-    value: 'Hàm Yên',
+    name: 'Hàm Yên',
     type: 'huyen',
     slug: 'ham-yen',
     name_with_type: 'Huyện Hàm Yên',
@@ -1020,7 +1020,7 @@ export const DistrictsArr = [
     parent_code: '08',
   },
   {
-    value: 'Yên Sơn',
+    name: 'Yên Sơn',
     type: 'huyen',
     slug: 'yen-son',
     name_with_type: 'Huyện Yên Sơn',
@@ -1030,7 +1030,7 @@ export const DistrictsArr = [
     parent_code: '08',
   },
   {
-    value: 'Sơn Dương',
+    name: 'Sơn Dương',
     type: 'huyen',
     slug: 'son-duong',
     name_with_type: 'Huyện Sơn Dương',
@@ -1040,7 +1040,7 @@ export const DistrictsArr = [
     parent_code: '08',
   },
   {
-    value: 'Quảng Ngãi',
+    name: 'Quảng Ngãi',
     type: 'thanh-pho',
     slug: 'quang-ngai',
     name_with_type: 'Thành phố Quảng Ngãi',
@@ -1050,7 +1050,7 @@ export const DistrictsArr = [
     parent_code: '51',
   },
   {
-    value: 'Bình Sơn',
+    name: 'Bình Sơn',
     type: 'huyen',
     slug: 'binh-son',
     name_with_type: 'Huyện Bình Sơn',
@@ -1060,7 +1060,7 @@ export const DistrictsArr = [
     parent_code: '51',
   },
   {
-    value: 'Trà Bồng',
+    name: 'Trà Bồng',
     type: 'huyen',
     slug: 'tra-bong',
     name_with_type: 'Huyện Trà Bồng',
@@ -1070,7 +1070,7 @@ export const DistrictsArr = [
     parent_code: '51',
   },
   {
-    value: 'Tây Trà',
+    name: 'Tây Trà',
     type: 'huyen',
     slug: 'tay-tra',
     name_with_type: 'Huyện Tây Trà',
@@ -1080,7 +1080,7 @@ export const DistrictsArr = [
     parent_code: '51',
   },
   {
-    value: 'Sơn Tịnh',
+    name: 'Sơn Tịnh',
     type: 'huyen',
     slug: 'son-tinh',
     name_with_type: 'Huyện Sơn Tịnh',
@@ -1090,7 +1090,7 @@ export const DistrictsArr = [
     parent_code: '51',
   },
   {
-    value: 'Tư Nghĩa',
+    name: 'Tư Nghĩa',
     type: 'huyen',
     slug: 'tu-nghia',
     name_with_type: 'Huyện Tư Nghĩa',
@@ -1100,7 +1100,7 @@ export const DistrictsArr = [
     parent_code: '51',
   },
   {
-    value: 'Sơn Hà',
+    name: 'Sơn Hà',
     type: 'huyen',
     slug: 'son-ha',
     name_with_type: 'Huyện Sơn Hà',
@@ -1110,7 +1110,7 @@ export const DistrictsArr = [
     parent_code: '51',
   },
   {
-    value: 'Sơn Tây',
+    name: 'Sơn Tây',
     type: 'huyen',
     slug: 'son-tay',
     name_with_type: 'Huyện Sơn Tây',
@@ -1120,7 +1120,7 @@ export const DistrictsArr = [
     parent_code: '51',
   },
   {
-    value: 'Minh Long',
+    name: 'Minh Long',
     type: 'huyen',
     slug: 'minh-long',
     name_with_type: 'Huyện Minh Long',
@@ -1130,7 +1130,7 @@ export const DistrictsArr = [
     parent_code: '51',
   },
   {
-    value: 'Nghĩa Hành',
+    name: 'Nghĩa Hành',
     type: 'huyen',
     slug: 'nghia-hanh',
     name_with_type: 'Huyện Nghĩa Hành',
@@ -1140,7 +1140,7 @@ export const DistrictsArr = [
     parent_code: '51',
   },
   {
-    value: 'Mộ Đức',
+    name: 'Mộ Đức',
     type: 'huyen',
     slug: 'mo-duc',
     name_with_type: 'Huyện Mộ Đức',
@@ -1150,7 +1150,7 @@ export const DistrictsArr = [
     parent_code: '51',
   },
   {
-    value: 'Đức Phổ',
+    name: 'Đức Phổ',
     type: 'huyen',
     slug: 'duc-pho',
     name_with_type: 'Huyện Đức Phổ',
@@ -1160,7 +1160,7 @@ export const DistrictsArr = [
     parent_code: '51',
   },
   {
-    value: 'Ba Tơ',
+    name: 'Ba Tơ',
     type: 'huyen',
     slug: 'ba-to',
     name_with_type: 'Huyện Ba Tơ',
@@ -1170,7 +1170,7 @@ export const DistrictsArr = [
     parent_code: '51',
   },
   {
-    value: 'Lý Sơn',
+    name: 'Lý Sơn',
     type: 'huyen',
     slug: 'ly-son',
     name_with_type: 'Huyện Lý Sơn',
@@ -1180,7 +1180,7 @@ export const DistrictsArr = [
     parent_code: '51',
   },
   {
-    value: 'Ba Đình',
+    name: 'Ba Đình',
     type: 'quan',
     slug: 'ba-dinh',
     name_with_type: 'Quận Ba Đình',
@@ -1190,7 +1190,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Hoàn Kiếm',
+    name: 'Hoàn Kiếm',
     type: 'quan',
     slug: 'hoan-kiem',
     name_with_type: 'Quận Hoàn Kiếm',
@@ -1200,7 +1200,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Tây Hồ',
+    name: 'Tây Hồ',
     type: 'quan',
     slug: 'tay-ho',
     name_with_type: 'Quận Tây Hồ',
@@ -1210,7 +1210,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Long Biên',
+    name: 'Long Biên',
     type: 'quan',
     slug: 'long-bien',
     name_with_type: 'Quận Long Biên',
@@ -1220,7 +1220,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Cầu Giấy',
+    name: 'Cầu Giấy',
     type: 'quan',
     slug: 'cau-giay',
     name_with_type: 'Quận Cầu Giấy',
@@ -1230,7 +1230,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Đống Đa',
+    name: 'Đống Đa',
     type: 'quan',
     slug: 'dong-da',
     name_with_type: 'Quận Đống Đa',
@@ -1240,7 +1240,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Hai Bà Trưng',
+    name: 'Hai Bà Trưng',
     type: 'quan',
     slug: 'hai-ba-trung',
     name_with_type: 'Quận Hai Bà Trưng',
@@ -1250,7 +1250,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Hoàng Mai',
+    name: 'Hoàng Mai',
     type: 'quan',
     slug: 'hoang-mai',
     name_with_type: 'Quận Hoàng Mai',
@@ -1260,7 +1260,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Thanh Xuân',
+    name: 'Thanh Xuân',
     type: 'quan',
     slug: 'thanh-xuan',
     name_with_type: 'Quận Thanh Xuân',
@@ -1270,7 +1270,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Sóc Sơn',
+    name: 'Sóc Sơn',
     type: 'huyen',
     slug: 'soc-son',
     name_with_type: 'Huyện Sóc Sơn',
@@ -1280,7 +1280,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Đông Anh',
+    name: 'Đông Anh',
     type: 'huyen',
     slug: 'dong-anh',
     name_with_type: 'Huyện Đông Anh',
@@ -1290,7 +1290,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Gia Lâm',
+    name: 'Gia Lâm',
     type: 'huyen',
     slug: 'gia-lam',
     name_with_type: 'Huyện Gia Lâm',
@@ -1300,7 +1300,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Nam Từ Liêm',
+    name: 'Nam Từ Liêm',
     type: 'quan',
     slug: 'nam-tu-liem',
     name_with_type: 'Quận Nam Từ Liêm',
@@ -1310,7 +1310,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Thanh Trì',
+    name: 'Thanh Trì',
     type: 'huyen',
     slug: 'thanh-tri',
     name_with_type: 'Huyện Thanh Trì',
@@ -1320,7 +1320,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Bắc Từ Liêm',
+    name: 'Bắc Từ Liêm',
     type: 'quan',
     slug: 'bac-tu-liem',
     name_with_type: 'Quận Bắc Từ Liêm',
@@ -1330,7 +1330,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Mê Linh',
+    name: 'Mê Linh',
     type: 'huyen',
     slug: 'me-linh',
     name_with_type: 'Huyện Mê Linh',
@@ -1340,7 +1340,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Hà Đông',
+    name: 'Hà Đông',
     type: 'quan',
     slug: 'ha-dong',
     name_with_type: 'Quận Hà Đông',
@@ -1350,7 +1350,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Sơn Tây',
+    name: 'Sơn Tây',
     type: 'thi-xa',
     slug: 'son-tay',
     name_with_type: 'Thị xã Sơn Tây',
@@ -1360,7 +1360,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Ba Vì',
+    name: 'Ba Vì',
     type: 'huyen',
     slug: 'ba-vi',
     name_with_type: 'Huyện Ba Vì',
@@ -1370,7 +1370,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Phúc Thọ',
+    name: 'Phúc Thọ',
     type: 'huyen',
     slug: 'phuc-tho',
     name_with_type: 'Huyện Phúc Thọ',
@@ -1380,7 +1380,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Đan Phượng',
+    name: 'Đan Phượng',
     type: 'huyen',
     slug: 'dan-phuong',
     name_with_type: 'Huyện Đan Phượng',
@@ -1390,7 +1390,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Hoài Đức',
+    name: 'Hoài Đức',
     type: 'huyen',
     slug: 'hoai-duc',
     name_with_type: 'Huyện Hoài Đức',
@@ -1400,7 +1400,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Quốc Oai',
+    name: 'Quốc Oai',
     type: 'huyen',
     slug: 'quoc-oai',
     name_with_type: 'Huyện Quốc Oai',
@@ -1410,7 +1410,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Thạch Thất',
+    name: 'Thạch Thất',
     type: 'huyen',
     slug: 'thach-that',
     name_with_type: 'Huyện Thạch Thất',
@@ -1420,7 +1420,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Chương Mỹ',
+    name: 'Chương Mỹ',
     type: 'huyen',
     slug: 'chuong-my',
     name_with_type: 'Huyện Chương Mỹ',
@@ -1430,7 +1430,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Thanh Oai',
+    name: 'Thanh Oai',
     type: 'huyen',
     slug: 'thanh-oai',
     name_with_type: 'Huyện Thanh Oai',
@@ -1440,7 +1440,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Thường Tín',
+    name: 'Thường Tín',
     type: 'huyen',
     slug: 'thuong-tin',
     name_with_type: 'Huyện Thường Tín',
@@ -1450,7 +1450,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Phú Xuyên',
+    name: 'Phú Xuyên',
     type: 'huyen',
     slug: 'phu-xuyen',
     name_with_type: 'Huyện Phú Xuyên',
@@ -1460,7 +1460,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Ứng Hòa',
+    name: 'Ứng Hòa',
     type: 'huyen',
     slug: 'ung-hoa',
     name_with_type: 'Huyện Ứng Hòa',
@@ -1470,7 +1470,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Mỹ Đức',
+    name: 'Mỹ Đức',
     type: 'huyen',
     slug: 'my-duc',
     name_with_type: 'Huyện Mỹ Đức',
@@ -1480,7 +1480,7 @@ export const DistrictsArr = [
     parent_code: '01',
   },
   {
-    value: 'Lào Cai',
+    name: 'Lào Cai',
     type: 'thanh-pho',
     slug: 'lao-cai',
     name_with_type: 'Thành phố Lào Cai',
@@ -1490,7 +1490,7 @@ export const DistrictsArr = [
     parent_code: '10',
   },
   {
-    value: 'Bát Xát',
+    name: 'Bát Xát',
     type: 'huyen',
     slug: 'bat-xat',
     name_with_type: 'Huyện Bát Xát',
@@ -1500,7 +1500,7 @@ export const DistrictsArr = [
     parent_code: '10',
   },
   {
-    value: 'Mường Khương',
+    name: 'Mường Khương',
     type: 'huyen',
     slug: 'muong-khuong',
     name_with_type: 'Huyện Mường Khương',
@@ -1510,7 +1510,7 @@ export const DistrictsArr = [
     parent_code: '10',
   },
   {
-    value: 'Si Ma Cai',
+    name: 'Si Ma Cai',
     type: 'huyen',
     slug: 'si-ma-cai',
     name_with_type: 'Huyện Si Ma Cai',
@@ -1520,7 +1520,7 @@ export const DistrictsArr = [
     parent_code: '10',
   },
   {
-    value: 'Bắc Hà',
+    name: 'Bắc Hà',
     type: 'huyen',
     slug: 'bac-ha',
     name_with_type: 'Huyện Bắc Hà',
@@ -1530,7 +1530,7 @@ export const DistrictsArr = [
     parent_code: '10',
   },
   {
-    value: 'Bảo Thắng',
+    name: 'Bảo Thắng',
     type: 'huyen',
     slug: 'bao-thang',
     name_with_type: 'Huyện Bảo Thắng',
@@ -1540,7 +1540,7 @@ export const DistrictsArr = [
     parent_code: '10',
   },
   {
-    value: 'Bảo Yên',
+    name: 'Bảo Yên',
     type: 'huyen',
     slug: 'bao-yen',
     name_with_type: 'Huyện Bảo Yên',
@@ -1550,7 +1550,7 @@ export const DistrictsArr = [
     parent_code: '10',
   },
   {
-    value: 'Sa Pa',
+    name: 'Sa Pa',
     type: 'huyen',
     slug: 'sa-pa',
     name_with_type: 'Huyện Sa Pa',
@@ -1560,7 +1560,7 @@ export const DistrictsArr = [
     parent_code: '10',
   },
   {
-    value: 'Văn Bàn',
+    name: 'Văn Bàn',
     type: 'huyen',
     slug: 'van-ban',
     name_with_type: 'Huyện Văn Bàn',
@@ -1570,7 +1570,7 @@ export const DistrictsArr = [
     parent_code: '10',
   },
   {
-    value: 'Vĩnh Long',
+    name: 'Vĩnh Long',
     type: 'thanh-pho',
     slug: 'vinh-long',
     name_with_type: 'Thành phố Vĩnh Long',
@@ -1580,7 +1580,7 @@ export const DistrictsArr = [
     parent_code: '86',
   },
   {
-    value: 'Long Hồ',
+    name: 'Long Hồ',
     type: 'huyen',
     slug: 'long-ho',
     name_with_type: 'Huyện Long Hồ',
@@ -1590,7 +1590,7 @@ export const DistrictsArr = [
     parent_code: '86',
   },
   {
-    value: 'Mang Thít',
+    name: 'Mang Thít',
     type: 'huyen',
     slug: 'mang-thit',
     name_with_type: 'Huyện Mang Thít',
@@ -1600,7 +1600,7 @@ export const DistrictsArr = [
     parent_code: '86',
   },
   {
-    value: 'Vũng Liêm',
+    name: 'Vũng Liêm',
     type: 'huyen',
     slug: 'vung-liem',
     name_with_type: 'Huyện  Vũng Liêm',
@@ -1610,7 +1610,7 @@ export const DistrictsArr = [
     parent_code: '86',
   },
   {
-    value: 'Tam Bình',
+    name: 'Tam Bình',
     type: 'huyen',
     slug: 'tam-binh',
     name_with_type: 'Huyện Tam Bình',
@@ -1620,7 +1620,7 @@ export const DistrictsArr = [
     parent_code: '86',
   },
   {
-    value: 'Bình Minh',
+    name: 'Bình Minh',
     type: 'thi-xa',
     slug: 'binh-minh',
     name_with_type: 'Thị xã Bình Minh',
@@ -1630,7 +1630,7 @@ export const DistrictsArr = [
     parent_code: '86',
   },
   {
-    value: 'Trà Ôn',
+    name: 'Trà Ôn',
     type: 'huyen',
     slug: 'tra-on',
     name_with_type: 'Huyện Trà Ôn',
@@ -1640,7 +1640,7 @@ export const DistrictsArr = [
     parent_code: '86',
   },
   {
-    value: 'Bình Tân',
+    name: 'Bình Tân',
     type: 'huyen',
     slug: 'binh-tan',
     name_with_type: 'Huyện Bình Tân',
@@ -1650,7 +1650,7 @@ export const DistrictsArr = [
     parent_code: '86',
   },
   {
-    value: 'Đà Lạt',
+    name: 'Đà Lạt',
     type: 'thanh-pho',
     slug: 'da-lat',
     name_with_type: 'Thành phố Đà Lạt',
@@ -1660,7 +1660,7 @@ export const DistrictsArr = [
     parent_code: '68',
   },
   {
-    value: 'Bảo Lộc',
+    name: 'Bảo Lộc',
     type: 'thanh-pho',
     slug: 'bao-loc',
     name_with_type: 'Thành phố Bảo Lộc',
@@ -1670,7 +1670,7 @@ export const DistrictsArr = [
     parent_code: '68',
   },
   {
-    value: 'Đam Rông',
+    name: 'Đam Rông',
     type: 'huyen',
     slug: 'dam-rong',
     name_with_type: 'Huyện Đam Rông',
@@ -1680,7 +1680,7 @@ export const DistrictsArr = [
     parent_code: '68',
   },
   {
-    value: 'Lạc Dương',
+    name: 'Lạc Dương',
     type: 'huyen',
     slug: 'lac-duong',
     name_with_type: 'Huyện Lạc Dương',
@@ -1690,7 +1690,7 @@ export const DistrictsArr = [
     parent_code: '68',
   },
   {
-    value: 'Lâm Hà',
+    name: 'Lâm Hà',
     type: 'huyen',
     slug: 'lam-ha',
     name_with_type: 'Huyện Lâm Hà',
@@ -1700,7 +1700,7 @@ export const DistrictsArr = [
     parent_code: '68',
   },
   {
-    value: 'Đơn Dương',
+    name: 'Đơn Dương',
     type: 'huyen',
     slug: 'don-duong',
     name_with_type: 'Huyện Đơn Dương',
@@ -1710,7 +1710,7 @@ export const DistrictsArr = [
     parent_code: '68',
   },
   {
-    value: 'Đức Trọng',
+    name: 'Đức Trọng',
     type: 'huyen',
     slug: 'duc-trong',
     name_with_type: 'Huyện Đức Trọng',
@@ -1720,7 +1720,7 @@ export const DistrictsArr = [
     parent_code: '68',
   },
   {
-    value: 'Di Linh',
+    name: 'Di Linh',
     type: 'huyen',
     slug: 'di-linh',
     name_with_type: 'Huyện Di Linh',
@@ -1730,7 +1730,7 @@ export const DistrictsArr = [
     parent_code: '68',
   },
   {
-    value: 'Bảo Lâm',
+    name: 'Bảo Lâm',
     type: 'huyen',
     slug: 'bao-lam',
     name_with_type: 'Huyện Bảo Lâm',
@@ -1740,7 +1740,7 @@ export const DistrictsArr = [
     parent_code: '68',
   },
   {
-    value: 'Đạ Huoai',
+    name: 'Đạ Huoai',
     type: 'huyen',
     slug: 'da-huoai',
     name_with_type: 'Huyện Đạ Huoai',
@@ -1750,7 +1750,7 @@ export const DistrictsArr = [
     parent_code: '68',
   },
   {
-    value: 'Đạ Tẻh',
+    name: 'Đạ Tẻh',
     type: 'huyen',
     slug: 'da-teh',
     name_with_type: 'Huyện Đạ Tẻh',
@@ -1760,7 +1760,7 @@ export const DistrictsArr = [
     parent_code: '68',
   },
   {
-    value: 'Cát Tiên',
+    name: 'Cát Tiên',
     type: 'huyen',
     slug: 'cat-tien',
     name_with_type: 'Huyện Cát Tiên',
@@ -1770,7 +1770,7 @@ export const DistrictsArr = [
     parent_code: '68',
   },
   {
-    value: 'Qui Nhơn',
+    name: 'Qui Nhơn',
     type: 'thanh-pho',
     slug: 'qui-nhon',
     name_with_type: 'Thành phố Qui Nhơn',
@@ -1780,7 +1780,7 @@ export const DistrictsArr = [
     parent_code: '52',
   },
   {
-    value: 'An Lão',
+    name: 'An Lão',
     type: 'huyen',
     slug: 'an-lao',
     name_with_type: 'Huyện An Lão',
@@ -1790,7 +1790,7 @@ export const DistrictsArr = [
     parent_code: '52',
   },
   {
-    value: 'Hoài Nhơn',
+    name: 'Hoài Nhơn',
     type: 'huyen',
     slug: 'hoai-nhon',
     name_with_type: 'Huyện Hoài Nhơn',
@@ -1800,7 +1800,7 @@ export const DistrictsArr = [
     parent_code: '52',
   },
   {
-    value: 'Hoài Ân',
+    name: 'Hoài Ân',
     type: 'huyen',
     slug: 'hoai-an',
     name_with_type: 'Huyện Hoài Ân',
@@ -1810,7 +1810,7 @@ export const DistrictsArr = [
     parent_code: '52',
   },
   {
-    value: 'Phù Mỹ',
+    name: 'Phù Mỹ',
     type: 'huyen',
     slug: 'phu-my',
     name_with_type: 'Huyện Phù Mỹ',
@@ -1820,7 +1820,7 @@ export const DistrictsArr = [
     parent_code: '52',
   },
   {
-    value: 'Vĩnh Thạnh',
+    name: 'Vĩnh Thạnh',
     type: 'huyen',
     slug: 'vinh-thanh',
     name_with_type: 'Huyện Vĩnh Thạnh',
@@ -1830,7 +1830,7 @@ export const DistrictsArr = [
     parent_code: '52',
   },
   {
-    value: 'Tây Sơn',
+    name: 'Tây Sơn',
     type: 'huyen',
     slug: 'tay-son',
     name_with_type: 'Huyện Tây Sơn',
@@ -1840,7 +1840,7 @@ export const DistrictsArr = [
     parent_code: '52',
   },
   {
-    value: 'Phù Cát',
+    name: 'Phù Cát',
     type: 'huyen',
     slug: 'phu-cat',
     name_with_type: 'Huyện Phù Cát',
@@ -1850,7 +1850,7 @@ export const DistrictsArr = [
     parent_code: '52',
   },
   {
-    value: 'An Nhơn',
+    name: 'An Nhơn',
     type: 'thi-xa',
     slug: 'an-nhon',
     name_with_type: 'Thị xã An Nhơn',
@@ -1860,7 +1860,7 @@ export const DistrictsArr = [
     parent_code: '52',
   },
   {
-    value: 'Tuy Phước',
+    name: 'Tuy Phước',
     type: 'huyen',
     slug: 'tuy-phuoc',
     name_with_type: 'Huyện Tuy Phước',
@@ -1870,7 +1870,7 @@ export const DistrictsArr = [
     parent_code: '52',
   },
   {
-    value: 'Vân Canh',
+    name: 'Vân Canh',
     type: 'huyen',
     slug: 'van-canh',
     name_with_type: 'Huyện Vân Canh',
@@ -1880,7 +1880,7 @@ export const DistrictsArr = [
     parent_code: '52',
   },
   {
-    value: 'Vinh',
+    name: 'Vinh',
     type: 'thanh-pho',
     slug: 'vinh',
     name_with_type: 'Thành phố Vinh',
@@ -1890,7 +1890,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Cửa Lò',
+    name: 'Cửa Lò',
     type: 'thi-xa',
     slug: 'cua-lo',
     name_with_type: 'Thị xã Cửa Lò',
@@ -1900,7 +1900,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Thái Hoà',
+    name: 'Thái Hoà',
     type: 'thi-xa',
     slug: 'thai-hoa',
     name_with_type: 'Thị xã Thái Hoà',
@@ -1910,7 +1910,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Quế Phong',
+    name: 'Quế Phong',
     type: 'huyen',
     slug: 'que-phong',
     name_with_type: 'Huyện Quế Phong',
@@ -1920,7 +1920,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Quỳ Châu',
+    name: 'Quỳ Châu',
     type: 'huyen',
     slug: 'quy-chau',
     name_with_type: 'Huyện Quỳ Châu',
@@ -1930,7 +1930,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Kỳ Sơn',
+    name: 'Kỳ Sơn',
     type: 'huyen',
     slug: 'ky-son',
     name_with_type: 'Huyện Kỳ Sơn',
@@ -1940,7 +1940,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Tương Dương',
+    name: 'Tương Dương',
     type: 'huyen',
     slug: 'tuong-duong',
     name_with_type: 'Huyện Tương Dương',
@@ -1950,7 +1950,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Nghĩa Đàn',
+    name: 'Nghĩa Đàn',
     type: 'huyen',
     slug: 'nghia-dan',
     name_with_type: 'Huyện Nghĩa Đàn',
@@ -1960,7 +1960,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Quỳ Hợp',
+    name: 'Quỳ Hợp',
     type: 'huyen',
     slug: 'quy-hop',
     name_with_type: 'Huyện Quỳ Hợp',
@@ -1970,7 +1970,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Quỳnh Lưu',
+    name: 'Quỳnh Lưu',
     type: 'huyen',
     slug: 'quynh-luu',
     name_with_type: 'Huyện Quỳnh Lưu',
@@ -1980,7 +1980,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Con Cuông',
+    name: 'Con Cuông',
     type: 'huyen',
     slug: 'con-cuong',
     name_with_type: 'Huyện Con Cuông',
@@ -1990,7 +1990,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Tân Kỳ',
+    name: 'Tân Kỳ',
     type: 'huyen',
     slug: 'tan-ky',
     name_with_type: 'Huyện Tân Kỳ',
@@ -2000,7 +2000,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Anh Sơn',
+    name: 'Anh Sơn',
     type: 'huyen',
     slug: 'anh-son',
     name_with_type: 'Huyện Anh Sơn',
@@ -2010,7 +2010,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Diễn Châu',
+    name: 'Diễn Châu',
     type: 'huyen',
     slug: 'dien-chau',
     name_with_type: 'Huyện Diễn Châu',
@@ -2020,7 +2020,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Yên Thành',
+    name: 'Yên Thành',
     type: 'huyen',
     slug: 'yen-thanh',
     name_with_type: 'Huyện Yên Thành',
@@ -2030,7 +2030,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Đô Lương',
+    name: 'Đô Lương',
     type: 'huyen',
     slug: 'do-luong',
     name_with_type: 'Huyện Đô Lương',
@@ -2040,7 +2040,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Thanh Chương',
+    name: 'Thanh Chương',
     type: 'huyen',
     slug: 'thanh-chuong',
     name_with_type: 'Huyện Thanh Chương',
@@ -2050,7 +2050,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Nghi Lộc',
+    name: 'Nghi Lộc',
     type: 'huyen',
     slug: 'nghi-loc',
     name_with_type: 'Huyện Nghi Lộc',
@@ -2060,7 +2060,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Nam Đàn',
+    name: 'Nam Đàn',
     type: 'huyen',
     slug: 'nam-dan',
     name_with_type: 'Huyện Nam Đàn',
@@ -2070,7 +2070,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Hưng Nguyên',
+    name: 'Hưng Nguyên',
     type: 'huyen',
     slug: 'hung-nguyen',
     name_with_type: 'Huyện Hưng Nguyên',
@@ -2080,7 +2080,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Hoàng Mai',
+    name: 'Hoàng Mai',
     type: 'thi-xa',
     slug: 'hoang-mai',
     name_with_type: 'Thị xã Hoàng Mai',
@@ -2090,7 +2090,7 @@ export const DistrictsArr = [
     parent_code: '40',
   },
   {
-    value: 'Rạch Giá',
+    name: 'Rạch Giá',
     type: 'thanh-pho',
     slug: 'rach-gia',
     name_with_type: 'Thành phố Rạch Giá',
@@ -2100,7 +2100,7 @@ export const DistrictsArr = [
     parent_code: '91',
   },
   {
-    value: 'Hà Tiên',
+    name: 'Hà Tiên',
     type: 'thi-xa',
     slug: 'ha-tien',
     name_with_type: 'Thị xã Hà Tiên',
@@ -2110,7 +2110,7 @@ export const DistrictsArr = [
     parent_code: '91',
   },
   {
-    value: 'Kiên Lương',
+    name: 'Kiên Lương',
     type: 'huyen',
     slug: 'kien-luong',
     name_with_type: 'Huyện Kiên Lương',
@@ -2120,7 +2120,7 @@ export const DistrictsArr = [
     parent_code: '91',
   },
   {
-    value: 'Hòn Đất',
+    name: 'Hòn Đất',
     type: 'huyen',
     slug: 'hon-dat',
     name_with_type: 'Huyện Hòn Đất',
@@ -2130,7 +2130,7 @@ export const DistrictsArr = [
     parent_code: '91',
   },
   {
-    value: 'Tân Hiệp',
+    name: 'Tân Hiệp',
     type: 'huyen',
     slug: 'tan-hiep',
     name_with_type: 'Huyện Tân Hiệp',
@@ -2140,7 +2140,7 @@ export const DistrictsArr = [
     parent_code: '91',
   },
   {
-    value: 'Châu Thành',
+    name: 'Châu Thành',
     type: 'huyen',
     slug: 'chau-thanh',
     name_with_type: 'Huyện Châu Thành',
@@ -2150,7 +2150,7 @@ export const DistrictsArr = [
     parent_code: '91',
   },
   {
-    value: 'Giồng Riềng',
+    name: 'Giồng Riềng',
     type: 'huyen',
     slug: 'giong-rieng',
     name_with_type: 'Huyện Giồng Riềng',
@@ -2160,7 +2160,7 @@ export const DistrictsArr = [
     parent_code: '91',
   },
   {
-    value: 'Gò Quao',
+    name: 'Gò Quao',
     type: 'huyen',
     slug: 'go-quao',
     name_with_type: 'Huyện Gò Quao',
@@ -2170,7 +2170,7 @@ export const DistrictsArr = [
     parent_code: '91',
   },
   {
-    value: 'An Biên',
+    name: 'An Biên',
     type: 'huyen',
     slug: 'an-bien',
     name_with_type: 'Huyện An Biên',
@@ -2180,7 +2180,7 @@ export const DistrictsArr = [
     parent_code: '91',
   },
   {
-    value: 'An Minh',
+    name: 'An Minh',
     type: 'huyen',
     slug: 'an-minh',
     name_with_type: 'Huyện An Minh',
@@ -2190,7 +2190,7 @@ export const DistrictsArr = [
     parent_code: '91',
   },
   {
-    value: 'Vĩnh Thuận',
+    name: 'Vĩnh Thuận',
     type: 'huyen',
     slug: 'vinh-thuan',
     name_with_type: 'Huyện Vĩnh Thuận',
@@ -2200,7 +2200,7 @@ export const DistrictsArr = [
     parent_code: '91',
   },
   {
-    value: 'Phú Quốc',
+    name: 'Phú Quốc',
     type: 'huyen',
     slug: 'phu-quoc',
     name_with_type: 'Huyện Phú Quốc',
@@ -2210,7 +2210,7 @@ export const DistrictsArr = [
     parent_code: '91',
   },
   {
-    value: 'Kiên Hải',
+    name: 'Kiên Hải',
     type: 'huyen',
     slug: 'kien-hai',
     name_with_type: 'Huyện Kiên Hải',
@@ -2220,7 +2220,7 @@ export const DistrictsArr = [
     parent_code: '91',
   },
   {
-    value: 'U Minh Thượng',
+    name: 'U Minh Thượng',
     type: 'huyen',
     slug: 'u-minh-thuong',
     name_with_type: 'Huyện U Minh Thượng',
@@ -2230,7 +2230,7 @@ export const DistrictsArr = [
     parent_code: '91',
   },
   {
-    value: 'Giang Thành',
+    name: 'Giang Thành',
     type: 'huyen',
     slug: 'giang-thanh',
     name_with_type: 'Huyện Giang Thành',
@@ -2240,7 +2240,7 @@ export const DistrictsArr = [
     parent_code: '91',
   },
   {
-    value: 'Hà Giang',
+    name: 'Hà Giang',
     type: 'thanh-pho',
     slug: 'ha-giang',
     name_with_type: 'Thành phố Hà Giang',
@@ -2250,7 +2250,7 @@ export const DistrictsArr = [
     parent_code: '02',
   },
   {
-    value: 'Đồng Văn',
+    name: 'Đồng Văn',
     type: 'huyen',
     slug: 'dong-van',
     name_with_type: 'Huyện Đồng Văn',
@@ -2260,7 +2260,7 @@ export const DistrictsArr = [
     parent_code: '02',
   },
   {
-    value: 'Mèo Vạc',
+    name: 'Mèo Vạc',
     type: 'huyen',
     slug: 'meo-vac',
     name_with_type: 'Huyện Mèo Vạc',
@@ -2270,7 +2270,7 @@ export const DistrictsArr = [
     parent_code: '02',
   },
   {
-    value: 'Yên Minh',
+    name: 'Yên Minh',
     type: 'huyen',
     slug: 'yen-minh',
     name_with_type: 'Huyện Yên Minh',
@@ -2280,7 +2280,7 @@ export const DistrictsArr = [
     parent_code: '02',
   },
   {
-    value: 'Quản Bạ',
+    name: 'Quản Bạ',
     type: 'huyen',
     slug: 'quan-ba',
     name_with_type: 'Huyện Quản Bạ',
@@ -2290,7 +2290,7 @@ export const DistrictsArr = [
     parent_code: '02',
   },
   {
-    value: 'Vị Xuyên',
+    name: 'Vị Xuyên',
     type: 'huyen',
     slug: 'vi-xuyen',
     name_with_type: 'Huyện Vị Xuyên',
@@ -2300,7 +2300,7 @@ export const DistrictsArr = [
     parent_code: '02',
   },
   {
-    value: 'Bắc Mê',
+    name: 'Bắc Mê',
     type: 'huyen',
     slug: 'bac-me',
     name_with_type: 'Huyện Bắc Mê',
@@ -2310,7 +2310,7 @@ export const DistrictsArr = [
     parent_code: '02',
   },
   {
-    value: 'Hoàng Su Phì',
+    name: 'Hoàng Su Phì',
     type: 'huyen',
     slug: 'hoang-su-phi',
     name_with_type: 'Huyện Hoàng Su Phì',
@@ -2320,7 +2320,7 @@ export const DistrictsArr = [
     parent_code: '02',
   },
   {
-    value: 'Xín Mần',
+    name: 'Xín Mần',
     type: 'huyen',
     slug: 'xin-man',
     name_with_type: 'Huyện Xín Mần',
@@ -2330,7 +2330,7 @@ export const DistrictsArr = [
     parent_code: '02',
   },
   {
-    value: 'Bắc Quang',
+    name: 'Bắc Quang',
     type: 'huyen',
     slug: 'bac-quang',
     name_with_type: 'Huyện Bắc Quang',
@@ -2340,7 +2340,7 @@ export const DistrictsArr = [
     parent_code: '02',
   },
   {
-    value: 'Quang Bình',
+    name: 'Quang Bình',
     type: 'huyen',
     slug: 'quang-binh',
     name_with_type: 'Huyện Quang Bình',
@@ -2350,7 +2350,7 @@ export const DistrictsArr = [
     parent_code: '02',
   },
   {
-    value: 'Tuy Hoà',
+    name: 'Tuy Hoà',
     type: 'thanh-pho',
     slug: 'tuy-hoa',
     name_with_type: 'Thành phố Tuy Hoà',
@@ -2360,7 +2360,7 @@ export const DistrictsArr = [
     parent_code: '54',
   },
   {
-    value: 'Sông Cầu',
+    name: 'Sông Cầu',
     type: 'thi-xa',
     slug: 'song-cau',
     name_with_type: 'Thị xã Sông Cầu',
@@ -2370,7 +2370,7 @@ export const DistrictsArr = [
     parent_code: '54',
   },
   {
-    value: 'Đồng Xuân',
+    name: 'Đồng Xuân',
     type: 'huyen',
     slug: 'dong-xuan',
     name_with_type: 'Huyện Đồng Xuân',
@@ -2380,7 +2380,7 @@ export const DistrictsArr = [
     parent_code: '54',
   },
   {
-    value: 'Tuy An',
+    name: 'Tuy An',
     type: 'huyen',
     slug: 'tuy-an',
     name_with_type: 'Huyện Tuy An',
@@ -2390,7 +2390,7 @@ export const DistrictsArr = [
     parent_code: '54',
   },
   {
-    value: 'Sơn Hòa',
+    name: 'Sơn Hòa',
     type: 'huyen',
     slug: 'son-hoa',
     name_with_type: 'Huyện Sơn Hòa',
@@ -2400,7 +2400,7 @@ export const DistrictsArr = [
     parent_code: '54',
   },
   {
-    value: 'Sông Hinh',
+    name: 'Sông Hinh',
     type: 'huyen',
     slug: 'song-hinh',
     name_with_type: 'Huyện Sông Hinh',
@@ -2410,7 +2410,7 @@ export const DistrictsArr = [
     parent_code: '54',
   },
   {
-    value: 'Tây Hoà',
+    name: 'Tây Hoà',
     type: 'huyen',
     slug: 'tay-hoa',
     name_with_type: 'Huyện Tây Hoà',
@@ -2420,7 +2420,7 @@ export const DistrictsArr = [
     parent_code: '54',
   },
   {
-    value: 'Phú Hoà',
+    name: 'Phú Hoà',
     type: 'huyen',
     slug: 'phu-hoa',
     name_with_type: 'Huyện Phú Hoà',
@@ -2430,7 +2430,7 @@ export const DistrictsArr = [
     parent_code: '54',
   },
   {
-    value: 'Đông Hòa',
+    name: 'Đông Hòa',
     type: 'huyen',
     slug: 'dong-hoa',
     name_with_type: 'Huyện Đông Hòa',
@@ -2440,7 +2440,7 @@ export const DistrictsArr = [
     parent_code: '54',
   },
   {
-    value: 'Lạng Sơn',
+    name: 'Lạng Sơn',
     type: 'thanh-pho',
     slug: 'lang-son',
     name_with_type: 'Thành phố Lạng Sơn',
@@ -2450,7 +2450,7 @@ export const DistrictsArr = [
     parent_code: '20',
   },
   {
-    value: 'Tràng Định',
+    name: 'Tràng Định',
     type: 'huyen',
     slug: 'trang-dinh',
     name_with_type: 'Huyện Tràng Định',
@@ -2460,7 +2460,7 @@ export const DistrictsArr = [
     parent_code: '20',
   },
   {
-    value: 'Bình Gia',
+    name: 'Bình Gia',
     type: 'huyen',
     slug: 'binh-gia',
     name_with_type: 'Huyện Bình Gia',
@@ -2470,7 +2470,7 @@ export const DistrictsArr = [
     parent_code: '20',
   },
   {
-    value: 'Văn Lãng',
+    name: 'Văn Lãng',
     type: 'huyen',
     slug: 'van-lang',
     name_with_type: 'Huyện Văn Lãng',
@@ -2480,7 +2480,7 @@ export const DistrictsArr = [
     parent_code: '20',
   },
   {
-    value: 'Cao Lộc',
+    name: 'Cao Lộc',
     type: 'huyen',
     slug: 'cao-loc',
     name_with_type: 'Huyện Cao Lộc',
@@ -2490,7 +2490,7 @@ export const DistrictsArr = [
     parent_code: '20',
   },
   {
-    value: 'Văn Quan',
+    name: 'Văn Quan',
     type: 'huyen',
     slug: 'van-quan',
     name_with_type: 'Huyện Văn Quan',
@@ -2500,7 +2500,7 @@ export const DistrictsArr = [
     parent_code: '20',
   },
   {
-    value: 'Bắc Sơn',
+    name: 'Bắc Sơn',
     type: 'huyen',
     slug: 'bac-son',
     name_with_type: 'Huyện Bắc Sơn',
@@ -2510,7 +2510,7 @@ export const DistrictsArr = [
     parent_code: '20',
   },
   {
-    value: 'Hữu Lũng',
+    name: 'Hữu Lũng',
     type: 'huyen',
     slug: 'huu-lung',
     name_with_type: 'Huyện Hữu Lũng',
@@ -2520,7 +2520,7 @@ export const DistrictsArr = [
     parent_code: '20',
   },
   {
-    value: 'Chi Lăng',
+    name: 'Chi Lăng',
     type: 'huyen',
     slug: 'chi-lang',
     name_with_type: 'Huyện Chi Lăng',
@@ -2530,7 +2530,7 @@ export const DistrictsArr = [
     parent_code: '20',
   },
   {
-    value: 'Lộc Bình',
+    name: 'Lộc Bình',
     type: 'huyen',
     slug: 'loc-binh',
     name_with_type: 'Huyện Lộc Bình',
@@ -2540,7 +2540,7 @@ export const DistrictsArr = [
     parent_code: '20',
   },
   {
-    value: 'Đình Lập',
+    name: 'Đình Lập',
     type: 'huyen',
     slug: 'dinh-lap',
     name_with_type: 'Huyện Đình Lập',
@@ -2550,7 +2550,7 @@ export const DistrictsArr = [
     parent_code: '20',
   },
   {
-    value: 'Liên Chiểu',
+    name: 'Liên Chiểu',
     type: 'quan',
     slug: 'lien-chieu',
     name_with_type: 'Quận Liên Chiểu',
@@ -2560,7 +2560,7 @@ export const DistrictsArr = [
     parent_code: '48',
   },
   {
-    value: 'Thanh Khê',
+    name: 'Thanh Khê',
     type: 'quan',
     slug: 'thanh-khe',
     name_with_type: 'Quận Thanh Khê',
@@ -2570,7 +2570,7 @@ export const DistrictsArr = [
     parent_code: '48',
   },
   {
-    value: 'Hải Châu',
+    name: 'Hải Châu',
     type: 'quan',
     slug: 'hai-chau',
     name_with_type: 'Quận Hải Châu',
@@ -2580,7 +2580,7 @@ export const DistrictsArr = [
     parent_code: '48',
   },
   {
-    value: 'Sơn Trà',
+    name: 'Sơn Trà',
     type: 'quan',
     slug: 'son-tra',
     name_with_type: 'Quận Sơn Trà',
@@ -2590,7 +2590,7 @@ export const DistrictsArr = [
     parent_code: '48',
   },
   {
-    value: 'Ngũ Hành Sơn',
+    name: 'Ngũ Hành Sơn',
     type: 'quan',
     slug: 'ngu-hanh-son',
     name_with_type: 'Quận Ngũ Hành Sơn',
@@ -2600,7 +2600,7 @@ export const DistrictsArr = [
     parent_code: '48',
   },
   {
-    value: 'Cẩm Lệ',
+    name: 'Cẩm Lệ',
     type: 'quan',
     slug: 'cam-le',
     name_with_type: 'Quận Cẩm Lệ',
@@ -2610,7 +2610,7 @@ export const DistrictsArr = [
     parent_code: '48',
   },
   {
-    value: 'Hòa Vang',
+    name: 'Hòa Vang',
     type: 'huyen',
     slug: 'hoa-vang',
     name_with_type: 'Huyện Hòa Vang',
@@ -2620,7 +2620,7 @@ export const DistrictsArr = [
     parent_code: '48',
   },
   {
-    value: 'Sơn La',
+    name: 'Sơn La',
     type: 'thanh-pho',
     slug: 'son-la',
     name_with_type: 'Thành phố Sơn La',
@@ -2630,7 +2630,7 @@ export const DistrictsArr = [
     parent_code: '14',
   },
   {
-    value: 'Quỳnh Nhai',
+    name: 'Quỳnh Nhai',
     type: 'huyen',
     slug: 'quynh-nhai',
     name_with_type: 'Huyện Quỳnh Nhai',
@@ -2640,7 +2640,7 @@ export const DistrictsArr = [
     parent_code: '14',
   },
   {
-    value: 'Thuận Châu',
+    name: 'Thuận Châu',
     type: 'huyen',
     slug: 'thuan-chau',
     name_with_type: 'Huyện Thuận Châu',
@@ -2650,7 +2650,7 @@ export const DistrictsArr = [
     parent_code: '14',
   },
   {
-    value: 'Mường La',
+    name: 'Mường La',
     type: 'huyen',
     slug: 'muong-la',
     name_with_type: 'Huyện Mường La',
@@ -2660,7 +2660,7 @@ export const DistrictsArr = [
     parent_code: '14',
   },
   {
-    value: 'Bắc Yên',
+    name: 'Bắc Yên',
     type: 'huyen',
     slug: 'bac-yen',
     name_with_type: 'Huyện Bắc Yên',
@@ -2670,7 +2670,7 @@ export const DistrictsArr = [
     parent_code: '14',
   },
   {
-    value: 'Phù Yên',
+    name: 'Phù Yên',
     type: 'huyen',
     slug: 'phu-yen',
     name_with_type: 'Huyện Phù Yên',
@@ -2680,7 +2680,7 @@ export const DistrictsArr = [
     parent_code: '14',
   },
   {
-    value: 'Mộc Châu',
+    name: 'Mộc Châu',
     type: 'huyen',
     slug: 'moc-chau',
     name_with_type: 'Huyện Mộc Châu',
@@ -2690,7 +2690,7 @@ export const DistrictsArr = [
     parent_code: '14',
   },
   {
-    value: 'Yên Châu',
+    name: 'Yên Châu',
     type: 'huyen',
     slug: 'yen-chau',
     name_with_type: 'Huyện Yên Châu',
@@ -2700,7 +2700,7 @@ export const DistrictsArr = [
     parent_code: '14',
   },
   {
-    value: 'Mai Sơn',
+    name: 'Mai Sơn',
     type: 'huyen',
     slug: 'mai-son',
     name_with_type: 'Huyện Mai Sơn',
@@ -2710,7 +2710,7 @@ export const DistrictsArr = [
     parent_code: '14',
   },
   {
-    value: 'Sông Mã',
+    name: 'Sông Mã',
     type: 'huyen',
     slug: 'song-ma',
     name_with_type: 'Huyện Sông Mã',
@@ -2720,7 +2720,7 @@ export const DistrictsArr = [
     parent_code: '14',
   },
   {
-    value: 'Sốp Cộp',
+    name: 'Sốp Cộp',
     type: 'huyen',
     slug: 'sop-cop',
     name_with_type: 'Huyện Sốp Cộp',
@@ -2730,7 +2730,7 @@ export const DistrictsArr = [
     parent_code: '14',
   },
   {
-    value: 'Vân Hồ',
+    name: 'Vân Hồ',
     type: 'huyen',
     slug: 'van-ho',
     name_with_type: 'Huyện Vân Hồ',
@@ -2740,7 +2740,7 @@ export const DistrictsArr = [
     parent_code: '14',
   },
   {
-    value: 'Tây Ninh',
+    name: 'Tây Ninh',
     type: 'thanh-pho',
     slug: 'tay-ninh',
     name_with_type: 'Thành phố Tây Ninh',
@@ -2750,7 +2750,7 @@ export const DistrictsArr = [
     parent_code: '72',
   },
   {
-    value: 'Tân Biên',
+    name: 'Tân Biên',
     type: 'huyen',
     slug: 'tan-bien',
     name_with_type: 'Huyện Tân Biên',
@@ -2760,7 +2760,7 @@ export const DistrictsArr = [
     parent_code: '72',
   },
   {
-    value: 'Tân Châu',
+    name: 'Tân Châu',
     type: 'huyen',
     slug: 'tan-chau',
     name_with_type: 'Huyện Tân Châu',
@@ -2770,7 +2770,7 @@ export const DistrictsArr = [
     parent_code: '72',
   },
   {
-    value: 'Dương Minh Châu',
+    name: 'Dương Minh Châu',
     type: 'huyen',
     slug: 'duong-minh-chau',
     name_with_type: 'Huyện Dương Minh Châu',
@@ -2780,7 +2780,7 @@ export const DistrictsArr = [
     parent_code: '72',
   },
   {
-    value: 'Châu Thành',
+    name: 'Châu Thành',
     type: 'huyen',
     slug: 'chau-thanh',
     name_with_type: 'Huyện Châu Thành',
@@ -2790,7 +2790,7 @@ export const DistrictsArr = [
     parent_code: '72',
   },
   {
-    value: 'Hòa Thành',
+    name: 'Hòa Thành',
     type: 'huyen',
     slug: 'hoa-thanh',
     name_with_type: 'Huyện Hòa Thành',
@@ -2800,7 +2800,7 @@ export const DistrictsArr = [
     parent_code: '72',
   },
   {
-    value: 'Gò Dầu',
+    name: 'Gò Dầu',
     type: 'huyen',
     slug: 'go-dau',
     name_with_type: 'Huyện Gò Dầu',
@@ -2810,7 +2810,7 @@ export const DistrictsArr = [
     parent_code: '72',
   },
   {
-    value: 'Bến Cầu',
+    name: 'Bến Cầu',
     type: 'huyen',
     slug: 'ben-cau',
     name_with_type: 'Huyện Bến Cầu',
@@ -2820,7 +2820,7 @@ export const DistrictsArr = [
     parent_code: '72',
   },
   {
-    value: 'Trảng Bàng',
+    name: 'Trảng Bàng',
     type: 'huyen',
     slug: 'trang-bang',
     name_with_type: 'Huyện Trảng Bàng',
@@ -2830,7 +2830,7 @@ export const DistrictsArr = [
     parent_code: '72',
   },
   {
-    value: 'Nam Định',
+    name: 'Nam Định',
     type: 'thanh-pho',
     slug: 'nam-dinh',
     name_with_type: 'Thành phố Nam Định',
@@ -2840,7 +2840,7 @@ export const DistrictsArr = [
     parent_code: '36',
   },
   {
-    value: 'Mỹ Lộc',
+    name: 'Mỹ Lộc',
     type: 'huyen',
     slug: 'my-loc',
     name_with_type: 'Huyện Mỹ Lộc',
@@ -2850,7 +2850,7 @@ export const DistrictsArr = [
     parent_code: '36',
   },
   {
-    value: 'Vụ Bản',
+    name: 'Vụ Bản',
     type: 'huyen',
     slug: 'vu-ban',
     name_with_type: 'Huyện Vụ Bản',
@@ -2860,7 +2860,7 @@ export const DistrictsArr = [
     parent_code: '36',
   },
   {
-    value: 'Ý Yên',
+    name: 'Ý Yên',
     type: 'huyen',
     slug: 'y-yen',
     name_with_type: 'Huyện Ý Yên',
@@ -2870,7 +2870,7 @@ export const DistrictsArr = [
     parent_code: '36',
   },
   {
-    value: 'Nghĩa Hưng',
+    name: 'Nghĩa Hưng',
     type: 'huyen',
     slug: 'nghia-hung',
     name_with_type: 'Huyện Nghĩa Hưng',
@@ -2880,7 +2880,7 @@ export const DistrictsArr = [
     parent_code: '36',
   },
   {
-    value: 'Nam Trực',
+    name: 'Nam Trực',
     type: 'huyen',
     slug: 'nam-truc',
     name_with_type: 'Huyện Nam Trực',
@@ -2890,7 +2890,7 @@ export const DistrictsArr = [
     parent_code: '36',
   },
   {
-    value: 'Trực Ninh',
+    name: 'Trực Ninh',
     type: 'huyen',
     slug: 'truc-ninh',
     name_with_type: 'Huyện Trực Ninh',
@@ -2900,7 +2900,7 @@ export const DistrictsArr = [
     parent_code: '36',
   },
   {
-    value: 'Xuân Trường',
+    name: 'Xuân Trường',
     type: 'huyen',
     slug: 'xuan-truong',
     name_with_type: 'Huyện Xuân Trường',
@@ -2910,7 +2910,7 @@ export const DistrictsArr = [
     parent_code: '36',
   },
   {
-    value: 'Giao Thủy',
+    name: 'Giao Thủy',
     type: 'huyen',
     slug: 'giao-thuy',
     name_with_type: 'Huyện Giao Thủy',
@@ -2920,7 +2920,7 @@ export const DistrictsArr = [
     parent_code: '36',
   },
   {
-    value: 'Hải Hậu',
+    name: 'Hải Hậu',
     type: 'huyen',
     slug: 'hai-hau',
     name_with_type: 'Huyện Hải Hậu',
@@ -2930,7 +2930,7 @@ export const DistrictsArr = [
     parent_code: '36',
   },
   {
-    value: 'Lai Châu',
+    name: 'Lai Châu',
     type: 'thanh-pho',
     slug: 'lai-chau',
     name_with_type: 'Thành phố Lai Châu',
@@ -2940,7 +2940,7 @@ export const DistrictsArr = [
     parent_code: '12',
   },
   {
-    value: 'Tam Đường',
+    name: 'Tam Đường',
     type: 'huyen',
     slug: 'tam-duong',
     name_with_type: 'Huyện Tam Đường',
@@ -2950,7 +2950,7 @@ export const DistrictsArr = [
     parent_code: '12',
   },
   {
-    value: 'Mường Tè',
+    name: 'Mường Tè',
     type: 'huyen',
     slug: 'muong-te',
     name_with_type: 'Huyện Mường Tè',
@@ -2960,7 +2960,7 @@ export const DistrictsArr = [
     parent_code: '12',
   },
   {
-    value: 'Sìn Hồ',
+    name: 'Sìn Hồ',
     type: 'huyen',
     slug: 'sin-ho',
     name_with_type: 'Huyện Sìn Hồ',
@@ -2970,7 +2970,7 @@ export const DistrictsArr = [
     parent_code: '12',
   },
   {
-    value: 'Phong Thổ',
+    name: 'Phong Thổ',
     type: 'huyen',
     slug: 'phong-tho',
     name_with_type: 'Huyện Phong Thổ',
@@ -2980,7 +2980,7 @@ export const DistrictsArr = [
     parent_code: '12',
   },
   {
-    value: 'Than Uyên',
+    name: 'Than Uyên',
     type: 'huyen',
     slug: 'than-uyen',
     name_with_type: 'Huyện Than Uyên',
@@ -2990,7 +2990,7 @@ export const DistrictsArr = [
     parent_code: '12',
   },
   {
-    value: 'Tân Uyên',
+    name: 'Tân Uyên',
     type: 'huyen',
     slug: 'tan-uyen',
     name_with_type: 'Huyện Tân Uyên',
@@ -3000,7 +3000,7 @@ export const DistrictsArr = [
     parent_code: '12',
   },
   {
-    value: 'Nậm Nhùn',
+    name: 'Nậm Nhùn',
     type: 'huyen',
     slug: 'nam-nhun',
     name_with_type: 'Huyện Nậm Nhùn',
@@ -3010,7 +3010,7 @@ export const DistrictsArr = [
     parent_code: '12',
   },
   {
-    value: 'Bến Tre',
+    name: 'Bến Tre',
     type: 'thanh-pho',
     slug: 'ben-tre',
     name_with_type: 'Thành phố Bến Tre',
@@ -3020,7 +3020,7 @@ export const DistrictsArr = [
     parent_code: '83',
   },
   {
-    value: 'Châu Thành',
+    name: 'Châu Thành',
     type: 'huyen',
     slug: 'chau-thanh',
     name_with_type: 'Huyện Châu Thành',
@@ -3030,7 +3030,7 @@ export const DistrictsArr = [
     parent_code: '83',
   },
   {
-    value: 'Chợ Lách',
+    name: 'Chợ Lách',
     type: 'huyen',
     slug: 'cho-lach',
     name_with_type: 'Huyện Chợ Lách',
@@ -3040,7 +3040,7 @@ export const DistrictsArr = [
     parent_code: '83',
   },
   {
-    value: 'Mỏ Cày Nam',
+    name: 'Mỏ Cày Nam',
     type: 'huyen',
     slug: 'mo-cay-nam',
     name_with_type: 'Huyện Mỏ Cày Nam',
@@ -3050,7 +3050,7 @@ export const DistrictsArr = [
     parent_code: '83',
   },
   {
-    value: 'Giồng Trôm',
+    name: 'Giồng Trôm',
     type: 'huyen',
     slug: 'giong-trom',
     name_with_type: 'Huyện Giồng Trôm',
@@ -3060,7 +3060,7 @@ export const DistrictsArr = [
     parent_code: '83',
   },
   {
-    value: 'Bình Đại',
+    name: 'Bình Đại',
     type: 'huyen',
     slug: 'binh-dai',
     name_with_type: 'Huyện Bình Đại',
@@ -3070,7 +3070,7 @@ export const DistrictsArr = [
     parent_code: '83',
   },
   {
-    value: 'Ba Tri',
+    name: 'Ba Tri',
     type: 'huyen',
     slug: 'ba-tri',
     name_with_type: 'Huyện Ba Tri',
@@ -3080,7 +3080,7 @@ export const DistrictsArr = [
     parent_code: '83',
   },
   {
-    value: 'Thạnh Phú',
+    name: 'Thạnh Phú',
     type: 'huyen',
     slug: 'thanh-phu',
     name_with_type: 'Huyện Thạnh Phú',
@@ -3090,7 +3090,7 @@ export const DistrictsArr = [
     parent_code: '83',
   },
   {
-    value: 'Mỏ Cày Bắc',
+    name: 'Mỏ Cày Bắc',
     type: 'huyen',
     slug: 'mo-cay-bac',
     name_with_type: 'Huyện Mỏ Cày Bắc',
@@ -3100,7 +3100,7 @@ export const DistrictsArr = [
     parent_code: '83',
   },
   {
-    value: 'Nha Trang',
+    name: 'Nha Trang',
     type: 'thanh-pho',
     slug: 'nha-trang',
     name_with_type: 'Thành phố Nha Trang',
@@ -3110,7 +3110,7 @@ export const DistrictsArr = [
     parent_code: '56',
   },
   {
-    value: 'Cam Ranh',
+    name: 'Cam Ranh',
     type: 'thanh-pho',
     slug: 'cam-ranh',
     name_with_type: 'Thành phố Cam Ranh',
@@ -3120,7 +3120,7 @@ export const DistrictsArr = [
     parent_code: '56',
   },
   {
-    value: 'Cam Lâm',
+    name: 'Cam Lâm',
     type: 'huyen',
     slug: 'cam-lam',
     name_with_type: 'Huyện Cam Lâm',
@@ -3130,7 +3130,7 @@ export const DistrictsArr = [
     parent_code: '56',
   },
   {
-    value: 'Vạn Ninh',
+    name: 'Vạn Ninh',
     type: 'huyen',
     slug: 'van-ninh',
     name_with_type: 'Huyện Vạn Ninh',
@@ -3140,7 +3140,7 @@ export const DistrictsArr = [
     parent_code: '56',
   },
   {
-    value: 'Ninh Hòa',
+    name: 'Ninh Hòa',
     type: 'thi-xa',
     slug: 'ninh-hoa',
     name_with_type: 'Thị xã Ninh Hòa',
@@ -3150,7 +3150,7 @@ export const DistrictsArr = [
     parent_code: '56',
   },
   {
-    value: 'Khánh Vĩnh',
+    name: 'Khánh Vĩnh',
     type: 'huyen',
     slug: 'khanh-vinh',
     name_with_type: 'Huyện Khánh Vĩnh',
@@ -3160,7 +3160,7 @@ export const DistrictsArr = [
     parent_code: '56',
   },
   {
-    value: 'Diên Khánh',
+    name: 'Diên Khánh',
     type: 'huyen',
     slug: 'dien-khanh',
     name_with_type: 'Huyện Diên Khánh',
@@ -3170,7 +3170,7 @@ export const DistrictsArr = [
     parent_code: '56',
   },
   {
-    value: 'Khánh Sơn',
+    name: 'Khánh Sơn',
     type: 'huyen',
     slug: 'khanh-son',
     name_with_type: 'Huyện Khánh Sơn',
@@ -3180,7 +3180,7 @@ export const DistrictsArr = [
     parent_code: '56',
   },
   {
-    value: 'Trường Sa',
+    name: 'Trường Sa',
     type: 'huyen',
     slug: 'truong-sa',
     name_with_type: 'Huyện Trường Sa',
@@ -3190,7 +3190,7 @@ export const DistrictsArr = [
     parent_code: '56',
   },
   {
-    value: 'Phan Thiết',
+    name: 'Phan Thiết',
     type: 'thanh-pho',
     slug: 'phan-thiet',
     name_with_type: 'Thành phố Phan Thiết',
@@ -3200,7 +3200,7 @@ export const DistrictsArr = [
     parent_code: '60',
   },
   {
-    value: 'La Gi',
+    name: 'La Gi',
     type: 'thi-xa',
     slug: 'la-gi',
     name_with_type: 'Thị xã La Gi',
@@ -3210,7 +3210,7 @@ export const DistrictsArr = [
     parent_code: '60',
   },
   {
-    value: 'Tuy Phong',
+    name: 'Tuy Phong',
     type: 'huyen',
     slug: 'tuy-phong',
     name_with_type: 'Huyện Tuy Phong',
@@ -3220,7 +3220,7 @@ export const DistrictsArr = [
     parent_code: '60',
   },
   {
-    value: 'Bắc Bình',
+    name: 'Bắc Bình',
     type: 'huyen',
     slug: 'bac-binh',
     name_with_type: 'Huyện Bắc Bình',
@@ -3230,7 +3230,7 @@ export const DistrictsArr = [
     parent_code: '60',
   },
   {
-    value: 'Hàm Thuận Bắc',
+    name: 'Hàm Thuận Bắc',
     type: 'huyen',
     slug: 'ham-thuan-bac',
     name_with_type: 'Huyện Hàm Thuận Bắc',
@@ -3240,7 +3240,7 @@ export const DistrictsArr = [
     parent_code: '60',
   },
   {
-    value: 'Hàm Thuận Nam',
+    name: 'Hàm Thuận Nam',
     type: 'huyen',
     slug: 'ham-thuan-nam',
     name_with_type: 'Huyện Hàm Thuận Nam',
@@ -3250,7 +3250,7 @@ export const DistrictsArr = [
     parent_code: '60',
   },
   {
-    value: 'Tánh Linh',
+    name: 'Tánh Linh',
     type: 'huyen',
     slug: 'tanh-linh',
     name_with_type: 'Huyện Tánh Linh',
@@ -3260,7 +3260,7 @@ export const DistrictsArr = [
     parent_code: '60',
   },
   {
-    value: 'Đức Linh',
+    name: 'Đức Linh',
     type: 'huyen',
     slug: 'duc-linh',
     name_with_type: 'Huyện Đức Linh',
@@ -3270,7 +3270,7 @@ export const DistrictsArr = [
     parent_code: '60',
   },
   {
-    value: 'Hàm Tân',
+    name: 'Hàm Tân',
     type: 'huyen',
     slug: 'ham-tan',
     name_with_type: 'Huyện Hàm Tân',
@@ -3280,7 +3280,7 @@ export const DistrictsArr = [
     parent_code: '60',
   },
   {
-    value: 'Phú Quí',
+    name: 'Phú Quí',
     type: 'huyen',
     slug: 'phu-qui',
     name_with_type: 'Huyện Phú Quí',
@@ -3290,7 +3290,7 @@ export const DistrictsArr = [
     parent_code: '60',
   },
   {
-    value: 'Cao Bằng',
+    name: 'Cao Bằng',
     type: 'thanh-pho',
     slug: 'cao-bang',
     name_with_type: 'Thành phố Cao Bằng',
@@ -3300,7 +3300,7 @@ export const DistrictsArr = [
     parent_code: '04',
   },
   {
-    value: 'Bảo Lâm',
+    name: 'Bảo Lâm',
     type: 'huyen',
     slug: 'bao-lam',
     name_with_type: 'Huyện Bảo Lâm',
@@ -3310,7 +3310,7 @@ export const DistrictsArr = [
     parent_code: '04',
   },
   {
-    value: 'Bảo Lạc',
+    name: 'Bảo Lạc',
     type: 'huyen',
     slug: 'bao-lac',
     name_with_type: 'Huyện Bảo Lạc',
@@ -3320,7 +3320,7 @@ export const DistrictsArr = [
     parent_code: '04',
   },
   {
-    value: 'Thông Nông',
+    name: 'Thông Nông',
     type: 'huyen',
     slug: 'thong-nong',
     name_with_type: 'Huyện Thông Nông',
@@ -3330,7 +3330,7 @@ export const DistrictsArr = [
     parent_code: '04',
   },
   {
-    value: 'Hà Quảng',
+    name: 'Hà Quảng',
     type: 'huyen',
     slug: 'ha-quang',
     name_with_type: 'Huyện Hà Quảng',
@@ -3340,7 +3340,7 @@ export const DistrictsArr = [
     parent_code: '04',
   },
   {
-    value: 'Trà Lĩnh',
+    name: 'Trà Lĩnh',
     type: 'huyen',
     slug: 'tra-linh',
     name_with_type: 'Huyện Trà Lĩnh',
@@ -3350,7 +3350,7 @@ export const DistrictsArr = [
     parent_code: '04',
   },
   {
-    value: 'Trùng Khánh',
+    name: 'Trùng Khánh',
     type: 'huyen',
     slug: 'trung-khanh',
     name_with_type: 'Huyện Trùng Khánh',
@@ -3360,7 +3360,7 @@ export const DistrictsArr = [
     parent_code: '04',
   },
   {
-    value: 'Hạ Lang',
+    name: 'Hạ Lang',
     type: 'huyen',
     slug: 'ha-lang',
     name_with_type: 'Huyện Hạ Lang',
@@ -3370,7 +3370,7 @@ export const DistrictsArr = [
     parent_code: '04',
   },
   {
-    value: 'Quảng Uyên',
+    name: 'Quảng Uyên',
     type: 'huyen',
     slug: 'quang-uyen',
     name_with_type: 'Huyện Quảng Uyên',
@@ -3380,7 +3380,7 @@ export const DistrictsArr = [
     parent_code: '04',
   },
   {
-    value: 'Phục Hoà',
+    name: 'Phục Hoà',
     type: 'huyen',
     slug: 'phuc-hoa',
     name_with_type: 'Huyện Phục Hoà',
@@ -3390,7 +3390,7 @@ export const DistrictsArr = [
     parent_code: '04',
   },
   {
-    value: 'Hoà An',
+    name: 'Hoà An',
     type: 'huyen',
     slug: 'hoa-an',
     name_with_type: 'Huyện Hoà An',
@@ -3400,7 +3400,7 @@ export const DistrictsArr = [
     parent_code: '04',
   },
   {
-    value: 'Nguyên Bình',
+    name: 'Nguyên Bình',
     type: 'huyen',
     slug: 'nguyen-binh',
     name_with_type: 'Huyện Nguyên Bình',
@@ -3410,7 +3410,7 @@ export const DistrictsArr = [
     parent_code: '04',
   },
   {
-    value: 'Thạch An',
+    name: 'Thạch An',
     type: 'huyen',
     slug: 'thach-an',
     name_with_type: 'Huyện Thạch An',
@@ -3420,7 +3420,7 @@ export const DistrictsArr = [
     parent_code: '04',
   },
   {
-    value: 'Hồng Bàng',
+    name: 'Hồng Bàng',
     type: 'quan',
     slug: 'hong-bang',
     name_with_type: 'Quận Hồng Bàng',
@@ -3430,7 +3430,7 @@ export const DistrictsArr = [
     parent_code: '31',
   },
   {
-    value: 'Ngô Quyền',
+    name: 'Ngô Quyền',
     type: 'quan',
     slug: 'ngo-quyen',
     name_with_type: 'Quận Ngô Quyền',
@@ -3440,7 +3440,7 @@ export const DistrictsArr = [
     parent_code: '31',
   },
   {
-    value: 'Lê Chân',
+    name: 'Lê Chân',
     type: 'quan',
     slug: 'le-chan',
     name_with_type: 'Quận Lê Chân',
@@ -3450,7 +3450,7 @@ export const DistrictsArr = [
     parent_code: '31',
   },
   {
-    value: 'Hải An',
+    name: 'Hải An',
     type: 'quan',
     slug: 'hai-an',
     name_with_type: 'Quận Hải An',
@@ -3460,7 +3460,7 @@ export const DistrictsArr = [
     parent_code: '31',
   },
   {
-    value: 'Kiến An',
+    name: 'Kiến An',
     type: 'quan',
     slug: 'kien-an',
     name_with_type: 'Quận Kiến An',
@@ -3470,7 +3470,7 @@ export const DistrictsArr = [
     parent_code: '31',
   },
   {
-    value: 'Đồ Sơn',
+    name: 'Đồ Sơn',
     type: 'quan',
     slug: 'do-son',
     name_with_type: 'Quận Đồ Sơn',
@@ -3480,7 +3480,7 @@ export const DistrictsArr = [
     parent_code: '31',
   },
   {
-    value: 'Dương Kinh',
+    name: 'Dương Kinh',
     type: 'quan',
     slug: 'duong-kinh',
     name_with_type: 'Quận Dương Kinh',
@@ -3490,7 +3490,7 @@ export const DistrictsArr = [
     parent_code: '31',
   },
   {
-    value: 'Thuỷ Nguyên',
+    name: 'Thuỷ Nguyên',
     type: 'huyen',
     slug: 'thuy-nguyen',
     name_with_type: 'Huyện Thuỷ Nguyên',
@@ -3500,7 +3500,7 @@ export const DistrictsArr = [
     parent_code: '31',
   },
   {
-    value: 'An Dương',
+    name: 'An Dương',
     type: 'huyen',
     slug: 'an-duong',
     name_with_type: 'Huyện An Dương',
@@ -3510,7 +3510,7 @@ export const DistrictsArr = [
     parent_code: '31',
   },
   {
-    value: 'An Lão',
+    name: 'An Lão',
     type: 'huyen',
     slug: 'an-lao',
     name_with_type: 'Huyện An Lão',
@@ -3520,7 +3520,7 @@ export const DistrictsArr = [
     parent_code: '31',
   },
   {
-    value: 'Kiến Thuỵ',
+    name: 'Kiến Thuỵ',
     type: 'huyen',
     slug: 'kien-thuy',
     name_with_type: 'Huyện Kiến Thuỵ',
@@ -3530,7 +3530,7 @@ export const DistrictsArr = [
     parent_code: '31',
   },
   {
-    value: 'Tiên Lãng',
+    name: 'Tiên Lãng',
     type: 'huyen',
     slug: 'tien-lang',
     name_with_type: 'Huyện Tiên Lãng',
@@ -3540,7 +3540,7 @@ export const DistrictsArr = [
     parent_code: '31',
   },
   {
-    value: 'Vĩnh Bảo',
+    name: 'Vĩnh Bảo',
     type: 'huyen',
     slug: 'vinh-bao',
     name_with_type: 'Huyện Vĩnh Bảo',
@@ -3550,7 +3550,7 @@ export const DistrictsArr = [
     parent_code: '31',
   },
   {
-    value: 'Cát Hải',
+    name: 'Cát Hải',
     type: 'huyen',
     slug: 'cat-hai',
     name_with_type: 'Huyện Cát Hải',
@@ -3560,7 +3560,7 @@ export const DistrictsArr = [
     parent_code: '31',
   },
   {
-    value: 'Ninh Bình',
+    name: 'Ninh Bình',
     type: 'thanh-pho',
     slug: 'ninh-binh',
     name_with_type: 'Thành phố Ninh Bình',
@@ -3570,7 +3570,7 @@ export const DistrictsArr = [
     parent_code: '37',
   },
   {
-    value: 'Tam Điệp',
+    name: 'Tam Điệp',
     type: 'thanh-pho',
     slug: 'tam-diep',
     name_with_type: 'Thành phố Tam Điệp',
@@ -3580,7 +3580,7 @@ export const DistrictsArr = [
     parent_code: '37',
   },
   {
-    value: 'Nho Quan',
+    name: 'Nho Quan',
     type: 'huyen',
     slug: 'nho-quan',
     name_with_type: 'Huyện Nho Quan',
@@ -3590,7 +3590,7 @@ export const DistrictsArr = [
     parent_code: '37',
   },
   {
-    value: 'Gia Viễn',
+    name: 'Gia Viễn',
     type: 'huyen',
     slug: 'gia-vien',
     name_with_type: 'Huyện Gia Viễn',
@@ -3600,7 +3600,7 @@ export const DistrictsArr = [
     parent_code: '37',
   },
   {
-    value: 'Hoa Lư',
+    name: 'Hoa Lư',
     type: 'huyen',
     slug: 'hoa-lu',
     name_with_type: 'Huyện Hoa Lư',
@@ -3610,7 +3610,7 @@ export const DistrictsArr = [
     parent_code: '37',
   },
   {
-    value: 'Yên Khánh',
+    name: 'Yên Khánh',
     type: 'huyen',
     slug: 'yen-khanh',
     name_with_type: 'Huyện Yên Khánh',
@@ -3620,7 +3620,7 @@ export const DistrictsArr = [
     parent_code: '37',
   },
   {
-    value: 'Kim Sơn',
+    name: 'Kim Sơn',
     type: 'huyen',
     slug: 'kim-son',
     name_with_type: 'Huyện Kim Sơn',
@@ -3630,7 +3630,7 @@ export const DistrictsArr = [
     parent_code: '37',
   },
   {
-    value: 'Yên Mô',
+    name: 'Yên Mô',
     type: 'huyen',
     slug: 'yen-mo',
     name_with_type: 'Huyện Yên Mô',
@@ -3640,7 +3640,7 @@ export const DistrictsArr = [
     parent_code: '37',
   },
   {
-    value: 'Yên Bái',
+    name: 'Yên Bái',
     type: 'thanh-pho',
     slug: 'yen-bai',
     name_with_type: 'Thành phố Yên Bái',
@@ -3650,7 +3650,7 @@ export const DistrictsArr = [
     parent_code: '15',
   },
   {
-    value: 'Nghĩa Lộ',
+    name: 'Nghĩa Lộ',
     type: 'thi-xa',
     slug: 'nghia-lo',
     name_with_type: 'Thị xã Nghĩa Lộ',
@@ -3660,7 +3660,7 @@ export const DistrictsArr = [
     parent_code: '15',
   },
   {
-    value: 'Lục Yên',
+    name: 'Lục Yên',
     type: 'huyen',
     slug: 'luc-yen',
     name_with_type: 'Huyện Lục Yên',
@@ -3670,7 +3670,7 @@ export const DistrictsArr = [
     parent_code: '15',
   },
   {
-    value: 'Văn Yên',
+    name: 'Văn Yên',
     type: 'huyen',
     slug: 'van-yen',
     name_with_type: 'Huyện Văn Yên',
@@ -3680,7 +3680,7 @@ export const DistrictsArr = [
     parent_code: '15',
   },
   {
-    value: 'Mù Căng Chải',
+    name: 'Mù Căng Chải',
     type: 'huyen',
     slug: 'mu-cang-chai',
     name_with_type: 'Huyện Mù Căng Chải',
@@ -3690,7 +3690,7 @@ export const DistrictsArr = [
     parent_code: '15',
   },
   {
-    value: 'Trấn Yên',
+    name: 'Trấn Yên',
     type: 'huyen',
     slug: 'tran-yen',
     name_with_type: 'Huyện Trấn Yên',
@@ -3700,7 +3700,7 @@ export const DistrictsArr = [
     parent_code: '15',
   },
   {
-    value: 'Trạm Tấu',
+    name: 'Trạm Tấu',
     type: 'huyen',
     slug: 'tram-tau',
     name_with_type: 'Huyện Trạm Tấu',
@@ -3710,7 +3710,7 @@ export const DistrictsArr = [
     parent_code: '15',
   },
   {
-    value: 'Văn Chấn',
+    name: 'Văn Chấn',
     type: 'huyen',
     slug: 'van-chan',
     name_with_type: 'Huyện Văn Chấn',
@@ -3720,7 +3720,7 @@ export const DistrictsArr = [
     parent_code: '15',
   },
   {
-    value: 'Yên Bình',
+    name: 'Yên Bình',
     type: 'huyen',
     slug: 'yen-binh',
     name_with_type: 'Huyện Yên Bình',
@@ -3730,7 +3730,7 @@ export const DistrictsArr = [
     parent_code: '15',
   },
   {
-    value: 'Pleiku',
+    name: 'Pleiku',
     type: 'thanh-pho',
     slug: 'pleiku',
     name_with_type: 'Thành phố Pleiku',
@@ -3740,7 +3740,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'An Khê',
+    name: 'An Khê',
     type: 'thi-xa',
     slug: 'an-khe',
     name_with_type: 'Thị xã An Khê',
@@ -3750,7 +3750,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'Ayun Pa',
+    name: 'Ayun Pa',
     type: 'thi-xa',
     slug: 'ayun-pa',
     name_with_type: 'Thị xã Ayun Pa',
@@ -3760,7 +3760,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'KBang',
+    name: 'KBang',
     type: 'huyen',
     slug: 'kbang',
     name_with_type: 'Huyện KBang',
@@ -3770,7 +3770,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'Đăk Đoa',
+    name: 'Đăk Đoa',
     type: 'huyen',
     slug: 'dak-doa',
     name_with_type: 'Huyện Đăk Đoa',
@@ -3780,7 +3780,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'Chư Păh',
+    name: 'Chư Păh',
     type: 'huyen',
     slug: 'chu-pah',
     name_with_type: 'Huyện Chư Păh',
@@ -3790,7 +3790,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'Ia Grai',
+    name: 'Ia Grai',
     type: 'huyen',
     slug: 'ia-grai',
     name_with_type: 'Huyện Ia Grai',
@@ -3800,7 +3800,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'Mang Yang',
+    name: 'Mang Yang',
     type: 'huyen',
     slug: 'mang-yang',
     name_with_type: 'Huyện Mang Yang',
@@ -3810,7 +3810,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'Kông Chro',
+    name: 'Kông Chro',
     type: 'huyen',
     slug: 'kong-chro',
     name_with_type: 'Huyện Kông Chro',
@@ -3820,7 +3820,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'Đức Cơ',
+    name: 'Đức Cơ',
     type: 'huyen',
     slug: 'duc-co',
     name_with_type: 'Huyện Đức Cơ',
@@ -3830,7 +3830,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'Chư Prông',
+    name: 'Chư Prông',
     type: 'huyen',
     slug: 'chu-prong',
     name_with_type: 'Huyện Chư Prông',
@@ -3840,7 +3840,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'Chư Sê',
+    name: 'Chư Sê',
     type: 'huyen',
     slug: 'chu-se',
     name_with_type: 'Huyện Chư Sê',
@@ -3850,7 +3850,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'Đăk Pơ',
+    name: 'Đăk Pơ',
     type: 'huyen',
     slug: 'dak-po',
     name_with_type: 'Huyện Đăk Pơ',
@@ -3860,7 +3860,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'Ia Pa',
+    name: 'Ia Pa',
     type: 'huyen',
     slug: 'ia-pa',
     name_with_type: 'Huyện Ia Pa',
@@ -3870,7 +3870,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'Krông Pa',
+    name: 'Krông Pa',
     type: 'huyen',
     slug: 'krong-pa',
     name_with_type: 'Huyện Krông Pa',
@@ -3880,7 +3880,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'Phú Thiện',
+    name: 'Phú Thiện',
     type: 'huyen',
     slug: 'phu-thien',
     name_with_type: 'Huyện Phú Thiện',
@@ -3890,7 +3890,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'Chư Pưh',
+    name: 'Chư Pưh',
     type: 'huyen',
     slug: 'chu-puh',
     name_with_type: 'Huyện Chư Pưh',
@@ -3900,7 +3900,7 @@ export const DistrictsArr = [
     parent_code: '64',
   },
   {
-    value: 'Hòa Bình',
+    name: 'Hòa Bình',
     type: 'thanh-pho',
     slug: 'hoa-binh',
     name_with_type: 'Thành phố Hòa Bình',
@@ -3910,7 +3910,7 @@ export const DistrictsArr = [
     parent_code: '17',
   },
   {
-    value: 'Đà Bắc',
+    name: 'Đà Bắc',
     type: 'huyen',
     slug: 'da-bac',
     name_with_type: 'Huyện Đà Bắc',
@@ -3920,7 +3920,7 @@ export const DistrictsArr = [
     parent_code: '17',
   },
   {
-    value: 'Kỳ Sơn',
+    name: 'Kỳ Sơn',
     type: 'huyen',
     slug: 'ky-son',
     name_with_type: 'Huyện Kỳ Sơn',
@@ -3930,7 +3930,7 @@ export const DistrictsArr = [
     parent_code: '17',
   },
   {
-    value: 'Lương Sơn',
+    name: 'Lương Sơn',
     type: 'huyen',
     slug: 'luong-son',
     name_with_type: 'Huyện Lương Sơn',
@@ -3940,7 +3940,7 @@ export const DistrictsArr = [
     parent_code: '17',
   },
   {
-    value: 'Kim Bôi',
+    name: 'Kim Bôi',
     type: 'huyen',
     slug: 'kim-boi',
     name_with_type: 'Huyện Kim Bôi',
@@ -3950,7 +3950,7 @@ export const DistrictsArr = [
     parent_code: '17',
   },
   {
-    value: 'Cao Phong',
+    name: 'Cao Phong',
     type: 'huyen',
     slug: 'cao-phong',
     name_with_type: 'Huyện Cao Phong',
@@ -3960,7 +3960,7 @@ export const DistrictsArr = [
     parent_code: '17',
   },
   {
-    value: 'Tân Lạc',
+    name: 'Tân Lạc',
     type: 'huyen',
     slug: 'tan-lac',
     name_with_type: 'Huyện Tân Lạc',
@@ -3970,7 +3970,7 @@ export const DistrictsArr = [
     parent_code: '17',
   },
   {
-    value: 'Mai Châu',
+    name: 'Mai Châu',
     type: 'huyen',
     slug: 'mai-chau',
     name_with_type: 'Huyện Mai Châu',
@@ -3980,7 +3980,7 @@ export const DistrictsArr = [
     parent_code: '17',
   },
   {
-    value: 'Lạc Sơn',
+    name: 'Lạc Sơn',
     type: 'huyen',
     slug: 'lac-son',
     name_with_type: 'Huyện Lạc Sơn',
@@ -3990,7 +3990,7 @@ export const DistrictsArr = [
     parent_code: '17',
   },
   {
-    value: 'Yên Thủy',
+    name: 'Yên Thủy',
     type: 'huyen',
     slug: 'yen-thuy',
     name_with_type: 'Huyện Yên Thủy',
@@ -4000,7 +4000,7 @@ export const DistrictsArr = [
     parent_code: '17',
   },
   {
-    value: 'Lạc Thủy',
+    name: 'Lạc Thủy',
     type: 'huyen',
     slug: 'lac-thuy',
     name_with_type: 'Huyện Lạc Thủy',
@@ -4010,7 +4010,7 @@ export const DistrictsArr = [
     parent_code: '17',
   },
   {
-    value: 'Vũng Tàu',
+    name: 'Vũng Tàu',
     type: 'thanh-pho',
     slug: 'vung-tau',
     name_with_type: 'Thành phố Vũng Tàu',
@@ -4020,7 +4020,7 @@ export const DistrictsArr = [
     parent_code: '77',
   },
   {
-    value: 'Bà Rịa',
+    name: 'Bà Rịa',
     type: 'thanh-pho',
     slug: 'ba-ria',
     name_with_type: 'Thành phố Bà Rịa',
@@ -4030,7 +4030,7 @@ export const DistrictsArr = [
     parent_code: '77',
   },
   {
-    value: 'Châu Đức',
+    name: 'Châu Đức',
     type: 'huyen',
     slug: 'chau-duc',
     name_with_type: 'Huyện Châu Đức',
@@ -4040,7 +4040,7 @@ export const DistrictsArr = [
     parent_code: '77',
   },
   {
-    value: 'Xuyên Mộc',
+    name: 'Xuyên Mộc',
     type: 'huyen',
     slug: 'xuyen-moc',
     name_with_type: 'Huyện Xuyên Mộc',
@@ -4050,7 +4050,7 @@ export const DistrictsArr = [
     parent_code: '77',
   },
   {
-    value: 'Long Điền',
+    name: 'Long Điền',
     type: 'huyen',
     slug: 'long-dien',
     name_with_type: 'Huyện Long Điền',
@@ -4060,7 +4060,7 @@ export const DistrictsArr = [
     parent_code: '77',
   },
   {
-    value: 'Đất Đỏ',
+    name: 'Đất Đỏ',
     type: 'huyen',
     slug: 'dat-do',
     name_with_type: 'Huyện Đất Đỏ',
@@ -4070,7 +4070,7 @@ export const DistrictsArr = [
     parent_code: '77',
   },
   {
-    value: 'Tân Thành',
+    name: 'Tân Thành',
     type: 'huyen',
     slug: 'tan-thanh',
     name_with_type: 'Huyện Tân Thành',
@@ -4080,7 +4080,7 @@ export const DistrictsArr = [
     parent_code: '77',
   },
   {
-    value: 'Cà Mau',
+    name: 'Cà Mau',
     type: 'thanh-pho',
     slug: 'ca-mau',
     name_with_type: 'Thành phố Cà Mau',
@@ -4090,7 +4090,7 @@ export const DistrictsArr = [
     parent_code: '96',
   },
   {
-    value: 'U Minh',
+    name: 'U Minh',
     type: 'huyen',
     slug: 'u-minh',
     name_with_type: 'Huyện U Minh',
@@ -4100,7 +4100,7 @@ export const DistrictsArr = [
     parent_code: '96',
   },
   {
-    value: 'Thới Bình',
+    name: 'Thới Bình',
     type: 'huyen',
     slug: 'thoi-binh',
     name_with_type: 'Huyện Thới Bình',
@@ -4110,7 +4110,7 @@ export const DistrictsArr = [
     parent_code: '96',
   },
   {
-    value: 'Trần Văn Thời',
+    name: 'Trần Văn Thời',
     type: 'huyen',
     slug: 'tran-van-thoi',
     name_with_type: 'Huyện Trần Văn Thời',
@@ -4120,7 +4120,7 @@ export const DistrictsArr = [
     parent_code: '96',
   },
   {
-    value: 'Cái Nước',
+    name: 'Cái Nước',
     type: 'huyen',
     slug: 'cai-nuoc',
     name_with_type: 'Huyện Cái Nước',
@@ -4130,7 +4130,7 @@ export const DistrictsArr = [
     parent_code: '96',
   },
   {
-    value: 'Đầm Dơi',
+    name: 'Đầm Dơi',
     type: 'huyen',
     slug: 'dam-doi',
     name_with_type: 'Huyện Đầm Dơi',
@@ -4140,7 +4140,7 @@ export const DistrictsArr = [
     parent_code: '96',
   },
   {
-    value: 'Năm Căn',
+    name: 'Năm Căn',
     type: 'huyen',
     slug: 'nam-can',
     name_with_type: 'Huyện Năm Căn',
@@ -4150,7 +4150,7 @@ export const DistrictsArr = [
     parent_code: '96',
   },
   {
-    value: 'Phú Tân',
+    name: 'Phú Tân',
     type: 'huyen',
     slug: 'phu-tan',
     name_with_type: 'Huyện Phú Tân',
@@ -4160,7 +4160,7 @@ export const DistrictsArr = [
     parent_code: '96',
   },
   {
-    value: 'Ngọc Hiển',
+    name: 'Ngọc Hiển',
     type: 'huyen',
     slug: 'ngoc-hien',
     name_with_type: 'Huyện Ngọc Hiển',
@@ -4170,7 +4170,7 @@ export const DistrictsArr = [
     parent_code: '96',
   },
   {
-    value: 'Thủ Dầu Một',
+    name: 'Thủ Dầu Một',
     type: 'thanh-pho',
     slug: 'thu-dau-mot',
     name_with_type: 'Thành phố Thủ Dầu Một',
@@ -4180,7 +4180,7 @@ export const DistrictsArr = [
     parent_code: '74',
   },
   {
-    value: 'Bàu Bàng',
+    name: 'Bàu Bàng',
     type: 'huyen',
     slug: 'bau-bang',
     name_with_type: 'Huyện Bàu Bàng',
@@ -4190,7 +4190,7 @@ export const DistrictsArr = [
     parent_code: '74',
   },
   {
-    value: 'Dầu Tiếng',
+    name: 'Dầu Tiếng',
     type: 'huyen',
     slug: 'dau-tieng',
     name_with_type: 'Huyện Dầu Tiếng',
@@ -4200,7 +4200,7 @@ export const DistrictsArr = [
     parent_code: '74',
   },
   {
-    value: 'Bến Cát',
+    name: 'Bến Cát',
     type: 'thi-xa',
     slug: 'ben-cat',
     name_with_type: 'Thị xã Bến Cát',
@@ -4210,7 +4210,7 @@ export const DistrictsArr = [
     parent_code: '74',
   },
   {
-    value: 'Phú Giáo',
+    name: 'Phú Giáo',
     type: 'huyen',
     slug: 'phu-giao',
     name_with_type: 'Huyện Phú Giáo',
@@ -4220,7 +4220,7 @@ export const DistrictsArr = [
     parent_code: '74',
   },
   {
-    value: 'Tân Uyên',
+    name: 'Tân Uyên',
     type: 'thi-xa',
     slug: 'tan-uyen',
     name_with_type: 'Thị xã Tân Uyên',
@@ -4230,7 +4230,7 @@ export const DistrictsArr = [
     parent_code: '74',
   },
   {
-    value: 'Dĩ An',
+    name: 'Dĩ An',
     type: 'thi-xa',
     slug: 'di-an',
     name_with_type: 'Thị xã Dĩ An',
@@ -4240,7 +4240,7 @@ export const DistrictsArr = [
     parent_code: '74',
   },
   {
-    value: 'Thuận An',
+    name: 'Thuận An',
     type: 'thi-xa',
     slug: 'thuan-an',
     name_with_type: 'Thị xã Thuận An',
@@ -4250,7 +4250,7 @@ export const DistrictsArr = [
     parent_code: '74',
   },
   {
-    value: 'Bắc Tân Uyên',
+    name: 'Bắc Tân Uyên',
     type: 'huyen',
     slug: 'bac-tan-uyen',
     name_with_type: 'Huyện Bắc Tân Uyên',
@@ -4260,7 +4260,7 @@ export const DistrictsArr = [
     parent_code: '74',
   },
   {
-    value: 'Ninh Kiều',
+    name: 'Ninh Kiều',
     type: 'quan',
     slug: 'ninh-kieu',
     name_with_type: 'Quận Ninh Kiều',
@@ -4270,7 +4270,7 @@ export const DistrictsArr = [
     parent_code: '92',
   },
   {
-    value: 'Ô Môn',
+    name: 'Ô Môn',
     type: 'quan',
     slug: 'o-mon',
     name_with_type: 'Quận Ô Môn',
@@ -4280,7 +4280,7 @@ export const DistrictsArr = [
     parent_code: '92',
   },
   {
-    value: 'Bình Thuỷ',
+    name: 'Bình Thuỷ',
     type: 'quan',
     slug: 'binh-thuy',
     name_with_type: 'Quận Bình Thuỷ',
@@ -4290,7 +4290,7 @@ export const DistrictsArr = [
     parent_code: '92',
   },
   {
-    value: 'Cái Răng',
+    name: 'Cái Răng',
     type: 'quan',
     slug: 'cai-rang',
     name_with_type: 'Quận Cái Răng',
@@ -4300,7 +4300,7 @@ export const DistrictsArr = [
     parent_code: '92',
   },
   {
-    value: 'Thốt Nốt',
+    name: 'Thốt Nốt',
     type: 'quan',
     slug: 'thot-not',
     name_with_type: 'Quận Thốt Nốt',
@@ -4310,7 +4310,7 @@ export const DistrictsArr = [
     parent_code: '92',
   },
   {
-    value: 'Vĩnh Thạnh',
+    name: 'Vĩnh Thạnh',
     type: 'huyen',
     slug: 'vinh-thanh',
     name_with_type: 'Huyện Vĩnh Thạnh',
@@ -4320,7 +4320,7 @@ export const DistrictsArr = [
     parent_code: '92',
   },
   {
-    value: 'Cờ Đỏ',
+    name: 'Cờ Đỏ',
     type: 'huyen',
     slug: 'co-do',
     name_with_type: 'Huyện Cờ Đỏ',
@@ -4330,7 +4330,7 @@ export const DistrictsArr = [
     parent_code: '92',
   },
   {
-    value: 'Phong Điền',
+    name: 'Phong Điền',
     type: 'huyen',
     slug: 'phong-dien',
     name_with_type: 'Huyện Phong Điền',
@@ -4340,7 +4340,7 @@ export const DistrictsArr = [
     parent_code: '92',
   },
   {
-    value: 'Thới Lai',
+    name: 'Thới Lai',
     type: 'huyen',
     slug: 'thoi-lai',
     name_with_type: 'Huyện Thới Lai',
@@ -4350,7 +4350,7 @@ export const DistrictsArr = [
     parent_code: '92',
   },
   {
-    value: 'Huế',
+    name: 'Huế',
     type: 'thanh-pho',
     slug: 'hue',
     name_with_type: 'Thành phố Huế',
@@ -4360,7 +4360,7 @@ export const DistrictsArr = [
     parent_code: '46',
   },
   {
-    value: 'Phong Điền',
+    name: 'Phong Điền',
     type: 'huyen',
     slug: 'phong-dien',
     name_with_type: 'Huyện Phong Điền',
@@ -4370,7 +4370,7 @@ export const DistrictsArr = [
     parent_code: '46',
   },
   {
-    value: 'Quảng Điền',
+    name: 'Quảng Điền',
     type: 'huyen',
     slug: 'quang-dien',
     name_with_type: 'Huyện Quảng Điền',
@@ -4380,7 +4380,7 @@ export const DistrictsArr = [
     parent_code: '46',
   },
   {
-    value: 'Phú Vang',
+    name: 'Phú Vang',
     type: 'huyen',
     slug: 'phu-vang',
     name_with_type: 'Huyện Phú Vang',
@@ -4390,7 +4390,7 @@ export const DistrictsArr = [
     parent_code: '46',
   },
   {
-    value: 'Hương Thủy',
+    name: 'Hương Thủy',
     type: 'thi-xa',
     slug: 'huong-thuy',
     name_with_type: 'Thị xã Hương Thủy',
@@ -4400,7 +4400,7 @@ export const DistrictsArr = [
     parent_code: '46',
   },
   {
-    value: 'Hương Trà',
+    name: 'Hương Trà',
     type: 'thi-xa',
     slug: 'huong-tra',
     name_with_type: 'Thị xã Hương Trà',
@@ -4410,7 +4410,7 @@ export const DistrictsArr = [
     parent_code: '46',
   },
   {
-    value: 'A Lưới',
+    name: 'A Lưới',
     type: 'huyen',
     slug: 'a-luoi',
     name_with_type: 'Huyện A Lưới',
@@ -4420,7 +4420,7 @@ export const DistrictsArr = [
     parent_code: '46',
   },
   {
-    value: 'Phú Lộc',
+    name: 'Phú Lộc',
     type: 'huyen',
     slug: 'phu-loc',
     name_with_type: 'Huyện Phú Lộc',
@@ -4430,7 +4430,7 @@ export const DistrictsArr = [
     parent_code: '46',
   },
   {
-    value: 'Nam Đông',
+    name: 'Nam Đông',
     type: 'huyen',
     slug: 'nam-dong',
     name_with_type: 'Huyện Nam Đông',
@@ -4440,7 +4440,7 @@ export const DistrictsArr = [
     parent_code: '46',
   },
   {
-    value: 'Biên Hòa',
+    name: 'Biên Hòa',
     type: 'thanh-pho',
     slug: 'bien-hoa',
     name_with_type: 'Thành phố Biên Hòa',
@@ -4450,7 +4450,7 @@ export const DistrictsArr = [
     parent_code: '75',
   },
   {
-    value: 'Long Khánh',
+    name: 'Long Khánh',
     type: 'thi-xa',
     slug: 'long-khanh',
     name_with_type: 'Thị xã Long Khánh',
@@ -4460,7 +4460,7 @@ export const DistrictsArr = [
     parent_code: '75',
   },
   {
-    value: 'Tân Phú',
+    name: 'Tân Phú',
     type: 'huyen',
     slug: 'tan-phu',
     name_with_type: 'Huyện Tân Phú',
@@ -4470,7 +4470,7 @@ export const DistrictsArr = [
     parent_code: '75',
   },
   {
-    value: 'Vĩnh Cửu',
+    name: 'Vĩnh Cửu',
     type: 'huyen',
     slug: 'vinh-cuu',
     name_with_type: 'Huyện Vĩnh Cửu',
@@ -4480,7 +4480,7 @@ export const DistrictsArr = [
     parent_code: '75',
   },
   {
-    value: 'Định Quán',
+    name: 'Định Quán',
     type: 'huyen',
     slug: 'dinh-quan',
     name_with_type: 'Huyện Định Quán',
@@ -4490,7 +4490,7 @@ export const DistrictsArr = [
     parent_code: '75',
   },
   {
-    value: 'Trảng Bom',
+    name: 'Trảng Bom',
     type: 'huyen',
     slug: 'trang-bom',
     name_with_type: 'Huyện Trảng Bom',
@@ -4500,7 +4500,7 @@ export const DistrictsArr = [
     parent_code: '75',
   },
   {
-    value: 'Thống Nhất',
+    name: 'Thống Nhất',
     type: 'huyen',
     slug: 'thong-nhat',
     name_with_type: 'Huyện Thống Nhất',
@@ -4510,7 +4510,7 @@ export const DistrictsArr = [
     parent_code: '75',
   },
   {
-    value: 'Cẩm Mỹ',
+    name: 'Cẩm Mỹ',
     type: 'huyen',
     slug: 'cam-my',
     name_with_type: 'Huyện Cẩm Mỹ',
@@ -4520,7 +4520,7 @@ export const DistrictsArr = [
     parent_code: '75',
   },
   {
-    value: 'Long Thành',
+    name: 'Long Thành',
     type: 'huyen',
     slug: 'long-thanh',
     name_with_type: 'Huyện Long Thành',
@@ -4530,7 +4530,7 @@ export const DistrictsArr = [
     parent_code: '75',
   },
   {
-    value: 'Xuân Lộc',
+    name: 'Xuân Lộc',
     type: 'huyen',
     slug: 'xuan-loc',
     name_with_type: 'Huyện Xuân Lộc',
@@ -4540,7 +4540,7 @@ export const DistrictsArr = [
     parent_code: '75',
   },
   {
-    value: 'Nhơn Trạch',
+    name: 'Nhơn Trạch',
     type: 'huyen',
     slug: 'nhon-trach',
     name_with_type: 'Huyện Nhơn Trạch',
@@ -4550,7 +4550,7 @@ export const DistrictsArr = [
     parent_code: '75',
   },
   {
-    value: 'Mỹ Tho',
+    name: 'Mỹ Tho',
     type: 'thanh-pho',
     slug: 'my-tho',
     name_with_type: 'Thành phố Mỹ Tho',
@@ -4560,7 +4560,7 @@ export const DistrictsArr = [
     parent_code: '82',
   },
   {
-    value: 'Gò Công',
+    name: 'Gò Công',
     type: 'thi-xa',
     slug: 'go-cong',
     name_with_type: 'Thị xã Gò Công',
@@ -4570,7 +4570,7 @@ export const DistrictsArr = [
     parent_code: '82',
   },
   {
-    value: 'Cai Lậy',
+    name: 'Cai Lậy',
     type: 'thi-xa',
     slug: 'cai-lay',
     name_with_type: 'Thị xã Cai Lậy',
@@ -4580,7 +4580,7 @@ export const DistrictsArr = [
     parent_code: '82',
   },
   {
-    value: 'Tân Phước',
+    name: 'Tân Phước',
     type: 'huyen',
     slug: 'tan-phuoc',
     name_with_type: 'Huyện Tân Phước',
@@ -4590,7 +4590,7 @@ export const DistrictsArr = [
     parent_code: '82',
   },
   {
-    value: 'Cái Bè',
+    name: 'Cái Bè',
     type: 'huyen',
     slug: 'cai-be',
     name_with_type: 'Huyện Cái Bè',
@@ -4600,7 +4600,7 @@ export const DistrictsArr = [
     parent_code: '82',
   },
   {
-    value: 'Cai Lậy',
+    name: 'Cai Lậy',
     type: 'huyen',
     slug: 'cai-lay',
     name_with_type: 'Huyện Cai Lậy',
@@ -4610,7 +4610,7 @@ export const DistrictsArr = [
     parent_code: '82',
   },
   {
-    value: 'Châu Thành',
+    name: 'Châu Thành',
     type: 'huyen',
     slug: 'chau-thanh',
     name_with_type: 'Huyện Châu Thành',
@@ -4620,7 +4620,7 @@ export const DistrictsArr = [
     parent_code: '82',
   },
   {
-    value: 'Chợ Gạo',
+    name: 'Chợ Gạo',
     type: 'huyen',
     slug: 'cho-gao',
     name_with_type: 'Huyện Chợ Gạo',
@@ -4630,7 +4630,7 @@ export const DistrictsArr = [
     parent_code: '82',
   },
   {
-    value: 'Gò Công Tây',
+    name: 'Gò Công Tây',
     type: 'huyen',
     slug: 'go-cong-tay',
     name_with_type: 'Huyện Gò Công Tây',
@@ -4640,7 +4640,7 @@ export const DistrictsArr = [
     parent_code: '82',
   },
   {
-    value: 'Gò Công Đông',
+    name: 'Gò Công Đông',
     type: 'huyen',
     slug: 'go-cong-dong',
     name_with_type: 'Huyện Gò Công Đông',
@@ -4650,7 +4650,7 @@ export const DistrictsArr = [
     parent_code: '82',
   },
   {
-    value: 'Tân Phú Đông',
+    name: 'Tân Phú Đông',
     type: 'huyen',
     slug: 'tan-phu-dong',
     name_with_type: 'Huyện Tân Phú Đông',
@@ -4660,7 +4660,7 @@ export const DistrictsArr = [
     parent_code: '82',
   },
   {
-    value: 'Điện Biên Phủ',
+    name: 'Điện Biên Phủ',
     type: 'thanh-pho',
     slug: 'dien-bien-phu',
     name_with_type: 'Thành phố Điện Biên Phủ',
@@ -4670,7 +4670,7 @@ export const DistrictsArr = [
     parent_code: '11',
   },
   {
-    value: 'Mường Lay',
+    name: 'Mường Lay',
     type: 'thi-xa',
     slug: 'muong-lay',
     name_with_type: 'Thị xã Mường Lay',
@@ -4680,7 +4680,7 @@ export const DistrictsArr = [
     parent_code: '11',
   },
   {
-    value: 'Mường Nhé',
+    name: 'Mường Nhé',
     type: 'huyen',
     slug: 'muong-nhe',
     name_with_type: 'Huyện Mường Nhé',
@@ -4690,7 +4690,7 @@ export const DistrictsArr = [
     parent_code: '11',
   },
   {
-    value: 'Mường Chà',
+    name: 'Mường Chà',
     type: 'huyen',
     slug: 'muong-cha',
     name_with_type: 'Huyện Mường Chà',
@@ -4700,7 +4700,7 @@ export const DistrictsArr = [
     parent_code: '11',
   },
   {
-    value: 'Tủa Chùa',
+    name: 'Tủa Chùa',
     type: 'huyen',
     slug: 'tua-chua',
     name_with_type: 'Huyện Tủa Chùa',
@@ -4710,7 +4710,7 @@ export const DistrictsArr = [
     parent_code: '11',
   },
   {
-    value: 'Tuần Giáo',
+    name: 'Tuần Giáo',
     type: 'huyen',
     slug: 'tuan-giao',
     name_with_type: 'Huyện Tuần Giáo',
@@ -4720,7 +4720,7 @@ export const DistrictsArr = [
     parent_code: '11',
   },
   {
-    value: 'Điện Biên',
+    name: 'Điện Biên',
     type: 'huyen',
     slug: 'dien-bien',
     name_with_type: 'Huyện Điện Biên',
@@ -4730,7 +4730,7 @@ export const DistrictsArr = [
     parent_code: '11',
   },
   {
-    value: 'Điện Biên Đông',
+    name: 'Điện Biên Đông',
     type: 'huyen',
     slug: 'dien-bien-dong',
     name_with_type: 'Huyện Điện Biên Đông',
@@ -4740,7 +4740,7 @@ export const DistrictsArr = [
     parent_code: '11',
   },
   {
-    value: 'Mường Ảng',
+    name: 'Mường Ảng',
     type: 'huyen',
     slug: 'muong-ang',
     name_with_type: 'Huyện Mường Ảng',
@@ -4750,7 +4750,7 @@ export const DistrictsArr = [
     parent_code: '11',
   },
   {
-    value: 'Nậm Pồ',
+    name: 'Nậm Pồ',
     type: 'huyen',
     slug: 'nam-po',
     name_with_type: 'Huyện Nậm Pồ',
@@ -4760,7 +4760,7 @@ export const DistrictsArr = [
     parent_code: '11',
   },
   {
-    value: 'Vĩnh Yên',
+    name: 'Vĩnh Yên',
     type: 'thanh-pho',
     slug: 'vinh-yen',
     name_with_type: 'Thành phố Vĩnh Yên',
@@ -4770,7 +4770,7 @@ export const DistrictsArr = [
     parent_code: '26',
   },
   {
-    value: 'Phúc Yên',
+    name: 'Phúc Yên',
     type: 'thi-xa',
     slug: 'phuc-yen',
     name_with_type: 'Thị xã Phúc Yên',
@@ -4780,7 +4780,7 @@ export const DistrictsArr = [
     parent_code: '26',
   },
   {
-    value: 'Lập Thạch',
+    name: 'Lập Thạch',
     type: 'huyen',
     slug: 'lap-thach',
     name_with_type: 'Huyện Lập Thạch',
@@ -4790,7 +4790,7 @@ export const DistrictsArr = [
     parent_code: '26',
   },
   {
-    value: 'Tam Dương',
+    name: 'Tam Dương',
     type: 'huyen',
     slug: 'tam-duong',
     name_with_type: 'Huyện Tam Dương',
@@ -4800,7 +4800,7 @@ export const DistrictsArr = [
     parent_code: '26',
   },
   {
-    value: 'Tam Đảo',
+    name: 'Tam Đảo',
     type: 'huyen',
     slug: 'tam-dao',
     name_with_type: 'Huyện Tam Đảo',
@@ -4810,7 +4810,7 @@ export const DistrictsArr = [
     parent_code: '26',
   },
   {
-    value: 'Bình Xuyên',
+    name: 'Bình Xuyên',
     type: 'huyen',
     slug: 'binh-xuyen',
     name_with_type: 'Huyện Bình Xuyên',
@@ -4820,7 +4820,7 @@ export const DistrictsArr = [
     parent_code: '26',
   },
   {
-    value: 'Yên Lạc',
+    name: 'Yên Lạc',
     type: 'huyen',
     slug: 'yen-lac',
     name_with_type: 'Huyện Yên Lạc',
@@ -4830,7 +4830,7 @@ export const DistrictsArr = [
     parent_code: '26',
   },
   {
-    value: 'Vĩnh Tường',
+    name: 'Vĩnh Tường',
     type: 'huyen',
     slug: 'vinh-tuong',
     name_with_type: 'Huyện Vĩnh Tường',
@@ -4840,7 +4840,7 @@ export const DistrictsArr = [
     parent_code: '26',
   },
   {
-    value: 'Sông Lô',
+    name: 'Sông Lô',
     type: 'huyen',
     slug: 'song-lo',
     name_with_type: 'Huyện Sông Lô',
@@ -4850,7 +4850,7 @@ export const DistrictsArr = [
     parent_code: '26',
   },
   {
-    value: 'Tam Kỳ',
+    name: 'Tam Kỳ',
     type: 'thanh-pho',
     slug: 'tam-ky',
     name_with_type: 'Thành phố Tam Kỳ',
@@ -4860,7 +4860,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Hội An',
+    name: 'Hội An',
     type: 'thanh-pho',
     slug: 'hoi-an',
     name_with_type: 'Thành phố Hội An',
@@ -4870,7 +4870,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Tây Giang',
+    name: 'Tây Giang',
     type: 'huyen',
     slug: 'tay-giang',
     name_with_type: 'Huyện Tây Giang',
@@ -4880,7 +4880,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Đông Giang',
+    name: 'Đông Giang',
     type: 'huyen',
     slug: 'dong-giang',
     name_with_type: 'Huyện Đông Giang',
@@ -4890,7 +4890,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Đại Lộc',
+    name: 'Đại Lộc',
     type: 'huyen',
     slug: 'dai-loc',
     name_with_type: 'Huyện Đại Lộc',
@@ -4900,7 +4900,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Điện Bàn',
+    name: 'Điện Bàn',
     type: 'thi-xa',
     slug: 'dien-ban',
     name_with_type: 'Thị xã Điện Bàn',
@@ -4910,7 +4910,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Duy Xuyên',
+    name: 'Duy Xuyên',
     type: 'huyen',
     slug: 'duy-xuyen',
     name_with_type: 'Huyện Duy Xuyên',
@@ -4920,7 +4920,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Quế Sơn',
+    name: 'Quế Sơn',
     type: 'huyen',
     slug: 'que-son',
     name_with_type: 'Huyện Quế Sơn',
@@ -4930,7 +4930,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Nam Giang',
+    name: 'Nam Giang',
     type: 'huyen',
     slug: 'nam-giang',
     name_with_type: 'Huyện Nam Giang',
@@ -4940,7 +4940,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Phước Sơn',
+    name: 'Phước Sơn',
     type: 'huyen',
     slug: 'phuoc-son',
     name_with_type: 'Huyện Phước Sơn',
@@ -4950,7 +4950,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Hiệp Đức',
+    name: 'Hiệp Đức',
     type: 'huyen',
     slug: 'hiep-duc',
     name_with_type: 'Huyện Hiệp Đức',
@@ -4960,7 +4960,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Thăng Bình',
+    name: 'Thăng Bình',
     type: 'huyen',
     slug: 'thang-binh',
     name_with_type: 'Huyện Thăng Bình',
@@ -4970,7 +4970,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Tiên Phước',
+    name: 'Tiên Phước',
     type: 'huyen',
     slug: 'tien-phuoc',
     name_with_type: 'Huyện Tiên Phước',
@@ -4980,7 +4980,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Bắc Trà My',
+    name: 'Bắc Trà My',
     type: 'huyen',
     slug: 'bac-tra-my',
     name_with_type: 'Huyện Bắc Trà My',
@@ -4990,7 +4990,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Nam Trà My',
+    name: 'Nam Trà My',
     type: 'huyen',
     slug: 'nam-tra-my',
     name_with_type: 'Huyện Nam Trà My',
@@ -5000,7 +5000,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Núi Thành',
+    name: 'Núi Thành',
     type: 'huyen',
     slug: 'nui-thanh',
     name_with_type: 'Huyện Núi Thành',
@@ -5010,7 +5010,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Phú Ninh',
+    name: 'Phú Ninh',
     type: 'huyen',
     slug: 'phu-ninh',
     name_with_type: 'Huyện Phú Ninh',
@@ -5020,7 +5020,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Nông Sơn',
+    name: 'Nông Sơn',
     type: 'huyen',
     slug: 'nong-son',
     name_with_type: 'Huyện Nông Sơn',
@@ -5030,7 +5030,7 @@ export const DistrictsArr = [
     parent_code: '49',
   },
   {
-    value: 'Buôn Ma Thuột',
+    name: 'Buôn Ma Thuột',
     type: 'thanh-pho',
     slug: 'buon-ma-thuot',
     name_with_type: 'Thành phố Buôn Ma Thuột',
@@ -5040,7 +5040,7 @@ export const DistrictsArr = [
     parent_code: '66',
   },
   {
-    value: 'Buôn Hồ',
+    name: 'Buôn Hồ',
     type: 'thi-xa',
     slug: 'buon-ho',
     name_with_type: 'Thị xã Buôn Hồ',
@@ -5050,7 +5050,7 @@ export const DistrictsArr = [
     parent_code: '66',
   },
   {
-    value: 'Ea Hleo',
+    name: 'Ea Hleo',
     type: 'huyen',
     slug: 'ea-h-leo',
     name_with_type: 'Huyện Ea Hleo',
@@ -5060,7 +5060,7 @@ export const DistrictsArr = [
     parent_code: '66',
   },
   {
-    value: 'Ea Súp',
+    name: 'Ea Súp',
     type: 'huyen',
     slug: 'ea-sup',
     name_with_type: 'Huyện Ea Súp',
@@ -5070,7 +5070,7 @@ export const DistrictsArr = [
     parent_code: '66',
   },
   {
-    value: 'Buôn Đôn',
+    name: 'Buôn Đôn',
     type: 'huyen',
     slug: 'buon-don',
     name_with_type: 'Huyện Buôn Đôn',
@@ -5080,7 +5080,7 @@ export const DistrictsArr = [
     parent_code: '66',
   },
   {
-    value: 'Cư Mgar',
+    name: 'Cư Mgar',
     type: 'huyen',
     slug: 'cu-m-gar',
     name_with_type: 'Huyện Cư Mgar',
@@ -5090,7 +5090,7 @@ export const DistrictsArr = [
     parent_code: '66',
   },
   {
-    value: 'Krông Búk',
+    name: 'Krông Búk',
     type: 'huyen',
     slug: 'krong-buk',
     name_with_type: 'Huyện Krông Búk',
@@ -5100,7 +5100,7 @@ export const DistrictsArr = [
     parent_code: '66',
   },
   {
-    value: 'Krông Năng',
+    name: 'Krông Năng',
     type: 'huyen',
     slug: 'krong-nang',
     name_with_type: 'Huyện Krông Năng',
@@ -5110,7 +5110,7 @@ export const DistrictsArr = [
     parent_code: '66',
   },
   {
-    value: 'Ea Kar',
+    name: 'Ea Kar',
     type: 'huyen',
     slug: 'ea-kar',
     name_with_type: 'Huyện Ea Kar',
@@ -5120,7 +5120,7 @@ export const DistrictsArr = [
     parent_code: '66',
   },
   {
-    value: 'MĐrắk',
+    name: 'MĐrắk',
     type: 'huyen',
     slug: 'm-drak',
     name_with_type: 'Huyện MĐrắk',
@@ -5130,7 +5130,7 @@ export const DistrictsArr = [
     parent_code: '66',
   },
   {
-    value: 'Krông Bông',
+    name: 'Krông Bông',
     type: 'huyen',
     slug: 'krong-bong',
     name_with_type: 'Huyện Krông Bông',
@@ -5140,7 +5140,7 @@ export const DistrictsArr = [
     parent_code: '66',
   },
   {
-    value: 'Krông Pắc',
+    name: 'Krông Pắc',
     type: 'huyen',
     slug: 'krong-pac',
     name_with_type: 'Huyện Krông Pắc',
@@ -5150,7 +5150,7 @@ export const DistrictsArr = [
     parent_code: '66',
   },
   {
-    value: 'Krông A Na',
+    name: 'Krông A Na',
     type: 'huyen',
     slug: 'krong-a-na',
     name_with_type: 'Huyện Krông A Na',
@@ -5160,7 +5160,7 @@ export const DistrictsArr = [
     parent_code: '66',
   },
   {
-    value: 'Lắk',
+    name: 'Lắk',
     type: 'huyen',
     slug: 'lak',
     name_with_type: 'Huyện Lắk',
@@ -5170,7 +5170,7 @@ export const DistrictsArr = [
     parent_code: '66',
   },
   {
-    value: 'Cư Kuin',
+    name: 'Cư Kuin',
     type: 'huyen',
     slug: 'cu-kuin',
     name_with_type: 'Huyện Cư Kuin',
@@ -5180,7 +5180,7 @@ export const DistrictsArr = [
     parent_code: '66',
   },
   {
-    value: 'Thái Nguyên',
+    name: 'Thái Nguyên',
     type: 'thanh-pho',
     slug: 'thai-nguyen',
     name_with_type: 'Thành phố Thái Nguyên',
@@ -5190,7 +5190,7 @@ export const DistrictsArr = [
     parent_code: '19',
   },
   {
-    value: 'Sông Công',
+    name: 'Sông Công',
     type: 'thanh-pho',
     slug: 'song-cong',
     name_with_type: 'Thành phố Sông Công',
@@ -5200,7 +5200,7 @@ export const DistrictsArr = [
     parent_code: '19',
   },
   {
-    value: 'Định Hóa',
+    name: 'Định Hóa',
     type: 'huyen',
     slug: 'dinh-hoa',
     name_with_type: 'Huyện Định Hóa',
@@ -5210,7 +5210,7 @@ export const DistrictsArr = [
     parent_code: '19',
   },
   {
-    value: 'Phú Lương',
+    name: 'Phú Lương',
     type: 'huyen',
     slug: 'phu-luong',
     name_with_type: 'Huyện Phú Lương',
@@ -5220,7 +5220,7 @@ export const DistrictsArr = [
     parent_code: '19',
   },
   {
-    value: 'Đồng Hỷ',
+    name: 'Đồng Hỷ',
     type: 'huyen',
     slug: 'dong-hy',
     name_with_type: 'Huyện Đồng Hỷ',
@@ -5230,7 +5230,7 @@ export const DistrictsArr = [
     parent_code: '19',
   },
   {
-    value: 'Võ Nhai',
+    name: 'Võ Nhai',
     type: 'huyen',
     slug: 'vo-nhai',
     name_with_type: 'Huyện Võ Nhai',
@@ -5240,7 +5240,7 @@ export const DistrictsArr = [
     parent_code: '19',
   },
   {
-    value: 'Đại Từ',
+    name: 'Đại Từ',
     type: 'huyen',
     slug: 'dai-tu',
     name_with_type: 'Huyện Đại Từ',
@@ -5250,7 +5250,7 @@ export const DistrictsArr = [
     parent_code: '19',
   },
   {
-    value: 'Phổ Yên',
+    name: 'Phổ Yên',
     type: 'thi-xa',
     slug: 'pho-yen',
     name_with_type: 'Thị xã Phổ Yên',
@@ -5260,7 +5260,7 @@ export const DistrictsArr = [
     parent_code: '19',
   },
   {
-    value: 'Phú Bình',
+    name: 'Phú Bình',
     type: 'huyen',
     slug: 'phu-binh',
     name_with_type: 'Huyện Phú Bình',
@@ -5270,7 +5270,7 @@ export const DistrictsArr = [
     parent_code: '19',
   },
   {
-    value: 'Hải Dương',
+    name: 'Hải Dương',
     type: 'thanh-pho',
     slug: 'hai-duong',
     name_with_type: 'Thành phố Hải Dương',
@@ -5280,7 +5280,7 @@ export const DistrictsArr = [
     parent_code: '30',
   },
   {
-    value: 'Chí Linh',
+    name: 'Chí Linh',
     type: 'thi-xa',
     slug: 'chi-linh',
     name_with_type: 'Thị xã Chí Linh',
@@ -5290,7 +5290,7 @@ export const DistrictsArr = [
     parent_code: '30',
   },
   {
-    value: 'Nam Sách',
+    name: 'Nam Sách',
     type: 'huyen',
     slug: 'nam-sach',
     name_with_type: 'Huyện Nam Sách',
@@ -5300,7 +5300,7 @@ export const DistrictsArr = [
     parent_code: '30',
   },
   {
-    value: 'Kinh Môn',
+    name: 'Kinh Môn',
     type: 'huyen',
     slug: 'kinh-mon',
     name_with_type: 'Huyện Kinh Môn',
@@ -5310,7 +5310,7 @@ export const DistrictsArr = [
     parent_code: '30',
   },
   {
-    value: 'Kim Thành',
+    name: 'Kim Thành',
     type: 'huyen',
     slug: 'kim-thanh',
     name_with_type: 'Huyện Kim Thành',
@@ -5320,7 +5320,7 @@ export const DistrictsArr = [
     parent_code: '30',
   },
   {
-    value: 'Thanh Hà',
+    name: 'Thanh Hà',
     type: 'huyen',
     slug: 'thanh-ha',
     name_with_type: 'Huyện Thanh Hà',
@@ -5330,7 +5330,7 @@ export const DistrictsArr = [
     parent_code: '30',
   },
   {
-    value: 'Cẩm Giàng',
+    name: 'Cẩm Giàng',
     type: 'huyen',
     slug: 'cam-giang',
     name_with_type: 'Huyện Cẩm Giàng',
@@ -5340,7 +5340,7 @@ export const DistrictsArr = [
     parent_code: '30',
   },
   {
-    value: 'Bình Giang',
+    name: 'Bình Giang',
     type: 'huyen',
     slug: 'binh-giang',
     name_with_type: 'Huyện Bình Giang',
@@ -5350,7 +5350,7 @@ export const DistrictsArr = [
     parent_code: '30',
   },
   {
-    value: 'Gia Lộc',
+    name: 'Gia Lộc',
     type: 'huyen',
     slug: 'gia-loc',
     name_with_type: 'Huyện Gia Lộc',
@@ -5360,7 +5360,7 @@ export const DistrictsArr = [
     parent_code: '30',
   },
   {
-    value: 'Tứ Kỳ',
+    name: 'Tứ Kỳ',
     type: 'huyen',
     slug: 'tu-ky',
     name_with_type: 'Huyện Tứ Kỳ',
@@ -5370,7 +5370,7 @@ export const DistrictsArr = [
     parent_code: '30',
   },
   {
-    value: 'Ninh Giang',
+    name: 'Ninh Giang',
     type: 'huyen',
     slug: 'ninh-giang',
     name_with_type: 'Huyện Ninh Giang',
@@ -5380,7 +5380,7 @@ export const DistrictsArr = [
     parent_code: '30',
   },
   {
-    value: 'Thanh Miện',
+    name: 'Thanh Miện',
     type: 'huyen',
     slug: 'thanh-mien',
     name_with_type: 'Huyện Thanh Miện',
@@ -5390,7 +5390,7 @@ export const DistrictsArr = [
     parent_code: '30',
   },
   {
-    value: 'Bạc Liêu',
+    name: 'Bạc Liêu',
     type: 'thanh-pho',
     slug: 'bac-lieu',
     name_with_type: 'Thành phố Bạc Liêu',
@@ -5400,7 +5400,7 @@ export const DistrictsArr = [
     parent_code: '95',
   },
   {
-    value: 'Hồng Dân',
+    name: 'Hồng Dân',
     type: 'huyen',
     slug: 'hong-dan',
     name_with_type: 'Huyện Hồng Dân',
@@ -5410,7 +5410,7 @@ export const DistrictsArr = [
     parent_code: '95',
   },
   {
-    value: 'Phước Long',
+    name: 'Phước Long',
     type: 'huyen',
     slug: 'phuoc-long',
     name_with_type: 'Huyện Phước Long',
@@ -5420,7 +5420,7 @@ export const DistrictsArr = [
     parent_code: '95',
   },
   {
-    value: 'Vĩnh Lợi',
+    name: 'Vĩnh Lợi',
     type: 'huyen',
     slug: 'vinh-loi',
     name_with_type: 'Huyện Vĩnh Lợi',
@@ -5430,7 +5430,7 @@ export const DistrictsArr = [
     parent_code: '95',
   },
   {
-    value: 'Giá Rai',
+    name: 'Giá Rai',
     type: 'thi-xa',
     slug: 'gia-rai',
     name_with_type: 'Thị xã Giá Rai',
@@ -5440,7 +5440,7 @@ export const DistrictsArr = [
     parent_code: '95',
   },
   {
-    value: 'Đông Hải',
+    name: 'Đông Hải',
     type: 'huyen',
     slug: 'dong-hai',
     name_with_type: 'Huyện Đông Hải',
@@ -5450,7 +5450,7 @@ export const DistrictsArr = [
     parent_code: '95',
   },
   {
-    value: 'Hoà Bình',
+    name: 'Hoà Bình',
     type: 'huyen',
     slug: 'hoa-binh',
     name_with_type: 'Huyện Hoà Bình',
@@ -5460,7 +5460,7 @@ export const DistrictsArr = [
     parent_code: '95',
   },
   {
-    value: 'Trà Vinh',
+    name: 'Trà Vinh',
     type: 'thanh-pho',
     slug: 'tra-vinh',
     name_with_type: 'Thành phố Trà Vinh',
@@ -5470,7 +5470,7 @@ export const DistrictsArr = [
     parent_code: '84',
   },
   {
-    value: 'Càng Long',
+    name: 'Càng Long',
     type: 'huyen',
     slug: 'cang-long',
     name_with_type: 'Huyện Càng Long',
@@ -5480,7 +5480,7 @@ export const DistrictsArr = [
     parent_code: '84',
   },
   {
-    value: 'Cầu Kè',
+    name: 'Cầu Kè',
     type: 'huyen',
     slug: 'cau-ke',
     name_with_type: 'Huyện Cầu Kè',
@@ -5490,7 +5490,7 @@ export const DistrictsArr = [
     parent_code: '84',
   },
   {
-    value: 'Tiểu Cần',
+    name: 'Tiểu Cần',
     type: 'huyen',
     slug: 'tieu-can',
     name_with_type: 'Huyện Tiểu Cần',
@@ -5500,7 +5500,7 @@ export const DistrictsArr = [
     parent_code: '84',
   },
   {
-    value: 'Châu Thành',
+    name: 'Châu Thành',
     type: 'huyen',
     slug: 'chau-thanh',
     name_with_type: 'Huyện Châu Thành',
@@ -5510,7 +5510,7 @@ export const DistrictsArr = [
     parent_code: '84',
   },
   {
-    value: 'Cầu Ngang',
+    name: 'Cầu Ngang',
     type: 'huyen',
     slug: 'cau-ngang',
     name_with_type: 'Huyện Cầu Ngang',
@@ -5520,7 +5520,7 @@ export const DistrictsArr = [
     parent_code: '84',
   },
   {
-    value: 'Trà Cú',
+    name: 'Trà Cú',
     type: 'huyen',
     slug: 'tra-cu',
     name_with_type: 'Huyện Trà Cú',
@@ -5530,7 +5530,7 @@ export const DistrictsArr = [
     parent_code: '84',
   },
   {
-    value: 'Duyên Hải',
+    name: 'Duyên Hải',
     type: 'huyen',
     slug: 'duyen-hai',
     name_with_type: 'Huyện Duyên Hải',
@@ -5540,7 +5540,7 @@ export const DistrictsArr = [
     parent_code: '84',
   },
   {
-    value: 'Duyên Hải',
+    name: 'Duyên Hải',
     type: 'thi-xa',
     slug: 'duyen-hai',
     name_with_type: 'Thị xã Duyên Hải',
@@ -5550,7 +5550,7 @@ export const DistrictsArr = [
     parent_code: '84',
   },
   {
-    value: 'Thái Bình',
+    name: 'Thái Bình',
     type: 'thanh-pho',
     slug: 'thai-binh',
     name_with_type: 'Thành phố Thái Bình',
@@ -5560,7 +5560,7 @@ export const DistrictsArr = [
     parent_code: '34',
   },
   {
-    value: 'Quỳnh Phụ',
+    name: 'Quỳnh Phụ',
     type: 'huyen',
     slug: 'quynh-phu',
     name_with_type: 'Huyện Quỳnh Phụ',
@@ -5570,7 +5570,7 @@ export const DistrictsArr = [
     parent_code: '34',
   },
   {
-    value: 'Hưng Hà',
+    name: 'Hưng Hà',
     type: 'huyen',
     slug: 'hung-ha',
     name_with_type: 'Huyện Hưng Hà',
@@ -5580,7 +5580,7 @@ export const DistrictsArr = [
     parent_code: '34',
   },
   {
-    value: 'Đông Hưng',
+    name: 'Đông Hưng',
     type: 'huyen',
     slug: 'dong-hung',
     name_with_type: 'Huyện Đông Hưng',
@@ -5590,7 +5590,7 @@ export const DistrictsArr = [
     parent_code: '34',
   },
   {
-    value: 'Thái Thụy',
+    name: 'Thái Thụy',
     type: 'huyen',
     slug: 'thai-thuy',
     name_with_type: 'Huyện Thái Thụy',
@@ -5600,7 +5600,7 @@ export const DistrictsArr = [
     parent_code: '34',
   },
   {
-    value: 'Tiền Hải',
+    name: 'Tiền Hải',
     type: 'huyen',
     slug: 'tien-hai',
     name_with_type: 'Huyện Tiền Hải',
@@ -5610,7 +5610,7 @@ export const DistrictsArr = [
     parent_code: '34',
   },
   {
-    value: 'Kiến Xương',
+    name: 'Kiến Xương',
     type: 'huyen',
     slug: 'kien-xuong',
     name_with_type: 'Huyện Kiến Xương',
@@ -5620,7 +5620,7 @@ export const DistrictsArr = [
     parent_code: '34',
   },
   {
-    value: 'Vũ Thư',
+    name: 'Vũ Thư',
     type: 'huyen',
     slug: 'vu-thu',
     name_with_type: 'Huyện Vũ Thư',
@@ -5630,7 +5630,7 @@ export const DistrictsArr = [
     parent_code: '34',
   },
   {
-    value: 'Hà Tĩnh',
+    name: 'Hà Tĩnh',
     type: 'thanh-pho',
     slug: 'ha-tinh',
     name_with_type: 'Thành phố Hà Tĩnh',
@@ -5640,7 +5640,7 @@ export const DistrictsArr = [
     parent_code: '42',
   },
   {
-    value: 'Hồng Lĩnh',
+    name: 'Hồng Lĩnh',
     type: 'thi-xa',
     slug: 'hong-linh',
     name_with_type: 'Thị xã Hồng Lĩnh',
@@ -5650,7 +5650,7 @@ export const DistrictsArr = [
     parent_code: '42',
   },
   {
-    value: 'Hương Sơn',
+    name: 'Hương Sơn',
     type: 'huyen',
     slug: 'huong-son',
     name_with_type: 'Huyện Hương Sơn',
@@ -5660,7 +5660,7 @@ export const DistrictsArr = [
     parent_code: '42',
   },
   {
-    value: 'Đức Thọ',
+    name: 'Đức Thọ',
     type: 'huyen',
     slug: 'duc-tho',
     name_with_type: 'Huyện Đức Thọ',
@@ -5670,7 +5670,7 @@ export const DistrictsArr = [
     parent_code: '42',
   },
   {
-    value: 'Vũ Quang',
+    name: 'Vũ Quang',
     type: 'huyen',
     slug: 'vu-quang',
     name_with_type: 'Huyện Vũ Quang',
@@ -5680,7 +5680,7 @@ export const DistrictsArr = [
     parent_code: '42',
   },
   {
-    value: 'Nghi Xuân',
+    name: 'Nghi Xuân',
     type: 'huyen',
     slug: 'nghi-xuan',
     name_with_type: 'Huyện Nghi Xuân',
@@ -5690,7 +5690,7 @@ export const DistrictsArr = [
     parent_code: '42',
   },
   {
-    value: 'Can Lộc',
+    name: 'Can Lộc',
     type: 'huyen',
     slug: 'can-loc',
     name_with_type: 'Huyện Can Lộc',
@@ -5700,7 +5700,7 @@ export const DistrictsArr = [
     parent_code: '42',
   },
   {
-    value: 'Hương Khê',
+    name: 'Hương Khê',
     type: 'huyen',
     slug: 'huong-khe',
     name_with_type: 'Huyện Hương Khê',
@@ -5710,7 +5710,7 @@ export const DistrictsArr = [
     parent_code: '42',
   },
   {
-    value: 'Thạch Hà',
+    name: 'Thạch Hà',
     type: 'huyen',
     slug: 'thach-ha',
     name_with_type: 'Huyện Thạch Hà',
@@ -5720,7 +5720,7 @@ export const DistrictsArr = [
     parent_code: '42',
   },
   {
-    value: 'Cẩm Xuyên',
+    name: 'Cẩm Xuyên',
     type: 'huyen',
     slug: 'cam-xuyen',
     name_with_type: 'Huyện Cẩm Xuyên',
@@ -5730,7 +5730,7 @@ export const DistrictsArr = [
     parent_code: '42',
   },
   {
-    value: 'Kỳ Anh',
+    name: 'Kỳ Anh',
     type: 'huyen',
     slug: 'ky-anh',
     name_with_type: 'Huyện Kỳ Anh',
@@ -5740,7 +5740,7 @@ export const DistrictsArr = [
     parent_code: '42',
   },
   {
-    value: 'Lộc Hà',
+    name: 'Lộc Hà',
     type: 'huyen',
     slug: 'loc-ha',
     name_with_type: 'Huyện Lộc Hà',
@@ -5750,7 +5750,7 @@ export const DistrictsArr = [
     parent_code: '42',
   },
   {
-    value: 'Kỳ Anh',
+    name: 'Kỳ Anh',
     type: 'thi-xa',
     slug: 'ky-anh',
     name_with_type: 'Thị xã Kỳ Anh',
@@ -5760,7 +5760,7 @@ export const DistrictsArr = [
     parent_code: '42',
   },
   {
-    value: 'Phan Rang-Tháp Chàm',
+    name: 'Phan Rang-Tháp Chàm',
     type: 'thanh-pho',
     slug: 'phan-rang-thap-cham',
     name_with_type: 'Thành phố Phan Rang-Tháp Chàm',
@@ -5770,7 +5770,7 @@ export const DistrictsArr = [
     parent_code: '58',
   },
   {
-    value: 'Bác Ái',
+    name: 'Bác Ái',
     type: 'huyen',
     slug: 'bac-ai',
     name_with_type: 'Huyện Bác Ái',
@@ -5780,7 +5780,7 @@ export const DistrictsArr = [
     parent_code: '58',
   },
   {
-    value: 'Ninh Sơn',
+    name: 'Ninh Sơn',
     type: 'huyen',
     slug: 'ninh-son',
     name_with_type: 'Huyện Ninh Sơn',
@@ -5790,7 +5790,7 @@ export const DistrictsArr = [
     parent_code: '58',
   },
   {
-    value: 'Ninh Hải',
+    name: 'Ninh Hải',
     type: 'huyen',
     slug: 'ninh-hai',
     name_with_type: 'Huyện Ninh Hải',
@@ -5800,7 +5800,7 @@ export const DistrictsArr = [
     parent_code: '58',
   },
   {
-    value: 'Ninh Phước',
+    name: 'Ninh Phước',
     type: 'huyen',
     slug: 'ninh-phuoc',
     name_with_type: 'Huyện Ninh Phước',
@@ -5810,7 +5810,7 @@ export const DistrictsArr = [
     parent_code: '58',
   },
   {
-    value: 'Thuận Bắc',
+    name: 'Thuận Bắc',
     type: 'huyen',
     slug: 'thuan-bac',
     name_with_type: 'Huyện Thuận Bắc',
@@ -5820,7 +5820,7 @@ export const DistrictsArr = [
     parent_code: '58',
   },
   {
-    value: 'Thuận Nam',
+    name: 'Thuận Nam',
     type: 'huyen',
     slug: 'thuan-nam',
     name_with_type: 'Huyện Thuận Nam',
@@ -5830,7 +5830,7 @@ export const DistrictsArr = [
     parent_code: '58',
   },
   {
-    value: 'Cao Lãnh',
+    name: 'Cao Lãnh',
     type: 'thanh-pho',
     slug: 'cao-lanh',
     name_with_type: 'Thành phố Cao Lãnh',
@@ -5840,7 +5840,7 @@ export const DistrictsArr = [
     parent_code: '87',
   },
   {
-    value: 'Sa Đéc',
+    name: 'Sa Đéc',
     type: 'thanh-pho',
     slug: 'sa-dec',
     name_with_type: 'Thành phố Sa Đéc',
@@ -5850,7 +5850,7 @@ export const DistrictsArr = [
     parent_code: '87',
   },
   {
-    value: 'Hồng Ngự',
+    name: 'Hồng Ngự',
     type: 'thi-xa',
     slug: 'hong-ngu',
     name_with_type: 'Thị xã Hồng Ngự',
@@ -5860,7 +5860,7 @@ export const DistrictsArr = [
     parent_code: '87',
   },
   {
-    value: 'Tân Hồng',
+    name: 'Tân Hồng',
     type: 'huyen',
     slug: 'tan-hong',
     name_with_type: 'Huyện Tân Hồng',
@@ -5870,7 +5870,7 @@ export const DistrictsArr = [
     parent_code: '87',
   },
   {
-    value: 'Hồng Ngự',
+    name: 'Hồng Ngự',
     type: 'huyen',
     slug: 'hong-ngu',
     name_with_type: 'Huyện Hồng Ngự',
@@ -5880,7 +5880,7 @@ export const DistrictsArr = [
     parent_code: '87',
   },
   {
-    value: 'Tam Nông',
+    name: 'Tam Nông',
     type: 'huyen',
     slug: 'tam-nong',
     name_with_type: 'Huyện Tam Nông',
@@ -5890,7 +5890,7 @@ export const DistrictsArr = [
     parent_code: '87',
   },
   {
-    value: 'Tháp Mười',
+    name: 'Tháp Mười',
     type: 'huyen',
     slug: 'thap-muoi',
     name_with_type: 'Huyện Tháp Mười',
@@ -5900,7 +5900,7 @@ export const DistrictsArr = [
     parent_code: '87',
   },
   {
-    value: 'Cao Lãnh',
+    name: 'Cao Lãnh',
     type: 'huyen',
     slug: 'cao-lanh',
     name_with_type: 'Huyện Cao Lãnh',
@@ -5910,7 +5910,7 @@ export const DistrictsArr = [
     parent_code: '87',
   },
   {
-    value: 'Thanh Bình',
+    name: 'Thanh Bình',
     type: 'huyen',
     slug: 'thanh-binh',
     name_with_type: 'Huyện Thanh Bình',
@@ -5920,7 +5920,7 @@ export const DistrictsArr = [
     parent_code: '87',
   },
   {
-    value: 'Lấp Vò',
+    name: 'Lấp Vò',
     type: 'huyen',
     slug: 'lap-vo',
     name_with_type: 'Huyện Lấp Vò',
@@ -5930,7 +5930,7 @@ export const DistrictsArr = [
     parent_code: '87',
   },
   {
-    value: 'Lai Vung',
+    name: 'Lai Vung',
     type: 'huyen',
     slug: 'lai-vung',
     name_with_type: 'Huyện Lai Vung',
@@ -5940,7 +5940,7 @@ export const DistrictsArr = [
     parent_code: '87',
   },
   {
-    value: 'Châu Thành',
+    name: 'Châu Thành',
     type: 'huyen',
     slug: 'chau-thanh',
     name_with_type: 'Huyện Châu Thành',
@@ -5950,7 +5950,7 @@ export const DistrictsArr = [
     parent_code: '87',
   },
   {
-    value: 'Tân An',
+    name: 'Tân An',
     type: 'thanh-pho',
     slug: 'tan-an',
     name_with_type: 'Thành phố Tân An',
@@ -5960,7 +5960,7 @@ export const DistrictsArr = [
     parent_code: '80',
   },
   {
-    value: 'Kiến Tường',
+    name: 'Kiến Tường',
     type: 'thi-xa',
     slug: 'kien-tuong',
     name_with_type: 'Thị xã Kiến Tường',
@@ -5970,7 +5970,7 @@ export const DistrictsArr = [
     parent_code: '80',
   },
   {
-    value: 'Tân Hưng',
+    name: 'Tân Hưng',
     type: 'huyen',
     slug: 'tan-hung',
     name_with_type: 'Huyện Tân Hưng',
@@ -5980,7 +5980,7 @@ export const DistrictsArr = [
     parent_code: '80',
   },
   {
-    value: 'Vĩnh Hưng',
+    name: 'Vĩnh Hưng',
     type: 'huyen',
     slug: 'vinh-hung',
     name_with_type: 'Huyện Vĩnh Hưng',
@@ -5990,7 +5990,7 @@ export const DistrictsArr = [
     parent_code: '80',
   },
   {
-    value: 'Mộc Hóa',
+    name: 'Mộc Hóa',
     type: 'huyen',
     slug: 'moc-hoa',
     name_with_type: 'Huyện Mộc Hóa',
@@ -6000,7 +6000,7 @@ export const DistrictsArr = [
     parent_code: '80',
   },
   {
-    value: 'Tân Thạnh',
+    name: 'Tân Thạnh',
     type: 'huyen',
     slug: 'tan-thanh',
     name_with_type: 'Huyện Tân Thạnh',
@@ -6010,7 +6010,7 @@ export const DistrictsArr = [
     parent_code: '80',
   },
   {
-    value: 'Thạnh Hóa',
+    name: 'Thạnh Hóa',
     type: 'huyen',
     slug: 'thanh-hoa',
     name_with_type: 'Huyện Thạnh Hóa',
@@ -6020,7 +6020,7 @@ export const DistrictsArr = [
     parent_code: '80',
   },
   {
-    value: 'Đức Huệ',
+    name: 'Đức Huệ',
     type: 'huyen',
     slug: 'duc-hue',
     name_with_type: 'Huyện Đức Huệ',
@@ -6030,7 +6030,7 @@ export const DistrictsArr = [
     parent_code: '80',
   },
   {
-    value: 'Đức Hòa',
+    name: 'Đức Hòa',
     type: 'huyen',
     slug: 'duc-hoa',
     name_with_type: 'Huyện Đức Hòa',
@@ -6040,7 +6040,7 @@ export const DistrictsArr = [
     parent_code: '80',
   },
   {
-    value: 'Bến Lức',
+    name: 'Bến Lức',
     type: 'huyen',
     slug: 'ben-luc',
     name_with_type: 'Huyện Bến Lức',
@@ -6050,7 +6050,7 @@ export const DistrictsArr = [
     parent_code: '80',
   },
   {
-    value: 'Thủ Thừa',
+    name: 'Thủ Thừa',
     type: 'huyen',
     slug: 'thu-thua',
     name_with_type: 'Huyện Thủ Thừa',
@@ -6060,7 +6060,7 @@ export const DistrictsArr = [
     parent_code: '80',
   },
   {
-    value: 'Tân Trụ',
+    name: 'Tân Trụ',
     type: 'huyen',
     slug: 'tan-tru',
     name_with_type: 'Huyện Tân Trụ',
@@ -6070,7 +6070,7 @@ export const DistrictsArr = [
     parent_code: '80',
   },
   {
-    value: 'Cần Đước',
+    name: 'Cần Đước',
     type: 'huyen',
     slug: 'can-duoc',
     name_with_type: 'Huyện Cần Đước',
@@ -6080,7 +6080,7 @@ export const DistrictsArr = [
     parent_code: '80',
   },
   {
-    value: 'Cần Giuộc',
+    name: 'Cần Giuộc',
     type: 'huyen',
     slug: 'can-giuoc',
     name_with_type: 'Huyện Cần Giuộc',
@@ -6090,7 +6090,7 @@ export const DistrictsArr = [
     parent_code: '80',
   },
   {
-    value: 'Châu Thành',
+    name: 'Châu Thành',
     type: 'huyen',
     slug: 'chau-thanh',
     name_with_type: 'Huyện Châu Thành',
@@ -6100,7 +6100,7 @@ export const DistrictsArr = [
     parent_code: '80',
   },
   {
-    value: 'Vị Thanh',
+    name: 'Vị Thanh',
     type: 'thanh-pho',
     slug: 'vi-thanh',
     name_with_type: 'Thành phố Vị Thanh',
@@ -6110,7 +6110,7 @@ export const DistrictsArr = [
     parent_code: '93',
   },
   {
-    value: 'Ngã Bảy',
+    name: 'Ngã Bảy',
     type: 'thi-xa',
     slug: 'nga-bay',
     name_with_type: 'Thị xã Ngã Bảy',
@@ -6120,7 +6120,7 @@ export const DistrictsArr = [
     parent_code: '93',
   },
   {
-    value: 'Châu Thành A',
+    name: 'Châu Thành A',
     type: 'huyen',
     slug: 'chau-thanh-a',
     name_with_type: 'Huyện Châu Thành A',
@@ -6130,7 +6130,7 @@ export const DistrictsArr = [
     parent_code: '93',
   },
   {
-    value: 'Châu Thành',
+    name: 'Châu Thành',
     type: 'huyen',
     slug: 'chau-thanh',
     name_with_type: 'Huyện Châu Thành',
@@ -6140,7 +6140,7 @@ export const DistrictsArr = [
     parent_code: '93',
   },
   {
-    value: 'Phụng Hiệp',
+    name: 'Phụng Hiệp',
     type: 'huyen',
     slug: 'phung-hiep',
     name_with_type: 'Huyện Phụng Hiệp',
@@ -6150,7 +6150,7 @@ export const DistrictsArr = [
     parent_code: '93',
   },
   {
-    value: 'Vị Thuỷ',
+    name: 'Vị Thuỷ',
     type: 'huyen',
     slug: 'vi-thuy',
     name_with_type: 'Huyện Vị Thuỷ',
@@ -6160,7 +6160,7 @@ export const DistrictsArr = [
     parent_code: '93',
   },
   {
-    value: 'Long Mỹ',
+    name: 'Long Mỹ',
     type: 'huyen',
     slug: 'long-my',
     name_with_type: 'Huyện Long Mỹ',
@@ -6170,7 +6170,7 @@ export const DistrictsArr = [
     parent_code: '93',
   },
   {
-    value: 'Long Mỹ',
+    name: 'Long Mỹ',
     type: 'thi-xa',
     slug: 'long-my',
     name_with_type: 'Thị xã Long Mỹ',
@@ -6180,7 +6180,7 @@ export const DistrictsArr = [
     parent_code: '93',
   },
   {
-    value: 'Hạ Long',
+    name: 'Hạ Long',
     type: 'thanh-pho',
     slug: 'ha-long',
     name_with_type: 'Thành phố Hạ Long',
@@ -6190,7 +6190,7 @@ export const DistrictsArr = [
     parent_code: '22',
   },
   {
-    value: 'Móng Cái',
+    name: 'Móng Cái',
     type: 'thanh-pho',
     slug: 'mong-cai',
     name_with_type: 'Thành phố Móng Cái',
@@ -6200,7 +6200,7 @@ export const DistrictsArr = [
     parent_code: '22',
   },
   {
-    value: 'Cẩm Phả',
+    name: 'Cẩm Phả',
     type: 'thanh-pho',
     slug: 'cam-pha',
     name_with_type: 'Thành phố Cẩm Phả',
@@ -6210,7 +6210,7 @@ export const DistrictsArr = [
     parent_code: '22',
   },
   {
-    value: 'Uông Bí',
+    name: 'Uông Bí',
     type: 'thanh-pho',
     slug: 'uong-bi',
     name_with_type: 'Thành phố Uông Bí',
@@ -6220,7 +6220,7 @@ export const DistrictsArr = [
     parent_code: '22',
   },
   {
-    value: 'Bình Liêu',
+    name: 'Bình Liêu',
     type: 'huyen',
     slug: 'binh-lieu',
     name_with_type: 'Huyện Bình Liêu',
@@ -6230,7 +6230,7 @@ export const DistrictsArr = [
     parent_code: '22',
   },
   {
-    value: 'Tiên Yên',
+    name: 'Tiên Yên',
     type: 'huyen',
     slug: 'tien-yen',
     name_with_type: 'Huyện Tiên Yên',
@@ -6240,7 +6240,7 @@ export const DistrictsArr = [
     parent_code: '22',
   },
   {
-    value: 'Đầm Hà',
+    name: 'Đầm Hà',
     type: 'huyen',
     slug: 'dam-ha',
     name_with_type: 'Huyện Đầm Hà',
@@ -6250,7 +6250,7 @@ export const DistrictsArr = [
     parent_code: '22',
   },
   {
-    value: 'Hải Hà',
+    name: 'Hải Hà',
     type: 'huyen',
     slug: 'hai-ha',
     name_with_type: 'Huyện Hải Hà',
@@ -6260,7 +6260,7 @@ export const DistrictsArr = [
     parent_code: '22',
   },
   {
-    value: 'Ba Chẽ',
+    name: 'Ba Chẽ',
     type: 'huyen',
     slug: 'ba-che',
     name_with_type: 'Huyện Ba Chẽ',
@@ -6270,7 +6270,7 @@ export const DistrictsArr = [
     parent_code: '22',
   },
   {
-    value: 'Vân Đồn',
+    name: 'Vân Đồn',
     type: 'huyen',
     slug: 'van-don',
     name_with_type: 'Huyện Vân Đồn',
@@ -6280,7 +6280,7 @@ export const DistrictsArr = [
     parent_code: '22',
   },
   {
-    value: 'Hoành Bồ',
+    name: 'Hoành Bồ',
     type: 'huyen',
     slug: 'hoanh-bo',
     name_with_type: 'Huyện Hoành Bồ',
@@ -6290,7 +6290,7 @@ export const DistrictsArr = [
     parent_code: '22',
   },
   {
-    value: 'Đông Triều',
+    name: 'Đông Triều',
     type: 'thi-xa',
     slug: 'dong-trieu',
     name_with_type: 'Thị xã Đông Triều',
@@ -6300,7 +6300,7 @@ export const DistrictsArr = [
     parent_code: '22',
   },
   {
-    value: 'Quảng Yên',
+    name: 'Quảng Yên',
     type: 'thi-xa',
     slug: 'quang-yen',
     name_with_type: 'Thị xã Quảng Yên',
@@ -6310,7 +6310,7 @@ export const DistrictsArr = [
     parent_code: '22',
   },
   {
-    value: 'Cô Tô',
+    name: 'Cô Tô',
     type: 'huyen',
     slug: 'co-to',
     name_with_type: 'Huyện Cô Tô',
@@ -6320,7 +6320,7 @@ export const DistrictsArr = [
     parent_code: '22',
   },
   {
-    value: 'Việt Trì',
+    name: 'Việt Trì',
     type: 'thanh-pho',
     slug: 'viet-tri',
     name_with_type: 'Thành phố Việt Trì',
@@ -6330,7 +6330,7 @@ export const DistrictsArr = [
     parent_code: '25',
   },
   {
-    value: 'Phú Thọ',
+    name: 'Phú Thọ',
     type: 'thi-xa',
     slug: 'phu-tho',
     name_with_type: 'Thị xã Phú Thọ',
@@ -6340,7 +6340,7 @@ export const DistrictsArr = [
     parent_code: '25',
   },
   {
-    value: 'Đoan Hùng',
+    name: 'Đoan Hùng',
     type: 'huyen',
     slug: 'doan-hung',
     name_with_type: 'Huyện Đoan Hùng',
@@ -6350,7 +6350,7 @@ export const DistrictsArr = [
     parent_code: '25',
   },
   {
-    value: 'Hạ Hoà',
+    name: 'Hạ Hoà',
     type: 'huyen',
     slug: 'ha-hoa',
     name_with_type: 'Huyện Hạ Hoà',
@@ -6360,7 +6360,7 @@ export const DistrictsArr = [
     parent_code: '25',
   },
   {
-    value: 'Thanh Ba',
+    name: 'Thanh Ba',
     type: 'huyen',
     slug: 'thanh-ba',
     name_with_type: 'Huyện Thanh Ba',
@@ -6370,7 +6370,7 @@ export const DistrictsArr = [
     parent_code: '25',
   },
   {
-    value: 'Phù Ninh',
+    name: 'Phù Ninh',
     type: 'huyen',
     slug: 'phu-ninh',
     name_with_type: 'Huyện Phù Ninh',
@@ -6380,7 +6380,7 @@ export const DistrictsArr = [
     parent_code: '25',
   },
   {
-    value: 'Yên Lập',
+    name: 'Yên Lập',
     type: 'huyen',
     slug: 'yen-lap',
     name_with_type: 'Huyện Yên Lập',
@@ -6390,7 +6390,7 @@ export const DistrictsArr = [
     parent_code: '25',
   },
   {
-    value: 'Cẩm Khê',
+    name: 'Cẩm Khê',
     type: 'huyen',
     slug: 'cam-khe',
     name_with_type: 'Huyện Cẩm Khê',
@@ -6400,7 +6400,7 @@ export const DistrictsArr = [
     parent_code: '25',
   },
   {
-    value: 'Tam Nông',
+    name: 'Tam Nông',
     type: 'huyen',
     slug: 'tam-nong',
     name_with_type: 'Huyện Tam Nông',
@@ -6410,7 +6410,7 @@ export const DistrictsArr = [
     parent_code: '25',
   },
   {
-    value: 'Lâm Thao',
+    name: 'Lâm Thao',
     type: 'huyen',
     slug: 'lam-thao',
     name_with_type: 'Huyện Lâm Thao',
@@ -6420,7 +6420,7 @@ export const DistrictsArr = [
     parent_code: '25',
   },
   {
-    value: 'Thanh Sơn',
+    name: 'Thanh Sơn',
     type: 'huyen',
     slug: 'thanh-son',
     name_with_type: 'Huyện Thanh Sơn',
@@ -6430,7 +6430,7 @@ export const DistrictsArr = [
     parent_code: '25',
   },
   {
-    value: 'Thanh Thuỷ',
+    name: 'Thanh Thuỷ',
     type: 'huyen',
     slug: 'thanh-thuy',
     name_with_type: 'Huyện Thanh Thuỷ',
@@ -6440,7 +6440,7 @@ export const DistrictsArr = [
     parent_code: '25',
   },
   {
-    value: 'Tân Sơn',
+    name: 'Tân Sơn',
     type: 'huyen',
     slug: 'tan-son',
     name_with_type: 'Huyện Tân Sơn',
@@ -6450,7 +6450,7 @@ export const DistrictsArr = [
     parent_code: '25',
   },
   {
-    value: 'Đồng Hới',
+    name: 'Đồng Hới',
     type: 'thanh-pho',
     slug: 'dong-hoi',
     name_with_type: 'Thành Phố Đồng Hới',
@@ -6460,7 +6460,7 @@ export const DistrictsArr = [
     parent_code: '44',
   },
   {
-    value: 'Minh Hóa',
+    name: 'Minh Hóa',
     type: 'huyen',
     slug: 'minh-hoa',
     name_with_type: 'Huyện Minh Hóa',
@@ -6470,7 +6470,7 @@ export const DistrictsArr = [
     parent_code: '44',
   },
   {
-    value: 'Tuyên Hóa',
+    name: 'Tuyên Hóa',
     type: 'huyen',
     slug: 'tuyen-hoa',
     name_with_type: 'Huyện Tuyên Hóa',
@@ -6480,7 +6480,7 @@ export const DistrictsArr = [
     parent_code: '44',
   },
   {
-    value: 'Quảng Trạch',
+    name: 'Quảng Trạch',
     type: 'huyen',
     slug: 'quang-trach',
     name_with_type: 'Huyện Quảng Trạch',
@@ -6490,7 +6490,7 @@ export const DistrictsArr = [
     parent_code: '44',
   },
   {
-    value: 'Bố Trạch',
+    name: 'Bố Trạch',
     type: 'huyen',
     slug: 'bo-trach',
     name_with_type: 'Huyện Bố Trạch',
@@ -6500,7 +6500,7 @@ export const DistrictsArr = [
     parent_code: '44',
   },
   {
-    value: 'Quảng Ninh',
+    name: 'Quảng Ninh',
     type: 'huyen',
     slug: 'quang-ninh',
     name_with_type: 'Huyện Quảng Ninh',
@@ -6510,7 +6510,7 @@ export const DistrictsArr = [
     parent_code: '44',
   },
   {
-    value: 'Lệ Thủy',
+    name: 'Lệ Thủy',
     type: 'huyen',
     slug: 'le-thuy',
     name_with_type: 'Huyện Lệ Thủy',
@@ -6520,7 +6520,7 @@ export const DistrictsArr = [
     parent_code: '44',
   },
   {
-    value: 'Ba Đồn',
+    name: 'Ba Đồn',
     type: 'thi-xa',
     slug: 'ba-don',
     name_with_type: 'Thị xã Ba Đồn',
@@ -6530,7 +6530,7 @@ export const DistrictsArr = [
     parent_code: '44',
   },
   {
-    value: '1',
+    name: '1',
     type: 'quan',
     slug: '1',
     name_with_type: 'Quận 1',
@@ -6540,7 +6540,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: '12',
+    name: '12',
     type: 'quan',
     slug: '12',
     name_with_type: 'Quận 12',
@@ -6550,7 +6550,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: 'Thủ Đức',
+    name: 'Thủ Đức',
     type: 'quan',
     slug: 'thu-duc',
     name_with_type: 'Quận Thủ Đức',
@@ -6560,7 +6560,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: '9',
+    name: '9',
     type: 'quan',
     slug: '9',
     name_with_type: 'Quận 9',
@@ -6570,7 +6570,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: 'Gò Vấp',
+    name: 'Gò Vấp',
     type: 'quan',
     slug: 'go-vap',
     name_with_type: 'Quận Gò Vấp',
@@ -6580,7 +6580,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: 'Bình Thạnh',
+    name: 'Bình Thạnh',
     type: 'quan',
     slug: 'binh-thanh',
     name_with_type: 'Quận Bình Thạnh',
@@ -6590,7 +6590,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: 'Tân Bình',
+    name: 'Tân Bình',
     type: 'quan',
     slug: 'tan-binh',
     name_with_type: 'Quận Tân Bình',
@@ -6600,7 +6600,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: 'Tân Phú',
+    name: 'Tân Phú',
     type: 'quan',
     slug: 'tan-phu',
     name_with_type: 'Quận Tân Phú',
@@ -6610,7 +6610,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: 'Phú Nhuận',
+    name: 'Phú Nhuận',
     type: 'quan',
     slug: 'phu-nhuan',
     name_with_type: 'Quận Phú Nhuận',
@@ -6620,7 +6620,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: '2',
+    name: '2',
     type: 'quan',
     slug: '2',
     name_with_type: 'Quận 2',
@@ -6630,7 +6630,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: '3',
+    name: '3',
     type: 'quan',
     slug: '3',
     name_with_type: 'Quận 3',
@@ -6640,7 +6640,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: '10',
+    name: '10',
     type: 'quan',
     slug: '10',
     name_with_type: 'Quận 10',
@@ -6650,7 +6650,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: '11',
+    name: '11',
     type: 'quan',
     slug: '11',
     name_with_type: 'Quận 11',
@@ -6660,7 +6660,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: '4',
+    name: '4',
     type: 'quan',
     slug: '4',
     name_with_type: 'Quận 4',
@@ -6670,7 +6670,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: '5',
+    name: '5',
     type: 'quan',
     slug: '5',
     name_with_type: 'Quận 5',
@@ -6680,7 +6680,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: '6',
+    name: '6',
     type: 'quan',
     slug: '6',
     name_with_type: 'Quận 6',
@@ -6690,7 +6690,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: '8',
+    name: '8',
     type: 'quan',
     slug: '8',
     name_with_type: 'Quận 8',
@@ -6700,7 +6700,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: 'Bình Tân',
+    name: 'Bình Tân',
     type: 'quan',
     slug: 'binh-tan',
     name_with_type: 'Quận Bình Tân',
@@ -6710,7 +6710,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: '7',
+    name: '7',
     type: 'quan',
     slug: '7',
     name_with_type: 'Quận 7',
@@ -6720,7 +6720,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: 'Củ Chi',
+    name: 'Củ Chi',
     type: 'huyen',
     slug: 'cu-chi',
     name_with_type: 'Huyện Củ Chi',
@@ -6730,7 +6730,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: 'Hóc Môn',
+    name: 'Hóc Môn',
     type: 'huyen',
     slug: 'hoc-mon',
     name_with_type: 'Huyện Hóc Môn',
@@ -6740,7 +6740,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: 'Bình Chánh',
+    name: 'Bình Chánh',
     type: 'huyen',
     slug: 'binh-chanh',
     name_with_type: 'Huyện Bình Chánh',
@@ -6750,7 +6750,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: 'Nhà Bè',
+    name: 'Nhà Bè',
     type: 'huyen',
     slug: 'nha-be',
     name_with_type: 'Huyện Nhà Bè',
@@ -6760,7 +6760,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: 'Cần Giờ',
+    name: 'Cần Giờ',
     type: 'huyen',
     slug: 'can-gio',
     name_with_type: 'Huyện Cần Giờ',
@@ -6770,7 +6770,7 @@ export const DistrictsArr = [
     parent_code: '79',
   },
   {
-    value: 'Phủ Lý',
+    name: 'Phủ Lý',
     type: 'thanh-pho',
     slug: 'phu-ly',
     name_with_type: 'Thành phố Phủ Lý',
@@ -6780,7 +6780,7 @@ export const DistrictsArr = [
     parent_code: '35',
   },
   {
-    value: 'Duy Tiên',
+    name: 'Duy Tiên',
     type: 'huyen',
     slug: 'duy-tien',
     name_with_type: 'Huyện Duy Tiên',
@@ -6790,7 +6790,7 @@ export const DistrictsArr = [
     parent_code: '35',
   },
   {
-    value: 'Kim Bảng',
+    name: 'Kim Bảng',
     type: 'huyen',
     slug: 'kim-bang',
     name_with_type: 'Huyện Kim Bảng',
@@ -6800,7 +6800,7 @@ export const DistrictsArr = [
     parent_code: '35',
   },
   {
-    value: 'Thanh Liêm',
+    name: 'Thanh Liêm',
     type: 'huyen',
     slug: 'thanh-liem',
     name_with_type: 'Huyện Thanh Liêm',
@@ -6810,7 +6810,7 @@ export const DistrictsArr = [
     parent_code: '35',
   },
   {
-    value: 'Bình Lục',
+    name: 'Bình Lục',
     type: 'huyen',
     slug: 'binh-luc',
     name_with_type: 'Huyện Bình Lục',
@@ -6820,7 +6820,7 @@ export const DistrictsArr = [
     parent_code: '35',
   },
   {
-    value: 'Lý Nhân',
+    name: 'Lý Nhân',
     type: 'huyen',
     slug: 'ly-nhan',
     name_with_type: 'Huyện Lý Nhân',
@@ -6830,7 +6830,7 @@ export const DistrictsArr = [
     parent_code: '35',
   },
   {
-    value: 'Bắc Ninh',
+    name: 'Bắc Ninh',
     type: 'thanh-pho',
     slug: 'bac-ninh',
     name_with_type: 'Thành phố Bắc Ninh',
@@ -6840,7 +6840,7 @@ export const DistrictsArr = [
     parent_code: '27',
   },
   {
-    value: 'Yên Phong',
+    name: 'Yên Phong',
     type: 'huyen',
     slug: 'yen-phong',
     name_with_type: 'Huyện Yên Phong',
@@ -6850,7 +6850,7 @@ export const DistrictsArr = [
     parent_code: '27',
   },
   {
-    value: 'Quế Võ',
+    name: 'Quế Võ',
     type: 'huyen',
     slug: 'que-vo',
     name_with_type: 'Huyện Quế Võ',
@@ -6860,7 +6860,7 @@ export const DistrictsArr = [
     parent_code: '27',
   },
   {
-    value: 'Tiên Du',
+    name: 'Tiên Du',
     type: 'huyen',
     slug: 'tien-du',
     name_with_type: 'Huyện Tiên Du',
@@ -6870,7 +6870,7 @@ export const DistrictsArr = [
     parent_code: '27',
   },
   {
-    value: 'Từ Sơn',
+    name: 'Từ Sơn',
     type: 'thi-xa',
     slug: 'tu-son',
     name_with_type: 'Thị xã Từ Sơn',
@@ -6880,7 +6880,7 @@ export const DistrictsArr = [
     parent_code: '27',
   },
   {
-    value: 'Thuận Thành',
+    name: 'Thuận Thành',
     type: 'huyen',
     slug: 'thuan-thanh',
     name_with_type: 'Huyện Thuận Thành',
@@ -6890,7 +6890,7 @@ export const DistrictsArr = [
     parent_code: '27',
   },
   {
-    value: 'Gia Bình',
+    name: 'Gia Bình',
     type: 'huyen',
     slug: 'gia-binh',
     name_with_type: 'Huyện Gia Bình',
@@ -6900,7 +6900,7 @@ export const DistrictsArr = [
     parent_code: '27',
   },
   {
-    value: 'Lương Tài',
+    name: 'Lương Tài',
     type: 'huyen',
     slug: 'luong-tai',
     name_with_type: 'Huyện Lương Tài',
@@ -6910,7 +6910,7 @@ export const DistrictsArr = [
     parent_code: '27',
   },
   {
-    value: 'Bắc Giang',
+    name: 'Bắc Giang',
     type: 'thanh-pho',
     slug: 'bac-giang',
     name_with_type: 'Thành phố Bắc Giang',
@@ -6920,7 +6920,7 @@ export const DistrictsArr = [
     parent_code: '24',
   },
   {
-    value: 'Yên Thế',
+    name: 'Yên Thế',
     type: 'huyen',
     slug: 'yen-the',
     name_with_type: 'Huyện Yên Thế',
@@ -6930,7 +6930,7 @@ export const DistrictsArr = [
     parent_code: '24',
   },
   {
-    value: 'Tân Yên',
+    name: 'Tân Yên',
     type: 'huyen',
     slug: 'tan-yen',
     name_with_type: 'Huyện Tân Yên',
@@ -6940,7 +6940,7 @@ export const DistrictsArr = [
     parent_code: '24',
   },
   {
-    value: 'Lạng Giang',
+    name: 'Lạng Giang',
     type: 'huyen',
     slug: 'lang-giang',
     name_with_type: 'Huyện Lạng Giang',
@@ -6950,7 +6950,7 @@ export const DistrictsArr = [
     parent_code: '24',
   },
   {
-    value: 'Lục Nam',
+    name: 'Lục Nam',
     type: 'huyen',
     slug: 'luc-nam',
     name_with_type: 'Huyện Lục Nam',
@@ -6960,7 +6960,7 @@ export const DistrictsArr = [
     parent_code: '24',
   },
   {
-    value: 'Lục Ngạn',
+    name: 'Lục Ngạn',
     type: 'huyen',
     slug: 'luc-ngan',
     name_with_type: 'Huyện Lục Ngạn',
@@ -6970,7 +6970,7 @@ export const DistrictsArr = [
     parent_code: '24',
   },
   {
-    value: 'Sơn Động',
+    name: 'Sơn Động',
     type: 'huyen',
     slug: 'son-dong',
     name_with_type: 'Huyện Sơn Động',
@@ -6980,7 +6980,7 @@ export const DistrictsArr = [
     parent_code: '24',
   },
   {
-    value: 'Yên Dũng',
+    name: 'Yên Dũng',
     type: 'huyen',
     slug: 'yen-dung',
     name_with_type: 'Huyện Yên Dũng',
@@ -6990,7 +6990,7 @@ export const DistrictsArr = [
     parent_code: '24',
   },
   {
-    value: 'Việt Yên',
+    name: 'Việt Yên',
     type: 'huyen',
     slug: 'viet-yen',
     name_with_type: 'Huyện Việt Yên',
@@ -7000,7 +7000,7 @@ export const DistrictsArr = [
     parent_code: '24',
   },
   {
-    value: 'Hiệp Hòa',
+    name: 'Hiệp Hòa',
     type: 'huyen',
     slug: 'hiep-hoa',
     name_with_type: 'Huyện Hiệp Hòa',
@@ -7010,7 +7010,7 @@ export const DistrictsArr = [
     parent_code: '24',
   },
   {
-    value: 'Bắc Kạn',
+    name: 'Bắc Kạn',
     type: 'thanh-pho',
     slug: 'bac-kan',
     name_with_type: 'Thành Phố Bắc Kạn',
@@ -7020,7 +7020,7 @@ export const DistrictsArr = [
     parent_code: '06',
   },
   {
-    value: 'Pác Nặm',
+    name: 'Pác Nặm',
     type: 'huyen',
     slug: 'pac-nam',
     name_with_type: 'Huyện Pác Nặm',
@@ -7030,7 +7030,7 @@ export const DistrictsArr = [
     parent_code: '06',
   },
   {
-    value: 'Ba Bể',
+    name: 'Ba Bể',
     type: 'huyen',
     slug: 'ba-be',
     name_with_type: 'Huyện Ba Bể',
@@ -7040,7 +7040,7 @@ export const DistrictsArr = [
     parent_code: '06',
   },
   {
-    value: 'Ngân Sơn',
+    name: 'Ngân Sơn',
     type: 'huyen',
     slug: 'ngan-son',
     name_with_type: 'Huyện Ngân Sơn',
@@ -7050,7 +7050,7 @@ export const DistrictsArr = [
     parent_code: '06',
   },
   {
-    value: 'Bạch Thông',
+    name: 'Bạch Thông',
     type: 'huyen',
     slug: 'bach-thong',
     name_with_type: 'Huyện Bạch Thông',
@@ -7060,7 +7060,7 @@ export const DistrictsArr = [
     parent_code: '06',
   },
   {
-    value: 'Chợ Đồn',
+    name: 'Chợ Đồn',
     type: 'huyen',
     slug: 'cho-don',
     name_with_type: 'Huyện Chợ Đồn',
@@ -7070,7 +7070,7 @@ export const DistrictsArr = [
     parent_code: '06',
   },
   {
-    value: 'Chợ Mới',
+    name: 'Chợ Mới',
     type: 'huyen',
     slug: 'cho-moi',
     name_with_type: 'Huyện Chợ Mới',
@@ -7080,7 +7080,7 @@ export const DistrictsArr = [
     parent_code: '06',
   },
   {
-    value: 'Na Rì',
+    name: 'Na Rì',
     type: 'huyen',
     slug: 'na-ri',
     name_with_type: 'Huyện Na Rì',

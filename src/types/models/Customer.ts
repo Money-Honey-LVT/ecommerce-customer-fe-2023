@@ -1,12 +1,13 @@
 import { BaseModel } from './BaseModal';
 
 export interface User extends BaseModel {
-  fullname: string;
+  fullName: string;
   email: string;
   phone?: string;
   address?: string;
-  province?: string;
   city?: string;
+  district?: string;
+  ward?: string;
 }
 
 export enum UserRole {

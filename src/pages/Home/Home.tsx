@@ -6,6 +6,8 @@ import ROUTER from '../../config/router';
 import Features from '../../components/Features/Features';
 import LandingpageImage from '../../assets/images/landingpageImage.jpg';
 import CategorySlider from '../../components/CategorySlider/CategorySlider';
+import VoucherList from '../../components/Vouchers/VouchersList';
+import ReviewCard, { fakeData } from '../../components/Review/Review';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -13,6 +15,7 @@ const Home = () => {
     <Stack>
       <CategorySlider />
 
+      <VoucherList />
       <Flex justify={'center'}>
         <Button
           onClick={() => navigate(ROUTER.PRODUCT.ALL_PRODUCTS)}

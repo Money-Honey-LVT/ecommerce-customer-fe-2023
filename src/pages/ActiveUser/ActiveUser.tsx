@@ -8,7 +8,7 @@ import { UserAction } from '../../reducers/user/user.action';
 const ActiveUser = () => {
   const location = useLocation().search;
   const email = _.chain(location).split('=').last().value();
-  console.log(email);
+
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 

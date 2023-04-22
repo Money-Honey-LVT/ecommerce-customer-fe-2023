@@ -59,7 +59,7 @@ const User = () => {
       {isLogin && (
         <Menu.Dropdown>
           {MenuItems.map((item, index) => (
-            <Menu.Item icon={item.icon} onClick={() => navigate(item.link)}>
+            <Menu.Item key={index} icon={item.icon} onClick={() => navigate(item.link)}>
               {item.title}
             </Menu.Item>
           ))}

@@ -14,6 +14,8 @@ const userReducer: Reducer<UserState, UserAction> = (state = initialState, actio
     case UserActionType.RESET_PASSWORD_PENDING:
     case UserActionType.SIGNUP_PENDING:
     case UserActionType.ACTIVE_USER_PENDING:
+    case UserActionType.UPDATE_PROFILE_PENDING:
+    case UserActionType.GET_PROFILE_PENDING:
       return { ...state, isFetching: true };
 
     //Fail
@@ -22,12 +24,18 @@ const userReducer: Reducer<UserState, UserAction> = (state = initialState, actio
     case UserActionType.RESET_PASSWORD_FAIL:
     case UserActionType.SIGNUP_FAIL:
     case UserActionType.ACTIVE_USER_FAIL:
+    case UserActionType.UPDATE_PROFILE_FAIL:
+    case UserActionType.GET_PROFILE_FAIL:
       return { ...state, isFetching: false };
 
     //Success
     case UserActionType.LOGIN_SUCCESS: {
       return { ...state, isFetching: false, user: action.payload };
     }
+    case UserActionType.GET_PROFILE_SUCCESS:
+    case UserActionType.UPDATE_PROFILE_SUCCESS:
+      return { ...state, isFetching: false, user: action.payload };
+
     case UserActionType.RESET_PASSWORD_SUCCESS:
     case UserActionType.FORGOT_PASSWORD_SUCCESS:
     case UserActionType.SIGNUP_SUCCESS:

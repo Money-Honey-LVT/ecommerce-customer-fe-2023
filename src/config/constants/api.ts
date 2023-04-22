@@ -1,5 +1,5 @@
 import { Schemas } from './schemas';
-
+import { SearchProductPayload } from '../../reducers/product/product.actions';
 export const HEADERS = {
   header: () => ({
     accept: 'application/json',
@@ -40,6 +40,40 @@ export const API_URLS = {
 
     resetPassword: (token: string, pass: string, confirmPass: string) => ({
       endPoint: `${Schemas.UserSchema}/ResetPassword?token=${token}&pass=${pass}&confirmPass=${confirmPass}`,
+      method: 'GET',
+      headers: HEADERS.header(),
+    }),
+
+    getProfile: () => ({
+      endPoint: `${Schemas.UserSchema}/Profile`,
+      method: 'GET',
+      headers: HEADERS.authHeader(),
+    }),
+
+    updateProfile: () => ({
+      endPoint: `${Schemas.UserSchema}/Profile`,
+      method: 'POST',
+      headers: HEADERS.authHeader(),
+    }),
+  },
+
+  PRODUCT: {
+    searchProduct: () => ({
+      endPoint: `${Schemas.ProductSchema}/search`,
+      method: 'POST',
+      headers: HEADERS.header(),
+    }),
+
+    getProductById: (id: number) => ({
+      endPoint: `${Schemas.ProductSchema}/${12}`,
+      method: 'GET',
+      headers: HEADERS.header(),
+    }),
+  },
+
+  CATEGORY: {
+    getAllCategory: () => ({
+      endPoint: `${Schemas.CategorySchema}`,
       method: 'GET',
       headers: HEADERS.header(),
     }),

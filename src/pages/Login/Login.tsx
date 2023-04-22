@@ -33,7 +33,6 @@ const Login = () => {
   });
 
   const handleSubmit = (values: any) => {
-    console.log(values);
     dispatch(
       UserAction.Login(
         {

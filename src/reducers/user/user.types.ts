@@ -27,6 +27,14 @@ export enum UserActionType {
   RESET_PASSWORD_PENDING = 'RESET_PASSWORD_PENDING',
   RESET_PASSWORD_SUCCESS = 'RESET_PASSWORD_SUCCESS',
   RESET_PASSWORD_FAIL = 'RESET_PASSWORD_FAIL',
+
+  GET_PROFILE_PENDING = 'GET_PROFILE_PENDING',
+  GET_PROFILE_SUCCESS = 'GET_PROFILE_SUCCESS',
+  GET_PROFILE_FAIL = 'GET_PROFILE_FAIL',
+
+  UPDATE_PROFILE_PENDING = 'UPDATE_PROFILE_PENDING',
+  UPDATE_PROFILE_SUCCESS = 'UPDATE_PROFILE_SUCCESS',
+  UPDATE_PROFILE_FAIL = 'UPDATET_PROFILE_FAIL',
 }
 //Login
 export interface LoginActionPending {
@@ -98,6 +106,32 @@ export interface ResetPasswordActionFail {
   type: UserActionType.RESET_PASSWORD_FAIL;
 }
 
+export interface GetProfileActionPending {
+  type: UserActionType.GET_PROFILE_PENDING;
+}
+
+export interface GetProfileActionSuccess {
+  type: UserActionType.GET_PROFILE_SUCCESS;
+  payload: User;
+}
+
+export interface GetProfileActionFail {
+  type: UserActionType.GET_PROFILE_FAIL;
+}
+
+export interface UpdateProfileActionPending {
+  type: UserActionType.UPDATE_PROFILE_PENDING;
+}
+
+export interface UpdateProfileActionSuccess {
+  type: UserActionType.UPDATE_PROFILE_SUCCESS;
+  payload: User;
+}
+
+export interface UpdateProfileActionFail {
+  type: UserActionType.UPDATE_PROFILE_FAIL;
+}
+
 export type UserAction =
   | LoginActionPending
   | LoginActionSuccess
@@ -113,6 +147,12 @@ export type UserAction =
   | SignUpActionFail
   | ActiveUserActionPending
   | ActiveUserActionFail
-  | ActiveUserActionSuccess;
+  | ActiveUserActionSuccess
+  | GetProfileActionFail
+  | GetProfileActionPending
+  | GetProfileActionSuccess
+  | UpdateProfileActionFail
+  | UpdateProfileActionPending
+  | UpdateProfileActionSuccess;
 
 export type UserThunkAction = ThunkAction<void, RootState, any, UserAction>;

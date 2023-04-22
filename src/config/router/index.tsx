@@ -19,14 +19,13 @@ const ROUTER = {
     INDEX: '/cart',
   },
   PRODUCT: {
+    INDEX: '/product',
     ALL_PRODUCTS: '/all-products',
+    ALL_PRODUCTS_BY_CATE: '/all-products/:categoryId',
     PRODUCT_DETAILS: '/product/:id',
   },
   CATEGORY: {
-    SHIRT: '/shirt',
-    PANTS: '/pants',
-    UNDERWEAR: '/underwear',
-    ACCESSORIES: '/accessories',
+    INDEX: '/category',
   },
 };
 
