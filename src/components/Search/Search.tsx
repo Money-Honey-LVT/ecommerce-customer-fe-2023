@@ -37,7 +37,7 @@ const Search = () => {
           defaultValue={value}
           onChange={(event) => setValue(event.currentTarget.value)}
         />
-        {value !== '' ? <SearchPopup productList={products} /> : null}
+        {value !== '' ? <SearchPopup productList={products} searchValue={value}/> : null}
       </Stack>
     </Center>
   );

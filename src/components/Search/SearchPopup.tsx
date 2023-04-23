@@ -6,8 +6,10 @@ import ROUTER from '../../config/router';
 
 interface Props {
   productList: Product[] | null;
+  searchValue: string;
 }
-export const SearchPopup = ({ productList }: Props) => {
+
+export const SearchPopup = ({ productList, searchValue }: Props) => {
   const navigate = useNavigate();
   if (productList) {
     return productList.length > 0 ? (
@@ -27,7 +29,7 @@ export const SearchPopup = ({ productList }: Props) => {
         ))}
         {productList.length > 5 ? (
           <Center>
-            <Text size={'sm'} underline>
+            <Text size={'sm'} underline onClick={() => navigate(ROUTER.PRODUCT.ALL_PRODUCTS, {})}>
               Xem tất cả kết quả
             </Text>
           </Center>

@@ -4,6 +4,7 @@ import { AppDispatch } from '../../redux/store';
 import { useCallApi } from '../../utils/api';
 import { notiType, renderNotification } from '../../utils/helpers';
 import { CategoryActionType, CategoryThunkAction } from './category.type';
+import { Category } from '../../types/models/Category';
 
 const GetAllCategory = (): CategoryThunkAction => async (dispatch: AppDispatch) => {
   dispatch({
@@ -18,7 +19,7 @@ const GetAllCategory = (): CategoryThunkAction => async (dispatch: AppDispatch) 
     const { data } = response;
     dispatch({
       type: CategoryActionType.GET_ALL_CATEGORIES_SUCCESS,
-      payload: data,
+      payload: data.filter((category: Category) => category.status !== 'INACTIVE'),
     });
   } else {
     dispatch({
