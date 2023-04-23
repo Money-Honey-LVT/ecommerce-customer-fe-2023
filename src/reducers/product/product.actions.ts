@@ -4,6 +4,7 @@ import { AppDispatch } from '../../redux/store';
 import { useCallApi } from '../../utils/api';
 import { notiType, renderNotification } from '../../utils/helpers';
 import { ProductActionType, ProductThunkAction } from './product.types';
+import { Product } from '../../types/models/Product';
 
 export interface SearchProductPayload {
   productName: string;
@@ -25,7 +26,7 @@ const SearchProduct =
       const { data } = response;
       dispatch({
         type: ProductActionType.SEARCH_PRODUCT_SUCCESS,
-        payload: data,
+        payload: data.filter((data: Product) => data.status !== 'INACTIVE'),
       });
     } else {
       dispatch({

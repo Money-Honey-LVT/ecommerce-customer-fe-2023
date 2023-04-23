@@ -23,7 +23,7 @@ const Category = () => {
   useEffect(() => {
     getAllProducts();
   }, []);
-  const { products, isFetchhing } = useSelector((state: RootState) => state.products);
+  const { products, isFetching } = useSelector((state: RootState) => state.products);
 
   return (
     <>

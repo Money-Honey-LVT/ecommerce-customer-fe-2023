@@ -4,10 +4,9 @@ import { IconShoppingCart, IconArrowNarrowRight } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
 import ROUTER from '../../config/router';
 import Features from '../../components/Features/Features';
-import LandingpageImage from '../../assets/images/landingpageImage.jpg';
 import CategorySlider from '../../components/CategorySlider/CategorySlider';
 import VoucherList from '../../components/Vouchers/VouchersList';
-import ReviewCard, { fakeData } from '../../components/Review/Review';
+import Search from '../../components/Search/Search';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -16,6 +15,9 @@ const Home = () => {
       <CategorySlider />
 
       <VoucherList />
+
+      <Search />
+
       <Flex justify={'center'}>
         <Button
           onClick={() => navigate(ROUTER.PRODUCT.ALL_PRODUCTS)}

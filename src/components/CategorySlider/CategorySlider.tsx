@@ -63,24 +63,24 @@ const data = [
     image:
       'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
     category: 'Áo Nam',
-    link: ROUTER.CATEGORY.SHIRT,
+    link: ROUTER.PRODUCT.ALL_PRODUCTS,
   },
   {
     image:
       'https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
     category: 'Quần Nam',
-    link: ROUTER.CATEGORY.PANTS,
+    link: ROUTER.PRODUCT.ALL_PRODUCTS,
   },
   {
     image:
       'https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
     category: 'Đồ Lót',
-    link: ROUTER.CATEGORY.UNDERWEAR,
+    link: ROUTER.PRODUCT.ALL_PRODUCTS,
   },
   {
     image:
       'https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    link: ROUTER.PRODUCT.,
+    link: ROUTER.PRODUCT.ALL_PRODUCTS,
     category: 'Phụ Kiện',
   },
 ];
