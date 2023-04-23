@@ -35,8 +35,31 @@ const SearchProduct =
     }
   };
 
-// const GetProductById = (payload: any)
+const GetProductById =
+  (payload: number): ProductThunkAction =>
+  async (dispatch: AppDispatch) => {
+    dispatch({
+      type: ProductActionType.GET_PRODUCT_BY_ID_PENDING,
+    });
+
+    const api = API_URLS.PRODUCT.getProductById(payload);
+
+    const { response, error } = await useCallApi({ ...api });
+    if (!error && response?.status === 200) {
+      const { data } = response;
+      dispatch({
+        type: ProductActionType.GET_PRODUCT_BY_ID_SUCCESS,
+        payload: data,
+      });
+    } else {
+      dispatch({
+        type: ProductActionType.GET_PRODUCT_BY_ID_FAIL,
+      });
+      renderNotification('Thông báo', error.response.data.devMsg, notiType.ERROR);
+    }
+  };
 
 export const ProductAction = {
   SearchProduct,
+  GetProductById,
 };

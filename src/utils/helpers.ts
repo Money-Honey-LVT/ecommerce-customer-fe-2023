@@ -83,7 +83,7 @@ export const formatProperties = (properties: Properties[] | undefined) => {
 };
 
 export const getColorsOfProduct = (properties: Properties[] | undefined) => {
-  if (!properties) return null;
+  if (!properties) return [''];
   return _.uniq(_.map(properties, 'color'));
 };
 

@@ -4,8 +4,9 @@ import { ThunkAction } from 'redux-thunk';
 import { RootState } from '../../redux/reducer';
 
 export interface ProductState {
-  isFetchhing: boolean;
+  isFetching: boolean;
   products: Product[] | null;
+  productById: Product | null;
 }
 
 export enum ProductActionType {

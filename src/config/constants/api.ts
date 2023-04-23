@@ -65,7 +65,7 @@ export const API_URLS = {
     }),
 
     getProductById: (id: number) => ({
-      endPoint: `${Schemas.ProductSchema}/${12}`,
+      endPoint: `${Schemas.ProductSchema}/${id}/detail`,
       method: 'GET',
       headers: HEADERS.header(),
     }),
