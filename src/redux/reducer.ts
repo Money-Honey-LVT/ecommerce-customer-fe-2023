@@ -3,12 +3,14 @@ import userReducer from '../reducers/user/user.reducer';
 import categoryReducer from '../reducers/category/category.reducer';
 import productReducer from '../reducers/product/product.reducer';
 import cartReducer from '../reducers/cart/cart.reducer';
+import orderReducer from '../reducers/order/order.reducer';
 
 const rootReducer = combineReducers({
   user: userReducer,
   categories: categoryReducer,
   products: productReducer,
   cart: cartReducer,
+  order: orderReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

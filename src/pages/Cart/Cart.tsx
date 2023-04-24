@@ -19,12 +19,17 @@ import { IconTruckDelivery } from '@tabler/icons-react';
 import MomoIcon from '../../assets/images/momo.png';
 import ZalopayIcon from '../../assets/images/ZaloPay-vuong.png';
 import VnpayIcon from '../../assets/images/vnpay.png';
+import _ from 'lodash';
+import { useAppDispatch } from '../../hooks/use-app-dispatch';
+import { Order } from '../../reducers/order/order.action';
 
 interface Props {
   user: User | null;
 }
 
 const Cart = ({ user }: Props) => {
+  const dispatch = useAppDispatch();
+
   const form = useForm({
     initialValues: {
       fullName: user?.fullName,
@@ -66,11 +71,30 @@ const Cart = ({ user }: Props) => {
   };
 
   const cart = useSelector((state: RootState) => state.cart.cart);
+  console.log(cart);
 
   const [selectedMethod, setSelectedMethod] = useState('');
 
   const handleCheckboxChange = (value: string) => {
     setSelectedMethod(value);
+  };
+
+  const handleOrder = () => {
+    const products = _.map(cart?.products, ({ productID, productDetailID, quantity, price }) => ({
+      productID,
+      productDetailID,
+      quantity,
+      price,
+    }));
+
+    const addresses = [form.getInputProps('address').value, selectedWard, selectedDistrict, selectedCity];
+    const payload = {
+      address: _.join(addresses, ', '),
+      products: products,
+      method: selectedMethod,
+    };
+
+    dispatch(Order.MakeOrder(payload));
   };
 
   return (
@@ -176,7 +200,15 @@ const Cart = ({ user }: Props) => {
             </Col>
           </Grid>
         </Card>
-        <Button fullWidth radius={'md'} mt={30} p={'md'} h={'fit-content'} sx={{ fontSize: 'lg' }}>
+        <Button
+          fullWidth
+          radius={'md'}
+          mt={30}
+          p={'md'}
+          h={'fit-content'}
+          sx={{ fontSize: 'lg' }}
+          onClick={() => handleOrder()}
+        >
           {`Thanh toán ${formatCurrency(cart?.totalAmount)} ${
             selectedMethod ? `(${selectedMethod.toLocaleUpperCase()})` : ''
           }`}
@@ -187,9 +219,11 @@ const Cart = ({ user }: Props) => {
         <Text size={28} weight={700}>
           Giỏ hàng
         </Text>
-        {cart?.products.map((product, index) => (
-          <CartItemCard key={index} product={product} />
-        ))}
+        {cart?.products ? (
+          cart?.products.map((product, index) => <CartItemCard key={index} product={product} />)
+        ) : (
+          <Text>Trong giỏ chưa có sản phẩm nào</Text>
+        )}
       </Col>
     </Grid>
   );

@@ -7,6 +7,8 @@ export interface Cart extends BaseModel {
 }
 
 export interface ProductInCart {
+  productID: number;
+  productDetailID: number;
   cartDetailID: number;
   name: string;
   price: number;
