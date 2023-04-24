@@ -8,6 +8,7 @@ import AuthLayout from '../containers/AuthLayout/AuthLayout';
 import { useAppDispatch } from '../hooks/use-app-dispatch';
 import { UserAction } from '../reducers/user/user.action';
 import { RootState } from '../redux/reducer';
+import { checkLogin } from '../utils/helpers';
 import ActiveUser from './ActiveUser/ActiveUser';
 
 const Login = React.lazy(() => import('./Login'));
@@ -31,9 +32,12 @@ const AppRoutes: React.FC = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(UserAction.GetProfile());
+    if (checkLogin()) {
+      dispatch(UserAction.GetProfile());
+    }
   }, []);
   const user = useSelector((state: RootState) => state.user.user);
+
   return (
     <Routes>
       <Route element={<AuthLayout />}>

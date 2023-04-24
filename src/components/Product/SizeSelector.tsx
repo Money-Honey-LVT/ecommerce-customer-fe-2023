@@ -15,7 +15,7 @@ const useStyles = createStyles((theme) => ({
 interface Props {
   productId: number;
   color: string;
-  sizes: string[];
+  sizes: any[];
 }
 
 export const SideSelector = ({ productId, color, sizes }: Props) => {
@@ -40,14 +40,22 @@ export const SideSelector = ({ productId, color, sizes }: Props) => {
 
   return (
     <Center>
-      <Card radius={'md'} padding={'xs'} bottom={15} sx={{ position: 'absolute' }} bg={'gray'}>
+      <Card
+        shadow="xs"
+        radius={'md'}
+        padding={'xs'}
+        bottom={15}
+        sx={{ position: 'absolute', backdropFilter: 'blur(5px)', backgroundColor: 'rgba(255, 255, 255, 0.4)' }}
+      >
         <Center mb={5}>
-          <Text weight={'bold'}>Thêm nhanh vào giỏ hàng+</Text>
+          <Text weight={'bold'} size={'sm'}>
+            Thêm nhanh vào giỏ hàng +
+          </Text>
         </Center>
-        <Grid justify={'space-between'}>
+        <Grid>
           {sizes.map((size, index) => (
             <Col key={index} span={3} onClick={() => handleAddToCart(size)}>
-              <Card radius={'md'} padding={5} className={classes.card}>
+              <Card radius={'md'} p={5} className={classes.card}>
                 <Center>
                   <Text weight={'500'}>{size}</Text>
                 </Center>

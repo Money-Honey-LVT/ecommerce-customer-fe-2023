@@ -14,8 +14,12 @@ export const SearchPopup = ({ productList, searchValue }: Props) => {
   if (productList) {
     return productList.length > 0 ? (
       <Card radius={'md'} shadow={'lg'} withBorder>
-        {productList?.map((product, index) => (
-          <Grid key={index} onClick={() => navigate(`${ROUTER.PRODUCT.INDEX}/${product.id}`)}>
+        {productList.slice(0, 5)?.map((product, index) => (
+          <Grid
+            key={index}
+            onClick={() => navigate(`${ROUTER.PRODUCT.INDEX}/${product.id}`)}
+            sx={{ cursor: 'pointer' }}
+          >
             <Col span={3}>
               <Image width={50} height={50} withPlaceholder src={product.properties[0].imagePath} />
             </Col>
@@ -29,7 +33,16 @@ export const SearchPopup = ({ productList, searchValue }: Props) => {
         ))}
         {productList.length > 5 ? (
           <Center>
-            <Text size={'sm'} underline onClick={() => navigate(ROUTER.PRODUCT.ALL_PRODUCTS, {})}>
+            <Text
+              size={'sm'}
+              underline
+              onClick={() =>
+                navigate(ROUTER.PRODUCT.ALL_PRODUCTS, {
+                  state: searchValue,
+                })
+              }
+              sx={{ cursor: 'pointer' }}
+            >
               Xem tất cả kết quả
             </Text>
           </Center>

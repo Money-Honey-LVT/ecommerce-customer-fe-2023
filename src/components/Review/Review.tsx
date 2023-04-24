@@ -3,7 +3,7 @@ import { IconStar, IconStarFilled } from '@tabler/icons-react';
 import { Grid, Col, Text, Divider } from '@mantine/core';
 
 export const fakeData: Review = {
-  id: '123',
+  id: 123,
   author: 'Anh Cảnh ở Ninh Bình',
   date: '4/20/2023',
   comment: 'Anh sống nhưu thế đấy',

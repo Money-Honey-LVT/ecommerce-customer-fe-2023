@@ -1,4 +1,4 @@
-import { Col, Divider, Grid, Text, Input, Select } from '@mantine/core';
+import { Col, Divider, Grid, Text, Input, Select, Card, Group, Checkbox, Image, Button } from '@mantine/core';
 import React from 'react';
 import CartItemCard from '../../components/CartItem/CartItemCard';
 import { User } from '../../types/models/Customer';
@@ -8,12 +8,17 @@ import {
   findCodeFromCityName,
   findCodeFromDistrictName,
   formatCitiesJson,
+  formatCurrency,
   formatDistrictsJson,
   formatWardsJson,
 } from '../../utils/helpers';
 import { City, District, Ward } from '../Account/UserInfo/UserInfo';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/reducer';
+import { IconTruckDelivery } from '@tabler/icons-react';
+import MomoIcon from '../../assets/images/momo.png';
+import ZalopayIcon from '../../assets/images/ZaloPay-vuong.png';
+import VnpayIcon from '../../assets/images/vnpay.png';
 
 interface Props {
   user: User | null;
@@ -61,7 +66,12 @@ const Cart = ({ user }: Props) => {
   };
 
   const cart = useSelector((state: RootState) => state.cart.cart);
-  console.log(cart);
+
+  const [selectedMethod, setSelectedMethod] = useState('');
+
+  const handleCheckboxChange = (value: string) => {
+    setSelectedMethod(value);
+  };
 
   return (
     <Grid>
@@ -72,15 +82,15 @@ const Cart = ({ user }: Props) => {
         <Grid>
           <Col span={3}>Họ tên</Col>
           <Col span={9}>
-            <Input {...form.getInputProps('fullName')} />
+            <Input {...form.getInputProps('fullName')} readOnly />
           </Col>
           <Col span={3}>Email</Col>
           <Col span={9}>
-            <Input {...form.getInputProps('email')} />
+            <Input {...form.getInputProps('email')} readOnly />
           </Col>
           <Col span={3}>Số điện thoại</Col>
           <Col span={9}>
-            <Input {...form.getInputProps('phone')} placeholder="SĐT của bạn" />
+            <Input {...form.getInputProps('phone')} placeholder="SĐT của bạn" readOnly />
           </Col>
           <Col span={3}>Địa chỉ</Col>
           <Col span={9}>
@@ -109,9 +119,68 @@ const Cart = ({ user }: Props) => {
             />
           </Col>
         </Grid>
-        <Text size={28} weight={700} my={30}>
+        <Text size={28} weight={700} mt={50}>
           Hình thức thanh toán
         </Text>
+        <Card withBorder radius={'md'}>
+          <Grid align="center">
+            <Col xs={2} md={1}>
+              <Checkbox
+                radius={'xl'}
+                value="momo"
+                checked={selectedMethod === 'momo'}
+                onChange={() => handleCheckboxChange('momo')}
+              />
+            </Col>
+            <Col xs={4} md={2}>
+              <Image src={MomoIcon} withPlaceholder width={50} />
+            </Col>
+            <Col xs={6} md={7}>
+              <Text size={'lg'}>Thanh toán Momo</Text>
+            </Col>
+          </Grid>
+        </Card>
+        <Card withBorder radius={'md'} mt={30}>
+          <Grid align="center">
+            <Col xs={2} md={1}>
+              <Checkbox
+                radius={'xl'}
+                value="zalopay"
+                checked={selectedMethod === 'zalopay'}
+                onChange={() => handleCheckboxChange('zalopay')}
+              />
+            </Col>
+            <Col xs={4} md={2}>
+              <Image src={ZalopayIcon} withPlaceholder width={50} />
+            </Col>
+            <Col xs={6} md={7}>
+              <Text size={'lg'}>Thanh toán ZaloPay</Text>
+            </Col>
+          </Grid>
+        </Card>
+        <Card withBorder radius={'md'} mt={30}>
+          <Grid align="center">
+            <Col xs={2} md={1}>
+              <Checkbox
+                radius={'xl'}
+                value="vnpay"
+                checked={selectedMethod === 'vnpay'}
+                onChange={() => handleCheckboxChange('vnpay')}
+              />
+            </Col>
+            <Col xs={4} md={2}>
+              <Image src={VnpayIcon} withPlaceholder width={50} />
+            </Col>
+            <Col xs={6} md={7}>
+              <Text size={'lg'}>Thanh toán VnPay</Text>
+            </Col>
+          </Grid>
+        </Card>
+        <Button fullWidth radius={'md'} mt={30} p={'md'} h={'fit-content'} sx={{ fontSize: 'lg' }}>
+          {`Thanh toán ${formatCurrency(cart?.totalAmount)} ${
+            selectedMethod ? `(${selectedMethod.toLocaleUpperCase()})` : ''
+          }`}
+        </Button>
       </Col>
 
       <Col sm={12} lg={5}>

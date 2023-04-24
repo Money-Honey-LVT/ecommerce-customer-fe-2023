@@ -9,6 +9,7 @@ import { Product } from '../../types/models/Product';
 import { formatCurrency, getColorsOfProduct } from '../../utils/helpers';
 import { ColorSelector } from './ColorSelector';
 import { SideSelector } from './SizeSelector';
+import { useClickOutside } from '@mantine/hooks';
 
 interface Props {
   product: Product | null;
@@ -63,17 +64,22 @@ const ProductCard: React.FC<Props> = ({ product }) => {
   };
 
   return (
-    <Card padding="0" radius="lg">
+    <Card padding="0" radius="lg" sx={{ cursor: 'pointer' }}>
       <CardSection
-        sx={{ backgroundImage: `url(${getColorImagePath(colorSelect)})`, position: 'relative' }}
+        sx={{
+          backgroundImage: `url(${getColorImagePath(colorSelect)})`,
+          position: 'relative',
+          backgroundPosition: 'center',
+          backgroundSize: '300px',
+        }}
         h={420}
         ref={ref}
-        mb={20}
+        mb={10}
       >
-        {hovered ? (
+        {hovered && product?.id ? (
           <SideSelector productId={product?.id} color={colorSelect} sizes={getSizesByColor(colorSelect)} />
         ) : null}
-        {renderOverallRating(4)}
+        {/* {renderOverallRating(4)} */}
       </CardSection>
 
       <Group>

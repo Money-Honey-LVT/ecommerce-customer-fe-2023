@@ -3,37 +3,37 @@ import { Product } from '../../types/models/Product';
 import { faker } from '@faker-js/faker';
 import { formatCurrency, randomArray } from '../../utils/helpers';
 import ProductCard from '../../components/Product/ProductCard';
-import { Button, Center, Col, Divider, Grid, Group, Input, Select, Text } from '@mantine/core';
+import { Button, Center, Col, Divider, Grid, Group, Input, Select, Text, TextInput } from '@mantine/core';
 import { IconSearch } from '@tabler/icons-react';
 import { useAppDispatch } from '../../hooks/use-app-dispatch';
-import { CategoryAction } from '../../reducers/category/category.action';
+import { CategoryAction } from '../../reducers/cart/category.action';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/reducer';
 import { ProductAction } from '../../reducers/product/product.actions';
+import { useLocation } from 'react-router-dom';
+import { useDebouncedState } from '@mantine/hooks';
+import { Category } from '../../types/models/Category';
 
 const ProductsList = () => {
-  const fakeData = {
-    id: 123,
-    name: faker.commerce.productName(),
-    price: 100000,
-    image: faker.image.fashion(),
-    description: faker.commerce.productDescription(),
-    rating: 4.5,
-    quantity: 120,
-  };
+  const state = useLocation().state;
+
+  const [selectedCate, setSelectedCate] = useState(0);
+  const [search, setSearch] = useDebouncedState('', 300);
 
   const dispatch = useAppDispatch();
+
   const getAllProducts = () => {
     dispatch(
       ProductAction.SearchProduct({
-        productName: '',
+        productName: state || search,
         categoryId: 0,
       })
     );
   };
+
   useEffect(() => {
     getAllProducts();
-  }, []);
+  }, [search]);
 
   const { categories, isFetching } = useSelector((state: RootState) => state.categories);
   const { products } = useSelector((state: RootState) => state.products);
@@ -42,31 +42,55 @@ const ProductsList = () => {
   const handleSelectCategory = (categoryId: number) => {
     dispatch(
       ProductAction.SearchProduct({
-        productName: '',
+        productName: search,
         categoryId: categoryId,
       })
     );
+    setSelectedCate(categoryId);
   };
+
+  const isSelectedCate = (categoryId: number) => {
+    if (categoryId == selectedCate) return true;
+    return false;
+  };
+
   return (
     <>
       <Text size={28} weight={'bolder'} my={20}>
         Danh mục sản phẩm
       </Text>
-      <Group mb={15} align="center">
-        <Button radius={'lg'} variant={'light'} miw={100} onClick={() => getAllProducts()}>
-          Tất cả
-        </Button>
-        {parentsCategories?.map((category, index) => (
+      <Group mb={15} align="center" position="apart">
+        <Group>
           <Button
-            key={index}
             radius={'lg'}
-            variant={'light'}
+            variant={isSelectedCate(0) ? '' : 'light'}
             miw={100}
-            onClick={() => handleSelectCategory(category.id)}
+            onClick={() => handleSelectCategory(0)}
+            sx={isSelectedCate(0) ? { background: 'black', color: 'white' } : undefined}
           >
-            {category.name}
+            Tất cả
           </Button>
-        ))}
+          {parentsCategories?.map((category, index) => (
+            <Button
+              key={index}
+              radius={'lg'}
+              variant={isSelectedCate(category.id) ? '' : 'light'}
+              miw={100}
+              onClick={() => handleSelectCategory(category.id)}
+              sx={isSelectedCate(category.id) ? { background: 'black', color: 'white' } : undefined}
+            >
+              {category.name}
+            </Button>
+          ))}
+        </Group>
+        <TextInput
+          icon={<IconSearch />}
+          radius={'lg'}
+          w={300}
+          placeholder={'Nhập từ khoá'}
+          defaultValue={search}
+          onChange={(e) => setSearch(e.currentTarget.value)}
+        />
       </Group>
 
       {products ? (

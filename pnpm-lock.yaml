@@ -61,6 +61,9 @@ dependencies:
   mantine-datatable:
     specifier: ^2.2.9
     version: 2.2.9(@mantine/core@6.0.5)(@mantine/hooks@6.0.5)(react@18.2.0)
+  pnpm:
+    specifier: ^8.3.1
+    version: 8.3.1
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -2857,6 +2860,12 @@ packages:
   /pkginfo@0.3.1:
     resolution: {integrity: sha512-yO5feByMzAp96LtP58wvPKSbaKAi/1C4kV9XpTctr6EepnP6F33RBNOiVrdz9BrPA98U2BMFsTNHo44TWcbQ2A==}
     engines: {node: '>= 0.4.0'}
+    dev: false
+
+  /pnpm@8.3.1:
+    resolution: {integrity: sha512-0mT2ZAv08J3nz8xUdWhRW88GE89IWgPo/xZhb6acQXK2+aCikl7kT7Bg31ZcnJqOrwYXSed68xjLd/ZoSnBR8w==}
+    engines: {node: '>=16.14'}
+    hasBin: true
     dev: false
 
   /postcss@8.4.21:

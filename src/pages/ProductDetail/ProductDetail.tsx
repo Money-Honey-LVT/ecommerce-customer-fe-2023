@@ -1,5 +1,5 @@
 import React from 'react';
-import { Product } from '../../types/models/Product';
+import { Product, Sizes } from '../../types/models/Product';
 import {
   Col,
   Grid,
@@ -15,9 +15,10 @@ import {
   ActionIcon,
   Center,
   Container,
+  Paper,
 } from '@mantine/core';
 import { faker } from '@faker-js/faker';
-import { formatCurrency, getColorsOfProduct } from '../../utils/helpers';
+import { formatCurrency, getColorsOfProduct, notiType, renderNotification } from '../../utils/helpers';
 import { Review } from '../../types/models/Review';
 import ReviewCard from '../../components/Review/Review';
 import { useEffect, useRef, useState } from 'react';
@@ -29,6 +30,9 @@ import { useAppDispatch } from '../../hooks/use-app-dispatch';
 import { ProductAction } from '../../reducers/product/product.actions';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/reducer';
+import { SizesRender } from './SizesRender';
+import { addCartPayload } from '../../types/helpers/payload';
+import { CartAction } from '../../reducers/cart/cart.action';
 
 const ProductDetail = () => {
   const [value, setValue] = useState<any>(1);
@@ -44,14 +48,10 @@ const ProductDetail = () => {
 
   const product = useSelector((state: RootState) => state.products.productById);
 
-  
   const colors = getColorsOfProduct(product?.properties);
 
   const [colorSelect, setColorSelect] = useState(colors[0]);
 
-  const handleSelectColor = (color: string) => {
-    setColorSelect(color);
-  };
   const isColorSelected = (color: string) => {
     if (!colors) return false;
     const bool = colorSelect === color ? true : false;
@@ -71,10 +71,36 @@ const ProductDetail = () => {
     });
     return [...sizes];
   };
+  const [sizeSelected, setSizeSelected] = useState<Sizes>();
+
+  const handleSelectColor = (color: string) => {
+    setColorSelect(color);
+    setSizeSelected(undefined);
+  };
+
+  const hanleAddToCart = () => {
+    if (product?.id) {
+      if (sizeSelected) {
+        const payload: addCartPayload = {
+          productId: product.id,
+          quantity: value,
+          size: sizeSelected,
+          color: colorSelect,
+        };
+        dispatch(
+          CartAction.AddCart(payload, {
+            onSuccess: () => dispatch(CartAction.GetCart()),
+          })
+        );
+      } else {
+        renderNotification('Thông báo', 'Vui lòng chọng kích thước cho sản phẩm', notiType.ERROR);
+      }
+    }
+  };
 
   if (product)
     return (
-      <Center>
+      <>
         <Center w={'90%'}>
           <Grid w={'100%'}>
             <Col
@@ -97,7 +123,7 @@ const ProductDetail = () => {
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}
-                src={getColorImagePath(colorSelect)}
+                src={getColorImagePath(colorSelect) || getColorImagePath(colors[0])}
                 withPlaceholder
               ></Image>
             </Col>
@@ -118,13 +144,20 @@ const ProductDetail = () => {
                     />
                   ))}
                 </Group>
-                <Text size={'lg'}>Kích thước áo:</Text>
+                <Text size={'lg'}>Kích thước:</Text>
+                <Group>
+                  <SizesRender
+                    availableSizes={getSizesByColor(colorSelect || colors[0]) as string[]}
+                    sizeSelected={sizeSelected}
+                    setSizeSelected={setSizeSelected}
+                  />
+                </Group>
 
                 <Grid align="center">
-                  <Col span={4}>
-                    <Group spacing={10}>
+                  <Col xs={4} md={4}>
+                    <Group spacing={3}>
                       <ActionIcon
-                        size={36}
+                        size={32}
                         radius="lg"
                         variant="filled"
                         color="dark"
@@ -142,12 +175,12 @@ const ProductDetail = () => {
                         min={1}
                         step={1}
                         styles={{
-                          input: { width: 54, textAlign: 'center' },
+                          input: { width: 40, textAlign: 'center' },
                         }}
                         radius="lg"
                       />
                       <ActionIcon
-                        size={36}
+                        size={32}
                         radius="lg"
                         variant="filled"
                         color="dark"
@@ -157,17 +190,22 @@ const ProductDetail = () => {
                       </ActionIcon>
                     </Group>
                   </Col>
-                  <Col span={8}>
-                    <Button w={'100%'} leftIcon={<IconShoppingCart />} h={'fit-content'} radius={'md'}>
-                      <Text size={24}>Thêm vào giỏ hàng</Text>
+                  <Col xs={8} md={8}>
+                    <Button w={'100%'} leftIcon={<IconShoppingCart />} radius={'md'} onClick={hanleAddToCart}>
+                      <Text size={'sm'}>Thêm vào giỏ hàng</Text>
                     </Button>
                   </Col>
                 </Grid>
+                <Divider orientation={'horizontal'} my={'md'} />
+                <Text weight={'bold'} size={'md'}>
+                  Đặc điểm nổi bật
+                </Text>
+                <Text size={'md'}>- {product.description}</Text>
               </Stack>
             </Col>
           </Grid>
         </Center>
-      </Center>
+      </>
     );
   else return null;
 };

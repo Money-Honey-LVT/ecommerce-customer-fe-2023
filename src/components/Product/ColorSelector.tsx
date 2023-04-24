@@ -7,13 +7,18 @@ interface Props {
 }
 
 export const ColorSelector = ({ color, isSelected, onClick }: Props) => {
+  console.log(isSelected);
   const useStyles = createStyles((theme) => ({
     box: {
       borderRadius: theme.radius.lg,
-      border: isSelected ? `1px solid ${color}` : '',
+      cursor: 'pointer',
     },
   }));
   const { classes } = useStyles();
 
-  return <Box bg={color} className={classes.box} w={35} h={20} onClick={() => onClick()} />;
+  return (
+    <Box sx={{ border: isSelected ? `2px solid black` : '', padding: '2px' }} className={classes.box}>
+      <Box bg={color} className={classes.box} w={35} h={25} onClick={() => onClick()} />
+    </Box>
+  );
 };

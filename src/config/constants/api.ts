@@ -98,4 +98,12 @@ export const API_URLS = {
       headers: HEADERS.authHeader(),
     }),
   },
+
+  ORDER: {
+    order: () => ({
+      endPoint: `${Schemas.OrderSchema}`,
+      method: 'POST',
+      headers: HEADERS.authHeader(),
+    }),
+  },
 };

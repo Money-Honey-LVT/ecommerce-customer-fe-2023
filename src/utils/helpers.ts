@@ -119,12 +119,10 @@ export const findCodeFromDistrictName = (name: string) => {
   return district ? district.code : null;
 };
 
-export const getColorImagePath = (color: string) => {
-  const item = items.find((item) => item.color === color);
-  return item ? item.imagePath : null;
-};
-
 export const getNumberProductInCart = () => {
   const cart = useSelector((state: RootState) => state.cart.cart);
-  return cart?.products.length;
+  if (cart?.products) {
+    return cart.products.length;
+  }
+  // return 0;
 };
