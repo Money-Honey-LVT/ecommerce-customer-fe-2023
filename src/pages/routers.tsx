@@ -22,7 +22,7 @@ const Cart = React.lazy(() => import('./Cart'));
 const ProductsList = React.lazy(() => import('./ProductsList'));
 const AccountLayout = React.lazy(() => import('./Account'));
 const UserInfo = React.lazy(() => import('./Account/UserInfo/UserInfo'));
-const Orders = React.lazy(() => import('./Account/Orders/Orders'));
+const OrderManagement = React.lazy(() => import('./Account/OrderManagement/OrderManagement'));
 const Category = React.lazy(() => import('./Category'));
 
 const _404NotFound = React.lazy(() => import('../components/common/_404NotFound'));
@@ -52,7 +52,7 @@ const AppRoutes: React.FC = () => {
         <Route path={ROUTER.CART.INDEX} element={<Cart user={user} />} />
         <Route element={<AccountLayout />}>
           <Route path={ROUTER.PROFILE.INFO} element={<UserInfo user={user} />} />
-          <Route path={ROUTER.PROFILE.ORDERS} element={<Orders />} />
+          <Route path={ROUTER.PROFILE.ORDERS} element={<OrderManagement />} />
           <Route path={ROUTER.PROFILE.VOUCHER_WALLET} element={null} />
         </Route>
         <Route path={ROUTER.PRODUCT.PRODUCT_DETAILS} element={<ProductDetail />} />

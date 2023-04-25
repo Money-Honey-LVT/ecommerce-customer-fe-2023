@@ -6,7 +6,7 @@ import ProductCard from '../../components/Product/ProductCard';
 import { Button, Center, Col, Divider, Grid, Group, Input, Select, Text, TextInput } from '@mantine/core';
 import { IconSearch } from '@tabler/icons-react';
 import { useAppDispatch } from '../../hooks/use-app-dispatch';
-import { CategoryAction } from '../../reducers/cart/category.action';
+import { CategoryAction } from '../../reducers/category/category.action';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/reducer';
 import { ProductAction } from '../../reducers/product/product.actions';

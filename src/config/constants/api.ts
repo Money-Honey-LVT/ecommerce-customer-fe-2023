@@ -1,5 +1,6 @@
 import { Schemas } from './schemas';
 import { SearchProductPayload } from '../../reducers/product/product.actions';
+
 export const HEADERS = {
   header: () => ({
     accept: 'application/json',
@@ -103,6 +104,18 @@ export const API_URLS = {
     order: () => ({
       endPoint: `${Schemas.OrderSchema}`,
       method: 'POST',
+      headers: HEADERS.authHeader(),
+    }),
+
+    getOrder: () => ({
+      endPoint: `${Schemas.OrderSchema}`,
+      method: 'GET',
+      headers: HEADERS.authHeader(),
+    }),
+
+    cancelOrder: (id: number) => ({
+      endPoint: `${Schemas.OrderSchema}/${id}/status?status=cancelled`,
+      method: 'PUT',
       headers: HEADERS.authHeader(),
     }),
   },

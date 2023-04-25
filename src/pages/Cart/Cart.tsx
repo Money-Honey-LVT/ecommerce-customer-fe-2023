@@ -21,7 +21,8 @@ import ZalopayIcon from '../../assets/images/ZaloPay-vuong.png';
 import VnpayIcon from '../../assets/images/vnpay.png';
 import _ from 'lodash';
 import { useAppDispatch } from '../../hooks/use-app-dispatch';
-import { Order } from '../../reducers/order/order.action';
+import { OrderAction } from '../../reducers/order/order.action';
+import { CartAction } from '../../reducers/cart/cart.action';
 
 interface Props {
   user: User | null;
@@ -94,7 +95,11 @@ const Cart = ({ user }: Props) => {
       method: selectedMethod,
     };
 
-    dispatch(Order.MakeOrder(payload));
+    dispatch(
+      OrderAction.MakeOrder(payload, {
+        onSuccess: () => dispatch(CartAction.GetCart()),
+      })
+    );
   };
 
   return (

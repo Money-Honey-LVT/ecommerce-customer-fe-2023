@@ -7,6 +7,7 @@ import { DistrictsArr } from '../json/districts';
 import { WardsArr } from '../json/wards';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/reducer';
+import { OrderStatus } from '../types/models/Order';
 
 export const randomArray = (number: number): number[] => Array.from({ length: number }, (_, i) => i + 1);
 
@@ -124,5 +125,21 @@ export const getNumberProductInCart = () => {
   if (cart?.products) {
     return cart.products.length;
   }
-  // return 0;
+  return 0;
+};
+
+export const parserOrderStatus = (status: OrderStatus | undefined) => {
+  if (status == undefined) return '';
+  switch (status) {
+    case OrderStatus.CANCELLED:
+      return 'ĐÃ HUỶ';
+    case OrderStatus.PENDING:
+      return 'ĐANG CHỜ XÁC NHẬN';
+    case OrderStatus.DELIVERED:
+      return 'ĐÃ GIAO HÀNG';
+    case OrderStatus.DELIVERING:
+      return 'ĐANG GIAO HÀNG';
+    default:
+      return '';
+  }
 };
