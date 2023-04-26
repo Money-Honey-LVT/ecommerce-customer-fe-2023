@@ -7,7 +7,6 @@ interface Props {
 }
 
 export const ColorSelector = ({ color, isSelected, onClick }: Props) => {
-  console.log(isSelected);
   const useStyles = createStyles((theme) => ({
     box: {
       borderRadius: theme.radius.lg,

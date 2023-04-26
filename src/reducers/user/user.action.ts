@@ -150,7 +150,6 @@ const GetProfile =
         payload: data,
       });
       cb?.onSuccess?.(data);
-      console.log(data);
     } else {
       dispatch({
         type: UserActionType.GET_PROFILE_FAIL,
@@ -175,7 +174,6 @@ const UpdateProfile =
         payload: data,
       });
       cb?.onSuccess?.(data);
-      console.log(data);
     } else {
       dispatch({
         type: UserActionType.UPDATE_PROFILE_FAIL,

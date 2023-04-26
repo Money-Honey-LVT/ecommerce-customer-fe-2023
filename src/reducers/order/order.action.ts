@@ -40,7 +40,7 @@ const GetOrder = (): OrderThunkAction => async (dispatch: AppDispatch) => {
 
   if (!error && response?.status === 200) {
     const { data } = response;
-    console.log(data);
+
     dispatch({
       type: OrderActionType.GET_ORDER_SUCCESS,
       payload: data,

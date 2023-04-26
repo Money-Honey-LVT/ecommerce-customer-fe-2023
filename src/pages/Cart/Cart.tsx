@@ -72,7 +72,6 @@ const Cart = ({ user }: Props) => {
   };
 
   const cart = useSelector((state: RootState) => state.cart.cart);
-  console.log(cart);
 
   const [selectedMethod, setSelectedMethod] = useState('');
 

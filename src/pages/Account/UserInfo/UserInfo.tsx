@@ -94,7 +94,6 @@ const UserInfo = ({ user }: Props) => {
       district: selectedDistrict,
       ward: selectedWard,
     };
-    console.log(payload);
 
     dispatch(
       UserAction.UpdateProfile(payload, {
