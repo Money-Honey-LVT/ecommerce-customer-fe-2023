@@ -1,6 +1,6 @@
-import { Col, Grid, Tabs, Text, createStyles } from '@mantine/core';
-import { Outlet, useNavigate, useParams } from 'react-router-dom';
-import ROUTER from '../../config/router';
+import { Col, Grid, Tabs, createStyles } from '@mantine/core';
+import _ from 'lodash';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { getRouterByTabValue } from '../../utils/helpers';
 
 const useStyles = createStyles((theme) => ({}));
@@ -19,15 +19,17 @@ const tabArray: OptionProps[] = [
     label: 'Danh sách đơn hàng',
     value: 'orders',
   },
-  {
-    label: 'Ví voucher',
-    value: 'voucher-wallet',
-  },
+  // {
+  //   label: 'Ví voucher',
+  //   value: 'voucher-wallet',
+  // },
 ];
 const Account = () => {
   const { classes } = useStyles();
   const navigate = useNavigate();
-  const { tabValue } = useParams();
+  const path = useLocation().pathname;
+  const startIndex = path.indexOf('/', path.indexOf('/') + 1) + 1;
+  const tabValue = path.substring(startIndex);
 
   return (
     <Grid>

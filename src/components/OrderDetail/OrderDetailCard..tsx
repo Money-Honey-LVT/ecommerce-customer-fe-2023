@@ -28,10 +28,11 @@ export const OrderDetailCard = ({ order }: Props) => {
     switch (status) {
       case undefined:
       case OrderStatus.CANCELLED:
-        return <Button>Đánh giá</Button>;
+        return null;
       case OrderStatus.DELIVERING:
+        return null;
       case OrderStatus.DELIVERED:
-        return <Button>Đánh giá</Button>;
+        return <Button onClick={open}>Đánh giá</Button>;
       case OrderStatus.PENDING:
         return <Button onClick={handleCancelOrder}>Huỷ đơn</Button>;
     }
@@ -39,10 +40,10 @@ export const OrderDetailCard = ({ order }: Props) => {
 
   return (
     <>
-      <Card withBorder py={'xs'} mb={15}>
+      <Card withBorder py={'xs'} mt={15}>
         <Card.Section>
           <Group position={'right'}>
-            <Text mt={'md'} mr={'md'} c={'red'} weight={'bold'}>
+            <Text mt={'md'} mr={'md'}>
               {parserOrderStatus(order?.status)}
             </Text>
           </Group>
@@ -73,7 +74,7 @@ export const OrderDetailCard = ({ order }: Props) => {
         ))}
         <Divider my={10} />
         <Group position="right">
-          <Text size={'lg'} c={'red'} weight={'bold'} align="right">
+          <Text size={'lg'} align="right">
             {`Thành tiền: ${formatCurrency(order?.price)}`}
           </Text>
         </Group>

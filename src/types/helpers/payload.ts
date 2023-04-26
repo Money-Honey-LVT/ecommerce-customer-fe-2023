@@ -9,6 +9,7 @@ export interface SignUpPayload {
   fullName: string;
   role: string;
   email: string;
+  phone: string;
 }
 export interface UpdateProfilePayload {
   fullName: string;
@@ -25,4 +26,8 @@ export interface addCartPayload {
   color: string;
   size: string;
   quantity: number;
+}
+export interface AddReviewPayload {
+  rateValue: number;
+  comment: string;
 }
