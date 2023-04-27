@@ -70,6 +70,12 @@ export const API_URLS = {
       method: 'GET',
       headers: HEADERS.header(),
     }),
+
+    ratingProduct: () => ({
+      endPoint: `${Schemas.ProductSchema}/rating`,
+      method: 'POST',
+      headers: HEADERS.authHeader(),
+    }),
   },
 
   CATEGORY: {

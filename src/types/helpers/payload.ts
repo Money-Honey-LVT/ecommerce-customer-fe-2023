@@ -28,6 +28,6 @@ export interface addCartPayload {
   quantity: number;
 }
 export interface AddReviewPayload {
-  rateValue: number;
-  comment: string;
+  score: number;
+  review: string;
 }

@@ -9,7 +9,6 @@ import { Product } from '../../types/models/Product';
 import { formatCurrency, getColorsOfProduct } from '../../utils/helpers';
 import { ColorSelector } from './ColorSelector';
 import { SideSelector } from './SizeSelector';
-import { useClickOutside } from '@mantine/hooks';
 
 interface Props {
   product: Product | null;

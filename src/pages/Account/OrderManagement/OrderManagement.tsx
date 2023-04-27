@@ -38,7 +38,7 @@ const OrderManagement = () => {
   })();
 
   return (
-    <Tabs mt={10}  value={selectedTab} onTabChange={setSelectedTab}>
+    <Tabs mt={10} value={selectedTab} onTabChange={setSelectedTab}>
       <Tabs.List>
         <Tabs.Tab value={'ALL'}>{'TẤT CẢ'}</Tabs.Tab>
         <Tabs.Tab value={OrderStatus.PENDING}>{parserOrderStatus(OrderStatus.PENDING)}</Tabs.Tab>

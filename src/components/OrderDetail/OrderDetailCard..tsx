@@ -32,7 +32,9 @@ export const OrderDetailCard = ({ order }: Props) => {
       case OrderStatus.DELIVERING:
         return null;
       case OrderStatus.DELIVERED:
-        return <Button onClick={open}>Đánh giá</Button>;
+        if (order?.reviews.length && order?.reviews.length == 0) {
+          return <Button onClick={open}>Đánh giá</Button>;
+        } else return null;
       case OrderStatus.PENDING:
         return <Button onClick={handleCancelOrder}>Huỷ đơn</Button>;
     }
@@ -51,12 +53,12 @@ export const OrderDetailCard = ({ order }: Props) => {
         <Divider my={10} />
         {order?.products.map((product, id) => (
           <Grid>
-            <Col span={1}>
-              <AspectRatio ratio={1 / 1}>
+            <Col span={4} lg={1}>
+              <AspectRatio ratio={1 / 1} w={'100%'}>
                 <Image width={'100%'} src={product.imagePath} withPlaceholder />
               </AspectRatio>
             </Col>
-            <Col span={9}>
+            <Col span={6} lg={9}>
               <Stack spacing={0}>
                 <Text>{product.name}</Text>
                 <Text size={'xs'} c={'gray'}>
@@ -65,7 +67,7 @@ export const OrderDetailCard = ({ order }: Props) => {
                 <Text>x {product.quantity}</Text>
               </Stack>
             </Col>
-            <Col span={2}>
+            <Col span={1} lg={2}>
               <Stack h={'100%'} justify={'flex-end'}>
                 <Text align="right">{formatCurrency(product.price)}</Text>
               </Stack>
@@ -84,7 +86,7 @@ export const OrderDetailCard = ({ order }: Props) => {
       </Card>
 
       <Modal centered opened={opened} onClose={close} title="Đánh giá sản phẩm">
-        <ReviewModal products={order?.products} />
+        <ReviewModal products={order?.products} orderID={order?.orderID} closeModal={close} />
       </Modal>
     </>
   );

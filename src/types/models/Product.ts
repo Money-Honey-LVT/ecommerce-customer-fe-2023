@@ -1,15 +1,14 @@
 import { BaseModel } from './BaseModal';
-import { Review } from './Review';
+import { IRating } from './Rating';
 
 export interface Product extends BaseModel {
   name: string;
   price: number;
   description: string;
-  rating: number;
   categoryID?: number;
   quantity: number;
   status?: string;
-  reviews: Review[];
+  reviews: IRating[];
   properties: Properties[];
 }
 

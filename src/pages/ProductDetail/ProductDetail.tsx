@@ -19,8 +19,8 @@ import {
 } from '@mantine/core';
 import { faker } from '@faker-js/faker';
 import { formatCurrency, getColorsOfProduct, notiType, renderNotification } from '../../utils/helpers';
-import { Review } from '../../types/models/Review';
-import ReviewCard from '../../components/Review/Review';
+
+import { ReviewCard } from '../../components/ReviewModal/ReviewCard';
 import { useEffect, useRef, useState } from 'react';
 import { IconShoppingCart } from '@tabler/icons-react';
 import { ColorSelector } from '../../components/Product/ColorSelector';
@@ -203,6 +203,22 @@ const ProductDetail = () => {
                 <Text size={'md'}>- {product.description}</Text>
               </Stack>
             </Col>
+          </Grid>
+        </Center>
+
+        <Divider mt={80} />
+        <Center w={'90%'}>
+          <Grid w={'100%'}>
+            <Col span={12}>
+              <Text weight={'bolder'} size={26} mt={20}>
+                {product.reviews.length} Đánh giá
+              </Text>
+            </Col>
+            {product.reviews.map((review, index) => (
+              <Col key={index} xs={12} md={6}>
+                <ReviewCard rating={review} />
+              </Col>
+            ))}
           </Grid>
         </Center>
       </>
