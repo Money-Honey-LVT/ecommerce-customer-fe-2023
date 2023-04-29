@@ -120,7 +120,7 @@ export const API_URLS = {
     }),
 
     cancelOrder: (id: number) => ({
-      endPoint: `${Schemas.OrderSchema}/${id}/status?status=cancelled`,
+      endPoint: `${Schemas.OrderSchema}/${id}/status?status=CANCELLED`,
       method: 'PUT',
       headers: HEADERS.authHeader(),
     }),

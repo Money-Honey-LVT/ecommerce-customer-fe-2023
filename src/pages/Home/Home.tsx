@@ -14,8 +14,6 @@ const Home = () => {
     <Stack>
       <CategorySlider />
 
-      <VoucherList />
-
       <Search />
 
       <Flex justify={'center'}>

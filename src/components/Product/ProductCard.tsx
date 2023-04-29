@@ -16,18 +16,22 @@ interface Props {
 
 const ProductCard: React.FC<Props> = ({ product }) => {
   const colors = getColorsOfProduct(product?.properties);
+
   const navigate = useNavigate();
 
   const { hovered, ref } = useHover();
 
-  const [colorSelect, setColorSelect] = useState(colors[0]);
+  const [colorSelect, setColorSelect] = useState('');
 
   const handleClickProduct = () => {
     navigate(`${ROUTER.PRODUCT.INDEX}/${product?.id}`);
   };
 
   const isColorSelected = (color: string) => {
-    if (!colors) return false;
+    if (!colorSelect) {
+      const bool = color === colors[0] ? true : false;
+      return bool;
+    }
     const bool = colorSelect === color ? true : false;
     return bool;
   };
@@ -47,16 +51,27 @@ const ProductCard: React.FC<Props> = ({ product }) => {
     setColorSelect(color);
   };
 
-  const getColorImagePath = (color: string) => {
-    const item = product?.properties.find((item) => item.color === color);
-    return item ? item.imagePath : null;
+  const getColorImagePath = () => {
+    if (colorSelect) {
+      const item = product?.properties.find((item) => item.color === colorSelect);
+      return item ? item.imagePath : null;
+    } else {
+      const item = product?.properties.find((item) => item.color === colors[0]);
+      return item ? item.imagePath : null;
+    }
   };
 
-  const getSizesByColor = (color: string) => {
+  const getSizesByColor = () => {
     const sizes = new Set();
     product?.properties.forEach((item) => {
-      if (item.color === color && item.quantity > 0) {
-        sizes.add(item.size);
+      if (colorSelect) {
+        if (item.color === colorSelect && item.quantity > 0) {
+          sizes.add(item.size);
+        }
+      } else {
+        if (item.color === colors[0] && item.quantity > 0) {
+          sizes.add(item.size);
+        }
       }
     });
     return [...sizes];
@@ -66,7 +81,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
     <Card padding="0" radius="lg" sx={{ cursor: 'pointer' }}>
       <CardSection
         sx={{
-          backgroundImage: `url(${getColorImagePath(colorSelect)})`,
+          backgroundImage: `url(${getColorImagePath()})`,
           position: 'relative',
           backgroundPosition: 'center',
           backgroundSize: '300px',
@@ -76,7 +91,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
         mb={10}
       >
         {hovered && product?.id ? (
-          <SideSelector productId={product?.id} color={colorSelect} sizes={getSizesByColor(colorSelect)} />
+          <SideSelector productId={product?.id} color={colorSelect || colors[0]} sizes={getSizesByColor()} />
         ) : null}
         {/* {renderOverallRating(4)} */}
       </CardSection>

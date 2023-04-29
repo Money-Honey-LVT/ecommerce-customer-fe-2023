@@ -24,51 +24,34 @@ const ForgotPassword = () => {
   };
 
   return (
-    <Grid style={{ height: '100vh' }} align="center" justify="center">
-      <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
-        <Grid.Col p={0} md={7}>
-          <BackgroundImage src={''}>
-            <Box
-              sx={{
-                minHeight: '100vh',
-                maxHeight: '100vh',
-              }}
-            ></Box>
-          </BackgroundImage>
-        </Grid.Col>
-      </MediaQuery>
+    <Center>
+      <Card withBorder padding="xl" radius="lg" shadow="xl" w={360}>
+        <form onSubmit={form.onSubmit((values) => handleSubmit(values))}>
+          <Grid>
+            <Col span={12}>
+              <Text align="center" weight={700} size="xl">
+                Quên Mật Khẩu
+              </Text>
+            </Col>
+            <Col span={12}>
+              <Text align="center" weight={400} size="sm">
+                Nhập email của bạn để khôi phục lại mật khẩu
+              </Text>
+            </Col>
 
-      <Grid.Col xs={12} md={5}>
-        <Center>
-          <Card withBorder padding="xl" radius="lg" shadow="xl" w={360}>
-            <form onSubmit={form.onSubmit((values) => handleSubmit(values))}>
-              <Grid>
-                <Col span={12}>
-                  <Text align="center" weight={700} size="xl">
-                    Quên Mật Khẩu
-                  </Text>
-                </Col>
-                <Col span={12}>
-                  <Text align="center" weight={400} size="sm">
-                    Nhập email của bạn để khôi phục lại mật khẩu
-                  </Text>
-                </Col>
+            <Col span={12}>
+              <TextInput radius="lg" placeholder="Email" {...form.getInputProps('email')}></TextInput>
+            </Col>
 
-                <Col span={12}>
-                  <TextInput radius="lg" placeholder="Email" {...form.getInputProps('email')}></TextInput>
-                </Col>
-
-                <Col sx={{ marginTop: '10px' }} span={12}>
-                  <Button type="submit" fullWidth color="dark" radius="lg">
-                    Lấy lại mật khẩu
-                  </Button>
-                </Col>
-              </Grid>
-            </form>
-          </Card>
-        </Center>
-      </Grid.Col>
-    </Grid>
+            <Col sx={{ marginTop: '10px' }} span={12}>
+              <Button type="submit" fullWidth color="dark" radius="lg">
+                Lấy lại mật khẩu
+              </Button>
+            </Col>
+          </Grid>
+        </form>
+      </Card>
+    </Center>
   );
 };
 

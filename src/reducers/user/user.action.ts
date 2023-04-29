@@ -55,7 +55,11 @@ const SignUp =
       });
 
       navigate(ROUTER.AUTH.LOGIN);
-      renderNotification('Thông báo', 'Đăng kí tài khoản thành công', notiType.SUCCESS);
+      renderNotification(
+        'Thông báo',
+        'Đăng kí tài khoản thành công. Vui lòng kiểm tra email của bạn để kích hoạt tài khoản',
+        notiType.SUCCESS
+      );
     } else {
       dispatch({
         type: UserActionType.SIGNUP_FAIL,
@@ -174,6 +178,7 @@ const UpdateProfile =
         payload: data,
       });
       cb?.onSuccess?.(data);
+      renderNotification('Thông báo', 'Cập nhật tài khoản thành công', notiType.SUCCESS);
     } else {
       dispatch({
         type: UserActionType.UPDATE_PROFILE_FAIL,

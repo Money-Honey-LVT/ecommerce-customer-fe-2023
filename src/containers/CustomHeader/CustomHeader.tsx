@@ -9,6 +9,7 @@ import {
   Drawer,
   Group,
   Header,
+  Indicator,
   Menu,
   ScrollArea,
   Text,
@@ -18,27 +19,13 @@ import {
   rem,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import {
-  IconBook,
-  IconChartPie3,
-  IconChevronDown,
-  IconCode,
-  IconCoin,
-  IconFingerprint,
-  IconNotification,
-  IconShirtSport,
-  IconShoppingCart,
-  IconUser,
-  IconArticle,
-  IconPackage,
-  IconLogout,
-} from '@tabler/icons-react';
+import { IconShirt, IconShoppingCart } from '@tabler/icons-react';
 import ROUTER from '../../config/router';
 import { useNavigate } from 'react-router-dom';
 import User from './User/User';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/reducer';
-import { getNumberProductInCart } from '../../utils/helpers';
+import { checkLogin, getNumberProductInCart } from '../../utils/helpers';
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -102,39 +89,6 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const mockdata = [
-  {
-    icon: IconCode,
-    title: 'Open source',
-    description: 'This Pokémon’s cry is very loud and distracting',
-  },
-  {
-    icon: IconCoin,
-    title: 'Free for everyone',
-    description: 'The fluid of Smeargle’s tail secretions changes',
-  },
-  {
-    icon: IconBook,
-    title: 'Documentation',
-    description: 'Yanma is capable of seeing 360 degrees without',
-  },
-  {
-    icon: IconFingerprint,
-    title: 'Security',
-    description: 'The shell’s rounded shape and the grooves on its.',
-  },
-  {
-    icon: IconChartPie3,
-    title: 'Analytics',
-    description: 'This Pokémon uses its flying ability to quickly chase',
-  },
-  {
-    icon: IconNotification,
-    title: 'Notifications',
-    description: 'Combusken battles with the intensely hot flames it spews',
-  },
-];
-
 const CustomHeader = () => {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
@@ -144,32 +98,16 @@ const CustomHeader = () => {
   const { categories, isFetching } = useSelector((state: RootState) => state.categories);
   const parentsCategories = categories?.filter((category) => category.categoryParentID === 0);
 
-  const links = mockdata.map((item, index) => (
-    <UnstyledButton className={classes.subLink} key={index}>
-      <Group noWrap align="flex-start">
-        <ThemeIcon size={34} variant="default" radius="md">
-          <item.icon size={rem(22)} color={theme.fn.primaryColor()} />
-        </ThemeIcon>
-        <div>
-          <Text size="sm" fw={500}>
-            {item.title}
-          </Text>
-          <Text size="xs" color="dimmed">
-            {item.description}
-          </Text>
-        </div>
-      </Group>
-    </UnstyledButton>
-  ));
-
   return (
     <Box>
       <Header height={60} px="md">
         <Group position="apart" sx={{ height: '100%' }}>
-          <Group>
-            <IconShirtSport size={30} />
+          <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
+
+          <Group onClick={() => navigate(ROUTER.HOME.INDEX)} sx={{ cursor: 'pointer' }}>
+            <IconShirt size={30} />
             <Text weight={'bolder'} size={24}>
-              KolMade
+              ManShop
             </Text>
           </Group>
           <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
@@ -179,7 +117,6 @@ const CustomHeader = () => {
             <a href={ROUTER.PRODUCT.ALL_PRODUCTS} className={classes.link}>
               Tất cả
             </a>
-
             {parentsCategories?.map((category, index) => (
               <a key={index} href={`${ROUTER.PRODUCT.ALL_PRODUCTS}/${category.id}`} className={classes.link}>
                 {category.name}
@@ -187,21 +124,14 @@ const CustomHeader = () => {
             ))}
           </Group>
 
-          <Group className={classes.hiddenMobile}>
+          <Group align="center">
             <User />
-            <Button
-              radius="lg"
-              sx={{ margin: '10px' }}
-              leftIcon={<IconShoppingCart />}
-              onClick={() => navigate(ROUTER.CART.INDEX)}
-              variant="filled"
-              color="dark"
-            >
-              <Badge color={'dark'}>{getNumberProductInCart()}</Badge>
-            </Button>
+            {checkLogin() ? (
+              <Indicator color="dark" size={15} label={getNumberProductInCart()} mt={5} radius={'md'}>
+                <IconShoppingCart className={classes.userIcon} onClick={() => navigate(ROUTER.CART.INDEX)} />
+              </Indicator>
+            ) : null}
           </Group>
-
-          <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
         </Group>
       </Header>
 
@@ -210,38 +140,30 @@ const CustomHeader = () => {
         onClose={closeDrawer}
         size="100%"
         padding="md"
-        title="Navigation"
         className={classes.hiddenDesktop}
         zIndex={1000000}
+        title={
+          <Group onClick={() => navigate(ROUTER.HOME.INDEX)} sx={{ cursor: 'pointer' }}>
+            <IconShirt size={30} />
+            <Text weight={'bolder'} size={24}>
+              ManShop
+            </Text>
+          </Group>
+        }
       >
         <ScrollArea h={`calc(100vh - ${rem(60)})`} mx="-md">
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
-
-          <a href="#" className={classes.link}>
-            Home
+          <a href={ROUTER.HOME.INDEX} className={classes.link}>
+            Trang chủ
           </a>
-          <UnstyledButton className={classes.link} onClick={toggleLinks}>
-            <Center inline>
-              <Box component="span" mr={5}>
-                Features
-              </Box>
-              <IconChevronDown size={16} color={theme.fn.primaryColor()} />
-            </Center>
-          </UnstyledButton>
-          <Collapse in={linksOpened}>{links}</Collapse>
-          <a href="#" className={classes.link}>
-            Learn
+          <a href={ROUTER.PRODUCT.ALL_PRODUCTS} className={classes.link}>
+            Tất cả
           </a>
-          <a href="#" className={classes.link}>
-            Academy
-          </a>
-
-          <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
-
-          <Group position="center" grow pb="xl" px="md">
-            <Button variant="default">Log in</Button>
-            <Button>Sign up</Button>
-          </Group>
+          {parentsCategories?.map((category, index) => (
+            <a key={index} href={`${ROUTER.PRODUCT.ALL_PRODUCTS}/${category.id}`} className={classes.link}>
+              {category.name}
+            </a>
+          ))}
         </ScrollArea>
       </Drawer>
     </Box>

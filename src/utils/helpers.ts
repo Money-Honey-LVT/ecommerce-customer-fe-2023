@@ -8,6 +8,9 @@ import { WardsArr } from '../json/wards';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/reducer';
 import { OrderStatus } from '../types/models/Order';
+import { Callback } from '../types/helpers/callback';
+import { modals } from '@mantine/modals';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 export const randomArray = (number: number): number[] => Array.from({ length: number }, (_, i) => i + 1);
 
@@ -141,5 +144,19 @@ export const parserOrderStatus = (status: OrderStatus | undefined) => {
       return 'ĐANG GIAO HÀNG';
     default:
       return '';
+  }
+};
+
+export const requireLogin = (cb?: Callback, navigate?: any) => {
+  if (checkLogin()) {
+    cb?.onSuccess?.();
+  } else {
+    modals.openConfirmModal({
+      title: 'Vui lòng đăng nhập để sử dụng tính năng này',
+      centered: true,
+      labels: { confirm: 'Đăng nhập', cancel: 'Huỷ bỏ' },
+      onCancel: () => {},
+      onConfirm: () => navigate(ROUTER.AUTH.LOGIN),
+    });
   }
 };

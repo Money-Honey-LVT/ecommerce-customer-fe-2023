@@ -55,13 +55,9 @@ const CartItemCard = ({ product }: Props) => {
             <Text size={'sm'}>
               {product?.color} / {product?.size}
             </Text>
-            <Text size={'sm'}>{formatCurrency(product?.price)}</Text>
-
-            {/* <Group>
-            <Select data={color} w={100} />
-            <Select data={size} w={70} />
-          </Group> */}
-            <Group spacing={5}>
+            <Text size={'sm'}>{formatCurrency(product.price)}</Text>
+            <Text size={'sm'}>x{product?.quantity}</Text>
+            {/* <Group spacing={5}>
               <ActionIcon
                 size={20}
                 radius="lg"
@@ -94,7 +90,7 @@ const CartItemCard = ({ product }: Props) => {
               >
                 +
               </ActionIcon>
-            </Group>
+            </Group> */}
           </Stack>
         </Col>
         <Col span={1}>

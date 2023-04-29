@@ -16,15 +16,16 @@ import {
   Center,
   Container,
   Paper,
+  createStyles,
 } from '@mantine/core';
 import { faker } from '@faker-js/faker';
-import { formatCurrency, getColorsOfProduct, notiType, renderNotification } from '../../utils/helpers';
+import { formatCurrency, getColorsOfProduct, notiType, renderNotification, requireLogin } from '../../utils/helpers';
 
 import { ReviewCard } from '../../components/ReviewModal/ReviewCard';
 import { useEffect, useRef, useState } from 'react';
 import { IconShoppingCart } from '@tabler/icons-react';
 import { ColorSelector } from '../../components/Product/ColorSelector';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { API_URLS } from '../../config/constants/api';
 import { useAppDispatch } from '../../hooks/use-app-dispatch';
 import { ProductAction } from '../../reducers/product/product.actions';
@@ -34,13 +35,31 @@ import { SizesRender } from './SizesRender';
 import { addCartPayload } from '../../types/helpers/payload';
 import { CartAction } from '../../reducers/cart/cart.action';
 
+const useStyles = createStyles((theme) => ({
+  image: {
+    [theme.fn.smallerThan('sm')]: {},
+    [theme.fn.largerThan('sm')]: {
+      width: '672',
+      height: '990',
+    },
+  },
+  width: {
+    [theme.fn.smallerThan('sm')]: { width: '100%' },
+    [theme.fn.largerThan('sm')]: {
+      width: '90%',
+    },
+  },
+}));
 const ProductDetail = () => {
+  const { classes } = useStyles();
+
   const [value, setValue] = useState<any>(1);
   const handlers = useRef<NumberInputHandlers>(null);
 
   const productId = useParams().id;
 
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(ProductAction.GetProductById(parseInt(productId || '')));
@@ -87,13 +106,26 @@ const ProductDetail = () => {
           size: sizeSelected,
           color: colorSelect,
         };
-        dispatch(
-          CartAction.AddCart(payload, {
-            onSuccess: () => dispatch(CartAction.GetCart()),
-          })
+
+        if (!colorSelect) {
+          renderNotification('Thông báo', 'Vui lòng chọn màu cho sản phẩm', notiType.ERROR);
+          return;
+        }
+
+        requireLogin(
+          {
+            onSuccess: () => {
+              dispatch(
+                CartAction.AddCart(payload, {
+                  onSuccess: () => dispatch(CartAction.GetCart()),
+                })
+              );
+            },
+          },
+          navigate
         );
       } else {
-        renderNotification('Thông báo', 'Vui lòng chọng kích thước cho sản phẩm', notiType.ERROR);
+        renderNotification('Thông báo', 'Vui lòng chọn kích thước cho sản phẩm', notiType.ERROR);
       }
     }
   };
@@ -101,7 +133,7 @@ const ProductDetail = () => {
   if (product)
     return (
       <>
-        <Center w={'90%'}>
+        <Center className={classes.width}>
           <Grid w={'100%'}>
             <Col
               sx={{
@@ -116,6 +148,7 @@ const ProductDetail = () => {
               xl={7}
             >
               <Image
+                className={classes.image}
                 radius="lg"
                 fit="contain"
                 sx={{
@@ -207,20 +240,28 @@ const ProductDetail = () => {
         </Center>
 
         <Divider mt={80} />
-        <Center w={'90%'}>
-          <Grid w={'100%'}>
-            <Col span={12}>
-              <Text weight={'bolder'} size={26} mt={20}>
-                {product.reviews.length} Đánh giá
-              </Text>
-            </Col>
-            {product.reviews.map((review, index) => (
-              <Col key={index} xs={12} md={6}>
-                <ReviewCard rating={review} />
+        {product.reviews.length > 0 ? (
+          <Center w={'90%'}>
+            <Grid w={'100%'}>
+              <Col span={12}>
+                <Text weight={'bolder'} size={26} mt={20}>
+                  {product.reviews.length} Đánh giá
+                </Text>
               </Col>
-            ))}
-          </Grid>
-        </Center>
+              {product.reviews.map((review, index) => (
+                <Col key={index} xs={12} md={6}>
+                  <ReviewCard rating={review} />
+                </Col>
+              ))}
+            </Grid>
+          </Center>
+        ) : (
+          <Center mt={'md'}>
+            <Text weight={'bold'} size={'lg'}>
+              Sản phẩm chưa có đánh giá nào
+            </Text>
+          </Center>
+        )}
       </>
     );
   else return null;

@@ -4,5 +4,5 @@ export interface Category extends BaseModel {
   name: string;
   description?: string;
   categoryParentID?: number;
-  status: string;
+  status?: string;
 }

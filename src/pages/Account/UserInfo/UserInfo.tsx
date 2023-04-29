@@ -1,4 +1,4 @@
-import { Button, Col, Grid, Input, Select, Text } from '@mantine/core';
+import { Button, Col, Grid, Input, Select, Text, createStyles } from '@mantine/core';
 import { useForm, isEmail, isNotEmpty } from '@mantine/form';
 import { CitiesArr } from '../../../json/cities';
 import { useEffect, useState } from 'react';
@@ -14,8 +14,11 @@ import {
   formatCitiesJson,
   formatDistrictsJson,
   formatWardsJson,
+  notiType,
+  renderNotification,
 } from '../../../utils/helpers';
 import { UpdateProfilePayload } from '../../../types/helpers/payload';
+import { isEqual } from 'lodash';
 
 interface Props {
   user: User | null;
@@ -41,20 +44,44 @@ export interface Ward {
   parent_code: string;
 }
 
+const useStyles = createStyles((theme) => ({
+  userform: {
+    [theme.fn.smallerThan('sm')]: {
+      width: '100%',
+    },
+    [theme.fn.largerThan('sm')]: {
+      width: '80%',
+    },
+  },
+  submitBtn: {
+    [theme.fn.smallerThan('sm')]: {
+      width: '100%',
+    },
+  },
+}));
+
 const UserInfo = ({ user }: Props) => {
+  const { classes } = useStyles();
+
   const dispatch = useAppDispatch();
 
+  const initialValues = {
+    fullName: user?.fullName,
+    email: user?.email,
+    phone: user?.phone,
+    address: user?.address,
+    city: user?.city,
+    district: user?.district,
+    ward: user?.ward,
+  };
+
   const form = useForm({
-    initialValues: {
-      fullName: user?.fullName,
-      email: user?.email,
-      phone: user?.phone,
-      address: user?.address,
-      city: user?.city,
-      district: user?.district,
-      ward: user?.ward,
+    initialValues,
+    validate: {
+      fullName: isNotEmpty('Bạn chưa nhập họ tên'),
+      email: isNotEmpty('Bạn chưa nhập Email'),
+      phone: isNotEmpty('Bạn chưa nhập số điện thoại'),
     },
-    validate: {},
   });
 
   const [selectedCity, setSelectedCity] = useState(user?.city || '');
@@ -95,6 +122,11 @@ const UserInfo = ({ user }: Props) => {
       ward: selectedWard,
     };
 
+    if (isEqual(payload, initialValues)) {
+      renderNotification('Thông báo', 'Bạn chưa cập nhật thông tin gì', notiType.ERROR);
+      return;
+    }
+
     dispatch(
       UserAction.UpdateProfile(payload, {
         onSuccess: () => {
@@ -111,28 +143,38 @@ const UserInfo = ({ user }: Props) => {
           Thông tin cá nhân
         </Text>
         <form onSubmit={form.onSubmit((values) => handleSubmit(values))}>
-          <Grid w={'80%'}>
-            <Col span={3}>Họ tên</Col>
-            <Col span={9}>
-              <Input {...form.getInputProps('fullName')} />
+          <Grid className={classes.userform}>
+            <Col span={12} md={3}>
+              Họ tên
             </Col>
-            <Col span={3}>Email</Col>
-            <Col span={9}>
-              <Input {...form.getInputProps('email')} />
+            <Col span={12} md={9}>
+              <Input {...form.getInputProps('fullName')} readOnly />
             </Col>
-            <Col span={3}>Số điện thoại</Col>
-            <Col span={9}>
-              <Input {...form.getInputProps('phone')} placeholder="SĐT của bạn" />
+            <Col span={12} md={3}>
+              Email
             </Col>
-            <Col span={3}>Địa chỉ</Col>
-            <Col span={9}>
+            <Col span={12} md={9}>
+              <Input {...form.getInputProps('email')} readOnly />
+            </Col>
+            <Col span={12} md={3}>
+              Số điện thoại
+            </Col>
+            <Col span={12} md={9}>
+              <Input {...form.getInputProps('phone')} placeholder="SĐT của bạn" readOnly />
+            </Col>
+            <Col span={12} md={3}>
+              Địa chỉ
+            </Col>
+            <Col span={12} md={9}>
               <Input {...form.getInputProps('address')} placeholder="Địa chỉ của bạn" />
             </Col>
-            <Col span={3}>Tỉnh/Thành</Col>
-            <Col span={3}>
+            <Col span={12} md={3}>
+              Tỉnh/Thành
+            </Col>
+            <Col span={4} md={3}>
               <Select placeholder="Chọn Tỉnh/Thành" data={cities} value={selectedCity} onChange={handleCityChange} />
             </Col>
-            <Col span={3}>
+            <Col span={4} md={3}>
               <Select
                 placeholder="Chọn Quận/Huyện"
                 data={districts}
@@ -141,7 +183,7 @@ const UserInfo = ({ user }: Props) => {
                 disabled={!selectedCity}
               />
             </Col>
-            <Col span={3}>
+            <Col span={4} md={3}>
               <Select
                 placeholder="Chọn Phường/Xã"
                 data={wards}
@@ -151,7 +193,7 @@ const UserInfo = ({ user }: Props) => {
               />
             </Col>
             <Col span={12} mt={10}>
-              <Button type="submit" px={'lg'} py={'xs'} radius={'lg'} h={'fit-content'}>
+              <Button type="submit" px={'lg'} py={'xs'} radius={'lg'} h={'fit-content'} className={classes.submitBtn}>
                 <Text>Cập nhật tài khoản</Text>
               </Button>
             </Col>

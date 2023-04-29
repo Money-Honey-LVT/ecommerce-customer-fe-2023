@@ -43,11 +43,11 @@ const AppRoutes: React.FC = () => {
       <Route element={<AuthLayout />}>
         <Route path={ROUTER.AUTH.LOGIN} element={<Login />} />
         <Route path={ROUTER.AUTH.SIGNUP} element={<SignUp />} />
-        <Route path={ROUTER.AUTH.ACTIVE_USER} element={<ActiveUser />} />
+
         <Route path={ROUTER.AUTH.FORGOTPASSWORD} element={<ForgotPassword />} />
         <Route path={ROUTER.AUTH.RESETPASSWORD} element={<ResetPassword />} />
       </Route>
-
+      <Route path={ROUTER.AUTH.ACTIVE_USER} element={<ActiveUser />} />
       <Route element={<AppLayout />}>
         <Route path={ROUTER.CART.INDEX} element={<Cart user={user} />} />
         <Route element={<AccountLayout />}>

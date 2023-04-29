@@ -39,58 +39,43 @@ const ResetPassword = () => {
   };
 
   return (
-    <Grid style={{ height: '100vh' }} align="center" justify="center">
-      <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
-        <Grid.Col p={0} md={7}>
-          <BackgroundImage src={''}>
-            <Box
-              sx={{
-                minHeight: '100vh',
-                maxHeight: '100vh',
-              }}
-            ></Box>
-          </BackgroundImage>
-        </Grid.Col>
-      </MediaQuery>
+    <Center>
+      <Card withBorder padding="xl" radius="lg" shadow="xl" w={360}>
+        <form onSubmit={form.onSubmit((values) => handleSubmit(values))}>
+          <Grid>
+            <Col span={12}>
+              <Text align="center" weight={700} size="xl">
+                Khôi phục mật khẩu
+              </Text>
+            </Col>
 
-      <Grid.Col xs={12} md={5}>
-        <Center>
-          <Card withBorder padding="xl" radius="lg" shadow="xl" w={360}>
-            <form onSubmit={form.onSubmit((values) => handleSubmit(values))}>
-              <Grid>
-                <Col span={12}>
-                  <Text align="center" weight={700} size="xl">
-                    Khôi phục mật khẩu
-                  </Text>
-                </Col>
-
-                <Col span={12}>
-                  <TextInput
-                    radius="lg"
-                    placeholder="Mật khẩu mới"
-                    label="Mật khẩu mới"
-                    {...form.getInputProps('password')}
-                  ></TextInput>
-                </Col>
-                <Col span={12}>
-                  <TextInput
-                    radius="lg"
-                    placeholder="Xác nhận mật khẩu"
-                    label="Xác nhận mật khẩu"
-                    {...form.getInputProps('confirmPassword')}
-                  ></TextInput>
-                </Col>
-                <Col sx={{ marginTop: '10px' }} span={12}>
-                  <Button type="submit" fullWidth color="dark" radius="lg">
-                    Khôi phục mật khẩu
-                  </Button>
-                </Col>
-              </Grid>
-            </form>
-          </Card>
-        </Center>
-      </Grid.Col>
-    </Grid>
+            <Col span={12}>
+              <TextInput
+                radius="lg"
+                placeholder="Mật khẩu mới"
+                label="Mật khẩu mới"
+                type={'password'}
+                {...form.getInputProps('password')}
+              ></TextInput>
+            </Col>
+            <Col span={12}>
+              <TextInput
+                radius="lg"
+                placeholder="Xác nhận mật khẩu"
+                label="Xác nhận mật khẩu"
+                type={'password'}
+                {...form.getInputProps('confirmPassword')}
+              ></TextInput>
+            </Col>
+            <Col sx={{ marginTop: '10px' }} span={12}>
+              <Button type="submit" fullWidth color="dark" radius="lg">
+                Khôi phục mật khẩu
+              </Button>
+            </Col>
+          </Grid>
+        </form>
+      </Card>
+    </Center>
   );
 };
 

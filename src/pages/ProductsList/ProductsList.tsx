@@ -1,9 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { Product } from '../../types/models/Product';
-import { faker } from '@faker-js/faker';
-import { formatCurrency, randomArray } from '../../utils/helpers';
+
 import ProductCard from '../../components/Product/ProductCard';
-import { Button, Center, Col, Divider, Grid, Group, Input, Select, Text, TextInput } from '@mantine/core';
+import {
+  Button,
+  Center,
+  Col,
+  Divider,
+  Flex,
+  Grid,
+  Group,
+  Input,
+  Select,
+  Text,
+  TextInput,
+  createStyles,
+} from '@mantine/core';
 import { IconSearch } from '@tabler/icons-react';
 import { useAppDispatch } from '../../hooks/use-app-dispatch';
 import { CategoryAction } from '../../reducers/category/category.action';
@@ -14,7 +25,26 @@ import { useLocation } from 'react-router-dom';
 import { useDebouncedState } from '@mantine/hooks';
 import { Category } from '../../types/models/Category';
 
+const useStyles = createStyles((theme) => ({
+  search: {
+    [theme.fn.smallerThan('sm')]: {
+      width: '100%',
+    },
+    [theme.fn.largerThan('sm')]: {
+      width: 300,
+    },
+  },
+
+  cateSelect: {
+    [theme.fn.smallerThan('sm')]: {
+      overflow: 'scroll',
+    },
+  },
+}));
+
 const ProductsList = () => {
+  const { classes } = useStyles();
+
   const state = useLocation().state;
 
   const [selectedCate, setSelectedCate] = useState(0);
@@ -60,7 +90,7 @@ const ProductsList = () => {
         Danh mục sản phẩm
       </Text>
       <Group mb={15} align="center" position="apart">
-        <Group>
+        <Flex className={classes.cateSelect} gap={'sm'}>
           <Button
             radius={'lg'}
             variant={isSelectedCate(0) ? '' : 'light'}
@@ -82,11 +112,11 @@ const ProductsList = () => {
               {category.name}
             </Button>
           ))}
-        </Group>
+        </Flex>
         <TextInput
           icon={<IconSearch />}
           radius={'lg'}
-          w={300}
+          className={classes.search}
           placeholder={'Nhập từ khoá'}
           defaultValue={search}
           onChange={(e) => setSearch(e.currentTarget.value)}
@@ -97,7 +127,7 @@ const ProductsList = () => {
         products?.length > 0 ? (
           <Grid mt={20}>
             {products.map((product, index) => (
-              <Col key={index} xs={6} md={3} lg={2.4} mb={20}>
+              <Col key={index} span={6}  xs={6} md={3} lg={2.4} mb={20}>
                 <ProductCard product={product} />
               </Col>
             ))}

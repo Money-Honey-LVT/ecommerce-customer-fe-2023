@@ -5,6 +5,7 @@ import { useCallApi } from '../../utils/api';
 import { notiType, renderNotification } from '../../utils/helpers';
 import { ProductActionType, ProductThunkAction } from './product.types';
 import { Product } from '../../types/models/Product';
+import { Callback } from '../../types/helpers/callback';
 
 export interface SearchProductPayload {
   productName: string;
@@ -12,7 +13,7 @@ export interface SearchProductPayload {
 }
 
 const SearchProduct =
-  (payload: SearchProductPayload, navigate?: NavigateFunction): ProductThunkAction =>
+  (payload: SearchProductPayload, cb?: Callback): ProductThunkAction =>
   async (dispatch: AppDispatch) => {
     dispatch({
       type: ProductActionType.SEARCH_PRODUCT_PENDING,
@@ -28,6 +29,7 @@ const SearchProduct =
         type: ProductActionType.SEARCH_PRODUCT_SUCCESS,
         payload: data.filter((data: Product) => data.status !== 'INACTIVE'),
       });
+      cb?.onSuccess?.(data.filter((data: Product) => data.status !== 'INACTIVE'));
     } else {
       dispatch({
         type: ProductActionType.SEARCH_PRODUCT_FAIL,
