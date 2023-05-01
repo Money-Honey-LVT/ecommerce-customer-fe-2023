@@ -3,7 +3,14 @@ import { useMediaQuery } from '@mantine/hooks';
 import { createStyles, Paper, Text, Title, Button, useMantineTheme, rem } from '@mantine/core';
 import ROUTER from '../../config/router';
 import { useNavigate } from 'react-router-dom';
+import bg1 from '../../assets/images/polo.webp';
+import bg2 from '../../assets/images/short.webp';
+import bg3 from '../../assets/images/quanlot.webp';
+import bg4 from '../../assets/images/phukien.avif';
 
+import { RootState } from '../../redux/reducer';
+import { useSelector } from 'react-redux';
+import _ from 'lodash';
 const useStyles = createStyles((theme) => ({
   card: {
     height: rem(440),
@@ -58,36 +65,20 @@ function Card({ image, category, link }: CardProps) {
   );
 }
 
-const data = [
-  {
-    image:
-      'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    category: 'Áo Nam',
-    link: ROUTER.PRODUCT.ALL_PRODUCTS,
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    category: 'Quần Nam',
-    link: ROUTER.PRODUCT.ALL_PRODUCTS,
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    category: 'Đồ Lót',
-    link: ROUTER.PRODUCT.ALL_PRODUCTS,
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    link: ROUTER.PRODUCT.ALL_PRODUCTS,
-    category: 'Phụ Kiện',
-  },
-];
-
 const CategorySlider = () => {
   const theme = useMantineTheme();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
+
+  const { categories, isFetching } = useSelector((state: RootState) => state.categories);
+  const parentsCategories = categories?.filter((category) => category.categoryParentID === 0);
+
+  const data = _.map(parentsCategories, ({ id, name }) => ({
+    id: id,
+    category: name,
+    image: id == 1 ? bg1 : id == 2 ? bg2 : id == 3 ? bg3 : bg4,
+    link: `${ROUTER.PRODUCT.ALL_PRODUCTS}/${id}`,
+  }));
+
   const slides = data.map((item, index) => (
     <Carousel.Slide key={index}>
       <Card {...item} />
@@ -97,10 +88,14 @@ const CategorySlider = () => {
   return (
     <Carousel
       slideSize="50%"
-      breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: rem(2) }]}
       slideGap="xl"
+      loop
       align="start"
-      slidesToScroll={mobile ? 1 : 2}
+      breakpoints={[
+        { maxWidth: 'md', slideSize: '50%' },
+        { maxWidth: 'sm', slideSize: '100%', slideGap: 0 },
+      ]}
+      withIndicators
     >
       {slides}
     </Carousel>

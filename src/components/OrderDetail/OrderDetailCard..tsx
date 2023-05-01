@@ -10,6 +10,7 @@ interface Props {
 }
 
 export const OrderDetailCard = ({ order }: Props) => {
+  console.log(order?.reviews.length)
   const dispatch = useAppDispatch();
   const [opened, { open, close }] = useDisclosure(false);
 
@@ -32,7 +33,7 @@ export const OrderDetailCard = ({ order }: Props) => {
       case OrderStatus.DELIVERING:
         return null;
       case OrderStatus.DELIVERED:
-        if (order?.reviews.length && order?.reviews.length == 0) {
+        if ( order?.reviews.length === 0) {
           return <Button onClick={open}>Đánh giá</Button>;
         } else return null;
       case OrderStatus.PENDING:

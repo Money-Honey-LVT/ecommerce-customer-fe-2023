@@ -5,6 +5,7 @@ import { Rating, Textarea, Grid, Col, AspectRatio, Image, Text, Stack, Group, Bu
 import { AddReviewPayload } from '../../types/helpers/payload';
 import { useAppDispatch } from '../../hooks/use-app-dispatch';
 import { RatingAction } from '../../reducers/rating/rating.action';
+import { OrderAction } from '../../reducers/order/order.action';
 
 interface Props {
   products: ProductInCart[] | undefined;
@@ -45,7 +46,10 @@ export const ReviewModal = ({ products, orderID, closeModal }: Props) => {
 
     dispatch(
       RatingAction.PostRating(payload, {
-        onSuccess: closeModal,
+        onSuccess: () => {
+          closeModal()
+          dispatch(OrderAction.GetOrder)
+        },
       })
     );
   };
@@ -53,8 +57,8 @@ export const ReviewModal = ({ products, orderID, closeModal }: Props) => {
   return (
     <form style={{ marginBottom: '30px' }} onSubmit={form.onSubmit((values) => handleSubmitReview(values))}>
       {products?.map((product) => (
-        <div key={product.productDetailID}>
-          <Grid mb={5}>
+        <div key={product.productDetailID} style={{marginBottom: '20px'}}>
+          <Grid mb={15}>
             <Col span={2}>
               <AspectRatio ratio={1 / 1}>
                 <Image width={'100%'} src={product.imagePath} withPlaceholder />

@@ -1,4 +1,5 @@
 import { BaseModel } from './BaseModal';
+import { CategoryStatus } from './Category';
 import { IRating } from './Rating';
 
 export interface Product extends BaseModel {
@@ -6,6 +7,7 @@ export interface Product extends BaseModel {
   price: number;
   description: string;
   categoryID?: number;
+  categoryStatus: CategoryStatus;
   quantity: number;
   status?: string;
   reviews: IRating[];

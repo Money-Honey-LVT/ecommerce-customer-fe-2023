@@ -1,6 +1,6 @@
 import { BaseModel } from './BaseModal';
 import { ProductInCart } from './Cart';
-import { Rating } from './Rating';
+import { IRating } from './Rating';
 
 export interface Order extends BaseModel {
   orderID: number;
@@ -11,7 +11,7 @@ export interface Order extends BaseModel {
   price?: number;
   categoryId?: number;
   products: ProductInCart[];
-  reviews: Rating[];
+  reviews: IRating[];
 }
 
 export enum OrderStatus {

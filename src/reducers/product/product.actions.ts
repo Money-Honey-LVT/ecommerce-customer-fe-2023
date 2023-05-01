@@ -6,6 +6,7 @@ import { notiType, renderNotification } from '../../utils/helpers';
 import { ProductActionType, ProductThunkAction } from './product.types';
 import { Product } from '../../types/models/Product';
 import { Callback } from '../../types/helpers/callback';
+import { CategoryStatus } from '../../types/models/Category';
 
 export interface SearchProductPayload {
   productName: string;
@@ -27,9 +28,13 @@ const SearchProduct =
       const { data } = response;
       dispatch({
         type: ProductActionType.SEARCH_PRODUCT_SUCCESS,
-        payload: data.filter((data: Product) => data.status !== 'INACTIVE'),
+        payload: data.filter(
+          (data: Product) => data.status !== 'INACTIVE' && data.categoryStatus !== CategoryStatus.INACTIVE
+        ),
       });
-      cb?.onSuccess?.(data.filter((data: Product) => data.status !== 'INACTIVE'));
+      cb?.onSuccess?.(
+        data.filter((data: Product) => data.status !== 'INACTIVE' && data.categoryStatus !== CategoryStatus.INACTIVE)
+      );
     } else {
       dispatch({
         type: ProductActionType.SEARCH_PRODUCT_FAIL,

@@ -6,3 +6,8 @@ export interface Category extends BaseModel {
   categoryParentID?: number;
   status?: string;
 }
+
+export enum CategoryStatus {
+  ACTIVE = 'ACTIVE',
+  INACTIVE = 'INACTIVE',
+}

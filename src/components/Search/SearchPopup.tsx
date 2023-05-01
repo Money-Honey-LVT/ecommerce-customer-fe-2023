@@ -1,4 +1,4 @@
-import { Card, Center, Col, Grid, Image, Stack, Text } from '@mantine/core';
+import { Card, Center, Col, Grid, Image, Stack, Text, createStyles } from '@mantine/core';
 import { Product } from '../../types/models/Product';
 import { formatCurrency } from '../../utils/helpers';
 import { useNavigate } from 'react-router-dom';
@@ -13,7 +13,14 @@ export const SearchPopup = ({ productList, searchValue }: Props) => {
   const navigate = useNavigate();
   if (productList) {
     return productList.length > 0 ? (
-      <Card radius={'md'} shadow={'lg'} withBorder>
+      <Card
+        radius={'md'}
+        shadow={'lg'}
+        withBorder
+        w={'100%'}
+        sx={{ position: 'absolute', top: '50px' }}
+        style={{ zIndex: '1000' }}
+      >
         {productList.slice(0, 5)?.map((product, index) => (
           <Grid
             key={index}

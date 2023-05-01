@@ -55,7 +55,7 @@ const ProductsList = () => {
   const getAllProducts = () => {
     dispatch(
       ProductAction.SearchProduct({
-        productName: state || search,
+        productName: search,
         categoryId: 0,
       })
     );
@@ -127,7 +127,7 @@ const ProductsList = () => {
         products?.length > 0 ? (
           <Grid mt={20}>
             {products.map((product, index) => (
-              <Col key={index} span={6}  xs={6} md={3} lg={2.4} mb={20}>
+              <Col key={index} span={6} xs={6} md={3} lg={2.4} mb={20}>
                 <ProductCard product={product} />
               </Col>
             ))}

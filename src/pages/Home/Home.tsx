@@ -1,12 +1,10 @@
-import React from 'react';
-import { Grid, Image, Col, Button, Stack, Flex } from '@mantine/core';
-import { IconShoppingCart, IconArrowNarrowRight } from '@tabler/icons-react';
+import { BackgroundImage, Button, Card, CardSection, Col, Flex, Grid, Stack } from '@mantine/core';
+import { IconArrowNarrowRight, IconShoppingCart } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
-import ROUTER from '../../config/router';
-import Features from '../../components/Features/Features';
 import CategorySlider from '../../components/CategorySlider/CategorySlider';
-import VoucherList from '../../components/Vouchers/VouchersList';
+import Features from '../../components/Features/Features';
 import Search from '../../components/Search/Search';
+import ROUTER from '../../config/router';
 
 const Home = () => {
   const navigate = useNavigate();
