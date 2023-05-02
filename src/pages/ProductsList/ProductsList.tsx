@@ -62,6 +62,16 @@ const ProductsList = () => {
   };
 
   useEffect(() => {
+    setSearch(state);
+    dispatch(
+      ProductAction.SearchProduct({
+        productName: state,
+        categoryId: 0,
+      })
+    );
+  }, []);
+
+  useEffect(() => {
     getAllProducts();
   }, [search]);
 
