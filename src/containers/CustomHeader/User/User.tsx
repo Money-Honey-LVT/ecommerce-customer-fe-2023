@@ -49,11 +49,12 @@ const User = () => {
   const handleClickMenuItem = (item: MenuItemProps) => {
     if (item.title === 'Đăng xuất') {
       localStorage.clear();
-      window.location.reload();
+
       navigate(item.link);
       renderNotification('Thông báo', 'Đăng xuất thành công', notiType.SUCCESS);
     }
     navigate(item.link);
+    window.location.reload();
   };
 
   return (
