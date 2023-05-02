@@ -104,6 +104,12 @@ export const API_URLS = {
       method: 'DELETE',
       headers: HEADERS.authHeader(),
     }),
+
+    updateCart: (productId: number) => ({
+      endPoint: `${Schemas.CartSchema}/${productId}`,
+      method: 'PUT',
+      headers: HEADERS.authHeader(),
+    }),
   },
 
   ORDER: {

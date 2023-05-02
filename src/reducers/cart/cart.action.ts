@@ -1,7 +1,7 @@
 import { API_URLS } from '../../config/constants/api';
 import { AppDispatch } from '../../redux/store';
 import { Callback } from '../../types/helpers/callback';
-import { addCartPayload } from '../../types/helpers/payload';
+import { addCartPayload, updateCartPayload } from '../../types/helpers/payload';
 import { useCallApi } from '../../utils/api';
 import { CartActionType, CartThunkAction } from './cart.types';
 import { notiType, renderNotification } from '../../utils/helpers';
@@ -78,8 +78,33 @@ const DeleteCart =
       renderNotification('Thông báo', error.response.data.devMsg, notiType.ERROR);
     }
   };
+
+const UpdateCart =
+  (payload: updateCartPayload, cartDetailID: number, cb?: Callback): CartThunkAction =>
+  async (dispatch: AppDispatch) => {
+    dispatch({
+      type: CartActionType.UPDATE_CART_PENDING,
+    });
+
+    const api = API_URLS.CART.updateCart(cartDetailID);
+
+    const { response, error } = await useCallApi({ ...api, payload });
+
+    if (!error && response?.status === 200) {
+      dispatch({
+        type: CartActionType.UPDATE_CART_SUCCESS,
+      });
+      renderNotification('Thông báo', 'Cập nhật giỏ hàng thành công', notiType.SUCCESS);
+      cb?.onSuccess?.();
+    } else {
+      dispatch({ type: CartActionType.UPDATE_CART_FAIL });
+      renderNotification('Thông báo', error.response.data.devMsg, notiType.ERROR);
+    }
+  };
+
 export const CartAction = {
   GetCart,
   AddCart,
   DeleteCart,
+  UpdateCart,
 };
