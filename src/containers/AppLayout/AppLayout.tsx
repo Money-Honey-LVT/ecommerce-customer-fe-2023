@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { CategoryAction } from '../../reducers/category/category.action';
 import { checkLogin } from '../../utils/helpers';
 import { CartAction } from '../../reducers/cart/cart.action';
+import { UserAction } from '../../reducers/user/user.action';
 
 const AppLayout = () => {
   const dispatch = useAppDispatch();
@@ -15,6 +16,7 @@ const AppLayout = () => {
     dispatch(CategoryAction.GetAllCategory());
     if (checkLogin()) {
       dispatch(CartAction.GetCart());
+      dispatch(UserAction.GetProfile());
     }
   }, []);
 
