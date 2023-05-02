@@ -78,7 +78,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
   };
 
   return (
-    <Card padding="0" radius="lg" sx={{ cursor: 'pointer' }}>
+    <Card padding={'md'} radius={'md'} sx={{ cursor: 'pointer' }}>
       <CardSection
         sx={{
           backgroundImage: `url(${getColorImagePath()})`,
