@@ -9,18 +9,21 @@ import customTheme from './theme';
 import { Notifications } from '@mantine/notifications';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import { SocketProvider } from './contexts/SocketContext';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
-        <MantineProvider theme={customTheme}>
-          <ModalsProvider>
-            <Notifications position="top-right" />
-            <AppRoutes />
-          </ModalsProvider>
-        </MantineProvider>
-      </BrowserRouter>
-    </Provider>
+    <SocketProvider>
+      <Provider store={store}>
+        <BrowserRouter>
+          <MantineProvider theme={customTheme}>
+            <ModalsProvider>
+              <Notifications position="top-right" />
+              <AppRoutes />
+            </ModalsProvider>
+          </MantineProvider>
+        </BrowserRouter>
+      </Provider>
+    </SocketProvider>
   </React.StrictMode>
 );
