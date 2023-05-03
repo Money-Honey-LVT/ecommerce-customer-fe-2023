@@ -1,4 +1,4 @@
-import { Button, Card, Center, Flex, Group, Select, Stack, Text, TextInput } from '@mantine/core';
+import { Button, Card, Center, Flex, Group, Select, Stack, Text, TextInput, createStyles } from '@mantine/core';
 import { IconSearch } from '@tabler/icons-react';
 import { useDebouncedState, useDebouncedValue } from '@mantine/hooks';
 import { SearchPopup } from './SearchPopup';
@@ -8,9 +8,25 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/reducer';
 
+const useStyles = createStyles((theme) => ({
+  keyword: {
+    hiddenMobile: {
+      [theme.fn.smallerThan('sm')]: {
+        overflowX: 'scroll',
+      },
+    },
+
+    hiddenDesktop: {
+      [theme.fn.largerThan('sm')]: {
+        width: 300,
+      },
+    },
+  },
+}));
+
 const Search = () => {
   const dispatch = useAppDispatch();
-
+  const { classes } = useStyles();
   const [value, setValue] = useState('');
 
   const SearchProduct = (value: string) => {
@@ -52,7 +68,7 @@ const Search = () => {
             Từ khoá nổi bật
           </Text>
         </Center>
-        <Flex w={'100%'} align={'center'} gap={'md'}>
+        <Group w={'100%'} align={'center'} className={classes.keyword}>
           {recommendList.map((item, index) => (
             <Card
               withBorder
@@ -66,7 +82,7 @@ const Search = () => {
               <Text size={'xs'}>{item}</Text>
             </Card>
           ))}
-        </Flex>
+        </Group>
       </Stack>
     </Center>
   );
