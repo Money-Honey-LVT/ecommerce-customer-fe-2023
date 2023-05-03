@@ -30,23 +30,7 @@ interface Props {
   product: ProductInCart;
 }
 
-const useStyles = createStyles((theme) => ({
-  group: {
-    hiddenMobile: {
-      [theme.fn.smallerThan('sm')]: {
-        maxWidth: '100',
-      },
-    },
-
-    hiddenDesktop: {
-      [theme.fn.largerThan('sm')]: {
-        maxWidth: '200',
-      },
-    },
-  },
-}));
 const CartItemCard = ({ product }: Props) => {
-  const { classes } = useStyles();
   const [value, setValue] = useState<number | ''>(product?.quantity);
   const theme = useMantineTheme();
 
@@ -127,7 +111,7 @@ const CartItemCard = ({ product }: Props) => {
           <Stack justify="space-between" h={'100%'}>
             <Stack>
               <Group position="apart" align={'flex-start'}>
-                <Text size={'sm'} weight={'bold'} className={classes.group}>
+                <Text size={'sm'} weight={'bold'} w={theme.fn.smallerThan('sm') ? 150 : 300}>
                   {product?.name}
                 </Text>
                 <IconX cursor={'pointer'} onClick={handleDeleteItem} />
