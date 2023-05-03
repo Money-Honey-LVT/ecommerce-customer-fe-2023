@@ -51,7 +51,7 @@ export const SearchPopup = ({ productList, searchValue }: Props) => {
               }}
               sx={{ cursor: 'pointer' }}
             >
-              Xem tất cả kết quả
+              Xem thêm các sản phẩm
             </Text>
           </Center>
         ) : null}
