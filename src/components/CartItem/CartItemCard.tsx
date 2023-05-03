@@ -30,7 +30,20 @@ interface Props {
   product: ProductInCart;
 }
 
+const useStyles = createStyles((theme) => ({
+  title: {
+    [theme.fn.smallerThan('sm')]: {
+      width: 100,
+    },
+
+    [theme.fn.largerThan('sm')]: {
+      width: 200,
+    },
+  },
+}));
+
 const CartItemCard = ({ product }: Props) => {
+  const { classes } = useStyles();
   const [value, setValue] = useState<number | ''>(product?.quantity);
   const theme = useMantineTheme();
 
@@ -95,10 +108,11 @@ const CartItemCard = ({ product }: Props) => {
     }
   }, [colorSelect, sizeSelected, value]);
 
+
   return (
     <Card mt={10}>
       <Grid>
-        <Col span={3} md={5}>
+        <Col span={5} md={5}>
           <AspectRatio ratio={126 / 186} maw={200}>
             <Image
               withPlaceholder
@@ -107,11 +121,11 @@ const CartItemCard = ({ product }: Props) => {
             />
           </AspectRatio>
         </Col>
-        <Col span={9} md={7}>
+        <Col span={7} md={7}>
           <Stack justify="space-between" h={'100%'}>
             <Stack>
               <Group position="apart" align={'flex-start'}>
-                <Text size={'sm'} weight={'bold'} w={theme.fn.smallerThan('sm') ? 150 : 300}>
+                <Text size={'sm'} weight={'bold'} className={classes.title}>
                   {product?.name}
                 </Text>
                 <IconX cursor={'pointer'} onClick={handleDeleteItem} />

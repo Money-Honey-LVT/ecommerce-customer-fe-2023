@@ -6,7 +6,7 @@ import { notiType, renderNotification } from '../../utils/helpers';
 
 interface Props {
   availableSizes: string[];
-  sizeSelected: Sizes | undefined;
+  sizeSelected: string | undefined;
   setSizeSelected: (size: any) => void;
 }
 const defaultSize: Sizes[] = [Sizes.XS, Sizes.S, Sizes.M, Sizes.L, Sizes.XL, Sizes.XXL];

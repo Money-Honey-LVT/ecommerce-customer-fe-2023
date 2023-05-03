@@ -34,6 +34,7 @@ import { RootState } from '../../redux/reducer';
 import { SizesRender } from './SizesRender';
 import { addCartPayload } from '../../types/helpers/payload';
 import { CartAction } from '../../reducers/cart/cart.action';
+import _ from 'lodash';
 
 const useStyles = createStyles((theme) => ({
   image: {
@@ -90,11 +91,17 @@ const ProductDetail = () => {
     });
     return [...sizes];
   };
-  const [sizeSelected, setSizeSelected] = useState<Sizes>();
+  const [sizeSelected, setSizeSelected] = useState<string | ''>();
+
+  const getQuantityByColorAndSize = (color: string | null, size: string | undefined) => {
+    const itemsWithColorSize = _.filter(product?.properties, { color: color, size: size });
+    const totalQuantity = _.sumBy(itemsWithColorSize, 'quantity');
+    return totalQuantity;
+  };
 
   const handleSelectColor = (color: string) => {
     setColorSelect(color);
-    setSizeSelected(undefined);
+    setSizeSelected(getSizesByColor(color)[0] as string);
   };
 
   const hanleAddToCart = () => {
@@ -111,7 +118,10 @@ const ProductDetail = () => {
           renderNotification('Thông báo', 'Vui lòng chọn màu cho sản phẩm', notiType.ERROR);
           return;
         }
-
+        if (value < 1) {
+          renderNotification('Thông báo', 'Vui lòng chọn số lượng', notiType.ERROR);
+          return;
+        }
         requireLogin(
           {
             onSuccess: () => {
@@ -204,7 +214,7 @@ const ProductDetail = () => {
                         value={value}
                         onChange={(val) => setValue(val)}
                         handlersRef={handlers}
-                        max={10}
+                        max={getQuantityByColorAndSize(colorSelect, sizeSelected)}
                         min={1}
                         step={1}
                         styles={{
