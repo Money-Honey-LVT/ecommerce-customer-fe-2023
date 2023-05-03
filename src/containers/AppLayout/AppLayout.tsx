@@ -5,18 +5,28 @@ import CustomHeader from '../CustomHeader';
 import { useAppDispatch } from '../../hooks/use-app-dispatch';
 import { useEffect } from 'react';
 import { CategoryAction } from '../../reducers/category/category.action';
-import { checkLogin } from '../../utils/helpers';
+import { checkLogin, notiType, renderNotification } from '../../utils/helpers';
 import { CartAction } from '../../reducers/cart/cart.action';
+import { useSocketContext } from '../../hooks/contexts';
+import { useDidUpdate } from '@mantine/hooks';
 
 const AppLayout = () => {
   const dispatch = useAppDispatch();
+  const { connectWs, closeWs, message } = useSocketContext();
 
   useEffect(() => {
     dispatch(CategoryAction.GetAllCategory());
     if (checkLogin()) {
       dispatch(CartAction.GetCart());
     }
+    connectWs();
+    return closeWs;
   }, []);
+
+  useDidUpdate(() => {
+    if (!message) return;
+    renderNotification('Thông báo', `Bạn có đơn hàng mới cập nhật`, notiType.SUCCESS);
+  }, [message]);
 
   return (
     <AppShell navbarOffsetBreakpoint="sm" asideOffsetBreakpoint="sm" header={<CustomHeader />}>
