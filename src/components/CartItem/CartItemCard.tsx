@@ -14,6 +14,7 @@ import {
   Col,
   AspectRatio,
   useMantineTheme,
+  createStyles,
 } from '@mantine/core';
 import { IconX } from '@tabler/icons-react';
 import { useState, useRef, useEffect } from 'react';
@@ -29,7 +30,23 @@ interface Props {
   product: ProductInCart;
 }
 
+const useStyles = createStyles((theme) => ({
+  group: {
+    hiddenMobile: {
+      [theme.fn.smallerThan('sm')]: {
+        maxWidth: '100',
+      },
+    },
+
+    hiddenDesktop: {
+      [theme.fn.largerThan('sm')]: {
+        maxWidth: '200',
+      },
+    },
+  },
+}));
 const CartItemCard = ({ product }: Props) => {
+  const { classes } = useStyles();
   const [value, setValue] = useState<number | ''>(product?.quantity);
   const theme = useMantineTheme();
 
@@ -74,8 +91,6 @@ const CartItemCard = ({ product }: Props) => {
 
   useEffect(() => {
     if (colorSelect && sizeSelected && value) {
-      console.log(value);
-      console.log(getQuantityByColorAndSize(colorSelect, sizeSelected));
       if (getQuantityByColorAndSize(colorSelect, sizeSelected) < value) {
         return;
       }
@@ -112,7 +127,7 @@ const CartItemCard = ({ product }: Props) => {
           <Stack justify="space-between" h={'100%'}>
             <Stack>
               <Group position="apart" align={'flex-start'}>
-                <Text size={'sm'} weight={'bold'} maw={180}>
+                <Text size={'sm'} weight={'bold'} className={classes.group}>
                   {product?.name}
                 </Text>
                 <IconX cursor={'pointer'} onClick={handleDeleteItem} />
@@ -159,6 +174,8 @@ const CartItemCard = ({ product }: Props) => {
                   step={1}
                   error={
                     value == ''
+                      ? ''
+                      : !getSizesByColor(colorSelect || product.color).includes(sizeSelected)
                       ? 'Sản phẩm hiện đang không có size này, vui lòng chọn size khác'
                       : value > getQuantityByColorAndSize(colorSelect, sizeSelected)
                       ? 'Sản phẩm hiện đang không đủ số lượng bạn cần'

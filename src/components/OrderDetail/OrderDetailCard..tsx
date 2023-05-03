@@ -10,7 +10,7 @@ interface Props {
 }
 
 export const OrderDetailCard = ({ order }: Props) => {
-  console.log(order?.reviews.length)
+
   const dispatch = useAppDispatch();
   const [opened, { open, close }] = useDisclosure(false);
 
