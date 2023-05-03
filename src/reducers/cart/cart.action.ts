@@ -94,7 +94,6 @@ const UpdateCart =
       dispatch({
         type: CartActionType.UPDATE_CART_SUCCESS,
       });
-      renderNotification('Thông báo', 'Cập nhật giỏ hàng thành công', notiType.SUCCESS);
       cb?.onSuccess?.();
     } else {
       dispatch({ type: CartActionType.UPDATE_CART_FAIL });

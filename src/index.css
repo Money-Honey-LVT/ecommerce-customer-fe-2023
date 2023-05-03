@@ -10,3 +10,15 @@
   opacity: 0.3;
   background-color: gainsboro;
 }
+
+.mantine-Select-input {
+  padding: 5px;
+}
+
+.mantine-NumberInput-error {
+  width: 300%;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+}

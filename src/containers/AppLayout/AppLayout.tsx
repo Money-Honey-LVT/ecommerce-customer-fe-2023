@@ -8,6 +8,7 @@ import { CategoryAction } from '../../reducers/category/category.action';
 import { checkLogin } from '../../utils/helpers';
 import { CartAction } from '../../reducers/cart/cart.action';
 import { UserAction } from '../../reducers/user/user.action';
+import { Footer } from '../Footer/Footer';
 
 const AppLayout = () => {
   const dispatch = useAppDispatch();
@@ -21,7 +22,7 @@ const AppLayout = () => {
   }, []);
 
   return (
-    <AppShell navbarOffsetBreakpoint="sm" asideOffsetBreakpoint="sm" header={<CustomHeader />}>
+    <AppShell navbarOffsetBreakpoint="sm" asideOffsetBreakpoint="sm" header={<CustomHeader />} footer={<Footer />}>
       <Suspense fallback={<LoadingOverlay visible />}>
         <Outlet />
       </Suspense>
