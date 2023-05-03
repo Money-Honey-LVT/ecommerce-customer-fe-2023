@@ -33,6 +33,7 @@ export interface updateCartPayload {
   color: string;
   size: string;
   quantity: number;
+  imagePath: string | null;
 }
 
 export interface AddReviewPayload {

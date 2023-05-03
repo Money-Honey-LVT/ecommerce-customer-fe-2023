@@ -54,6 +54,12 @@ const CartItemCard = ({ product }: Props) => {
     const totalQuantity = _.sumBy(itemsWithColorSize, 'quantity');
     return totalQuantity;
   };
+
+  const getColorImagePath = (color: string) => {
+    const item = product?.properties.find((item) => item.color === color);
+    return item ? item.imagePath : null;
+  };
+
   const dispatch = useAppDispatch();
 
   const handleDeleteItem = () => {
@@ -74,6 +80,7 @@ const CartItemCard = ({ product }: Props) => {
         size: sizeSelected,
         productId: product.productID,
         quantity: value,
+        imagePath: colorSelect ? getColorImagePath(colorSelect) : getColorImagePath(colors[0]),
       };
       dispatch(
         CartAction.UpdateCart(payload, product.cartDetailID, {
@@ -90,7 +97,11 @@ const CartItemCard = ({ product }: Props) => {
       <Grid>
         <Col span={5} md={5}>
           <AspectRatio ratio={126 / 186} maw={200}>
-            <Image withPlaceholder src={product?.imagePath} radius={'md'} />
+            <Image
+              withPlaceholder
+              src={colorSelect ? getColorImagePath(colorSelect) : getColorImagePath(colors[0])}
+              radius={'md'}
+            />
           </AspectRatio>
         </Col>
         <Col span={7} md={7}>
