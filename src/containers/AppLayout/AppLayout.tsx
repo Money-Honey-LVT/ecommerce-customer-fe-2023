@@ -9,6 +9,8 @@ import { checkLogin, notiType, renderNotification } from '../../utils/helpers';
 import { CartAction } from '../../reducers/cart/cart.action';
 import { useSocketContext } from '../../hooks/contexts';
 import { useDidUpdate } from '@mantine/hooks';
+import { UserAction } from '../../reducers/user/user.action';
+import { Footer } from '../Footer/Footer';
 
 const AppLayout = () => {
   const dispatch = useAppDispatch();
@@ -18,6 +20,7 @@ const AppLayout = () => {
     dispatch(CategoryAction.GetAllCategory());
     if (checkLogin()) {
       dispatch(CartAction.GetCart());
+      dispatch(UserAction.GetProfile());
     }
     connectWs();
     return closeWs;
@@ -29,7 +32,7 @@ const AppLayout = () => {
   }, [message]);
 
   return (
-    <AppShell navbarOffsetBreakpoint="sm" asideOffsetBreakpoint="sm" header={<CustomHeader />}>
+    <AppShell navbarOffsetBreakpoint="sm" asideOffsetBreakpoint="sm" header={<CustomHeader />} footer={<Footer />}>
       <Suspense fallback={<LoadingOverlay visible />}>
         <Outlet />
       </Suspense>

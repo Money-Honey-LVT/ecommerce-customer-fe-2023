@@ -19,6 +19,10 @@ export enum CartActionType {
   DELETE_CART_PENDING = 'DELETE_CART_PENDING',
   DELETE_CART_SUCCESS = 'DELETE_CART_SUCCESS',
   DELETE_CART_FAIL = 'DELETE_CART_FAIL',
+
+  UPDATE_CART_PENDING = 'UPDATE_CART_PENDING',
+  UPDATE_CART_SUCCESS = 'UPDATE_CART_SUCCESS',
+  UPDATE_CART_FAIL = 'UPDATE_CART_FAIL',
 }
 
 export interface AddCartActionPending {
@@ -52,6 +56,16 @@ export interface DeleteCartActionFail {
   type: CartActionType.DELETE_CART_FAIL;
 }
 
+export interface UpdateCartActionPending {
+  type: CartActionType.UPDATE_CART_PENDING;
+}
+export interface UpdateCartActionSuccess {
+  type: CartActionType.UPDATE_CART_SUCCESS;
+}
+export interface UpdateCartActionFail {
+  type: CartActionType.UPDATE_CART_FAIL;
+}
+
 export type CartAction =
   | AddCartActionFail
   | AddCartActionPending
@@ -61,6 +75,9 @@ export type CartAction =
   | GetCartActionSuccess
   | DeleteCartActionFail
   | DeleteCartActionPending
-  | DeleteCartActionSuccess;
+  | DeleteCartActionSuccess
+  | UpdateCartActionPending
+  | UpdateCartActionFail
+  | UpdateCartActionSuccess;
 
 export type CartThunkAction = ThunkAction<void, RootState, any, CartAction>;

@@ -1,5 +1,5 @@
 import { BaseModel } from './BaseModal';
-import { Colors, Sizes } from './Product';
+import { Colors, Properties, Sizes } from './Product';
 
 export interface Cart extends BaseModel {
   totalAmount: number;
@@ -16,4 +16,5 @@ export interface ProductInCart {
   size: Sizes;
   quantity: number;
   imagePath: string;
+  properties: Properties[];
 }

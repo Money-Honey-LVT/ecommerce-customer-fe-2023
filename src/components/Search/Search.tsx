@@ -52,7 +52,7 @@ const Search = () => {
             Từ khoá nổi bật
           </Text>
         </Center>
-        <Flex w={'100%'} align={'center'} sx={{ overflow: 'scroll' }} gap={'md'}>
+        <Flex w={'100%'} align={'center'} gap={'md'}>
           {recommendList.map((item, index) => (
             <Card
               withBorder

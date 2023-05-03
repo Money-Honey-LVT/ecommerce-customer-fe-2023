@@ -56,26 +56,26 @@ const ProductsList = () => {
     dispatch(
       ProductAction.SearchProduct({
         productName: search,
-        categoryId: 0,
+        categoryId: selectedCate,
       })
     );
   };
 
   useEffect(() => {
     getAllProducts();
-  }, [search]);
+  }, [search, selectedCate]);
 
   const { categories, isFetching } = useSelector((state: RootState) => state.categories);
   const { products } = useSelector((state: RootState) => state.products);
   const parentsCategories = categories?.filter((category) => category.categoryParentID === 0);
 
   const handleSelectCategory = (categoryId: number) => {
-    dispatch(
-      ProductAction.SearchProduct({
-        productName: search,
-        categoryId: categoryId,
-      })
-    );
+    // dispatch(
+    //   ProductAction.SearchProduct({
+    //     productName: search,
+    //     categoryId: categoryId,
+    //   })
+    // );
     setSelectedCate(categoryId);
   };
 

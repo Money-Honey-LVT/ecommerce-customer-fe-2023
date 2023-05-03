@@ -12,13 +12,17 @@ import {
   NumberInput,
   Grid,
   Col,
+  AspectRatio,
 } from '@mantine/core';
 import { IconX } from '@tabler/icons-react';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { ProductInCart } from '../../types/models/Cart';
-import { formatCurrency } from '../../utils/helpers';
+import { formatCurrency, getColorsOfProduct, notiType, renderNotification } from '../../utils/helpers';
 import { useAppDispatch } from '../../hooks/use-app-dispatch';
 import { CartAction } from '../../reducers/cart/cart.action';
+import { Colors, Sizes } from '../../types/models/Product';
+import _ from 'lodash';
+import { updateCartPayload } from '../../types/helpers/payload';
 
 interface Props {
   product: ProductInCart;
@@ -27,11 +31,31 @@ interface Props {
 const CartItemCard = ({ product }: Props) => {
   const [value, setValue] = useState<number | ''>(product?.quantity);
   const handlers = useRef<NumberInputHandlers>();
+  const [error, setError] = useState(false);
 
-  const [color, setColor] = useState(product?.color);
-  const [size, setSize] = useState(product?.size);
+  const colors = getColorsOfProduct(product.properties);
 
+  const [colorSelect, setColorSelect] = useState<string | null>(product.color);
+
+  const getSizesByColor = (color: string) => {
+    const sizes = new Set();
+    product?.properties.forEach((item) => {
+      if (item.color === color && item.quantity > 0) {
+        sizes.add(item.size);
+      }
+    });
+    return [...sizes];
+  };
+
+  const [sizeSelected, setSizeSelected] = useState<string | null>(product.size);
+
+  const getQuantityByColorAndSize = (color: string | null, size: string | null) => {
+    const itemsWithColorSize = _.filter(product.properties, { color: color, size: size });
+    const totalQuantity = _.sumBy(itemsWithColorSize, 'quantity');
+    return totalQuantity;
+  };
   const dispatch = useAppDispatch();
+
   const handleDeleteItem = () => {
     dispatch(
       CartAction.DeleteCart(product.cartDetailID, {
@@ -41,62 +65,99 @@ const CartItemCard = ({ product }: Props) => {
       })
     );
   };
+
+  useEffect(() => {
+    if (colorSelect && sizeSelected && value) {
+      setError(false);
+      const payload: updateCartPayload = {
+        color: colorSelect,
+        size: sizeSelected,
+        productId: product.productID,
+        quantity: value,
+      };
+      dispatch(
+        CartAction.UpdateCart(payload, product.cartDetailID, {
+          onSuccess: () => dispatch(CartAction.GetCart()),
+        })
+      );
+    } else {
+      return;
+    }
+  }, [colorSelect, sizeSelected, value]);
+
   return (
     <Card mt={10}>
       <Grid>
-        <Col span={5}>
-          <Image width={120} height={180} withPlaceholder src={product?.imagePath} />
+        <Col span={5} md={5}>
+          <AspectRatio ratio={126 / 186} maw={200}>
+            <Image withPlaceholder src={product?.imagePath} radius={'md'} />
+          </AspectRatio>
         </Col>
-        <Col span={5}>
-          <Stack h={180} justify="space-between">
-            <Text size={'sm'} weight={'bold'}>
-              {product?.name}
-            </Text>
-            <Text size={'sm'}>
-              {product?.color} / {product?.size}
-            </Text>
-            <Text size={'sm'}>{formatCurrency(product.price)}</Text>
-            <Text size={'sm'}>x{product?.quantity}</Text>
-            {/* <Group spacing={5}>
-              <ActionIcon
-                size={20}
-                radius="lg"
-                variant="filled"
-                color="dark"
-                onClick={() => handlers?.current?.decrement()}
-              >
-                –
-              </ActionIcon>
-              <NumberInput
-                size="xs"
-                hideControls
-                value={value}
-                onChange={(val) => setValue(val)}
-                handlersRef={handlers}
-                max={10}
-                min={1}
-                step={1}
-                styles={{
-                  input: { width: 54, textAlign: 'center' },
-                }}
-                radius="lg"
-              />
-              <ActionIcon
-                size={20}
-                radius="lg"
-                variant="filled"
-                color="dark"
-                onClick={() => handlers?.current?.increment()}
-              >
-                +
-              </ActionIcon>
-            </Group> */}
+        <Col span={7} md={7}>
+          <Stack justify="space-between" h={'100%'}>
+            <Group position="apart">
+              <Stack>
+                <Text size={'sm'} weight={'bold'}>
+                  {product?.name}
+                </Text>
+                <Text size={'sm'}>
+                  {product?.color} / {product?.size}
+                </Text>
+              </Stack>
+              <IconX cursor={'pointer'} onClick={handleDeleteItem} />
+            </Group>
+            <div>
+              <Group mb={10}>
+                <Select
+                  w={85}
+                  size="xs"
+                  radius={'md'}
+                  data={colors.map((color) => ({
+                    value: color,
+                    label: color,
+                  }))}
+                  value={colorSelect}
+                  onChange={setColorSelect}
+                />
+                <Select
+                  w={55}
+                  size="xs"
+                  radius={'md'}
+                  data={(getSizesByColor(colorSelect || product.color) as string[]).map((size: string) => ({
+                    value: size,
+                    label: size,
+                  }))}
+                  value={sizeSelected}
+                  onChange={setSizeSelected}
+                />
+              </Group>
+
+              <Group position="apart">
+                <NumberInput
+                  size="xs"
+                  w={80}
+                  value={value}
+                  onChange={setValue}
+                  min={1}
+                  max={getQuantityByColorAndSize(colorSelect, sizeSelected)}
+                  step={1}
+                  error={
+                    value == ''
+                      ? null
+                      : value > getQuantityByColorAndSize(colorSelect, sizeSelected)
+                      ? 'Sản phẩm hiện đang không có size này, vui lòng chọn size khác'
+                      : value < 1
+                      ? 'Số lượng phải lớn hơn 0'
+                      : null
+                  }
+                />
+                <Text size={'sm'}>{formatCurrency(product.price)}</Text>
+              </Group>
+            </div>
           </Stack>
         </Col>
         <Col span={1}>
-          <Stack h={180}>
-            <IconX cursor={'pointer'} onClick={handleDeleteItem} />
-          </Stack>
+          <Stack h={180}></Stack>
         </Col>
       </Grid>
     </Card>

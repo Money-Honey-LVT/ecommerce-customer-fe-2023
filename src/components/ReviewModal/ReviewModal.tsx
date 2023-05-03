@@ -47,8 +47,8 @@ export const ReviewModal = ({ products, orderID, closeModal }: Props) => {
     dispatch(
       RatingAction.PostRating(payload, {
         onSuccess: () => {
-          closeModal()
-          dispatch(OrderAction.GetOrder)
+          closeModal();
+          dispatch(OrderAction.GetOrder());
         },
       })
     );
@@ -57,7 +57,7 @@ export const ReviewModal = ({ products, orderID, closeModal }: Props) => {
   return (
     <form style={{ marginBottom: '30px' }} onSubmit={form.onSubmit((values) => handleSubmitReview(values))}>
       {products?.map((product) => (
-        <div key={product.productDetailID} style={{marginBottom: '20px'}}>
+        <div key={product.productDetailID} style={{ marginBottom: '20px' }}>
           <Grid mb={15}>
             <Col span={2}>
               <AspectRatio ratio={1 / 1}>

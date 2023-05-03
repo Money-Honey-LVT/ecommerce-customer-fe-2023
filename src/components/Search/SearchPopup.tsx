@@ -43,11 +43,12 @@ export const SearchPopup = ({ productList, searchValue }: Props) => {
             <Text
               size={'sm'}
               underline
-              onClick={() =>
+              onClick={() => {
                 navigate(ROUTER.PRODUCT.ALL_PRODUCTS, {
                   state: searchValue,
-                })
-              }
+                });
+                window.scrollTo(0, 0);
+              }}
               sx={{ cursor: 'pointer' }}
             >
               Xem tất cả kết quả

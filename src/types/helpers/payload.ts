@@ -27,6 +27,14 @@ export interface addCartPayload {
   size: string;
   quantity: number;
 }
+
+export interface updateCartPayload {
+  productId: number;
+  color: string;
+  size: string;
+  quantity: number;
+}
+
 export interface AddReviewPayload {
   score: number;
   review: string;
