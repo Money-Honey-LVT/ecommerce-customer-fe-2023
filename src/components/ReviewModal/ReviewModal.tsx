@@ -20,7 +20,7 @@ export const ReviewModal = ({ products, orderID, closeModal }: Props) => {
     initialValues: products?.reduce((acc, product) => {
       return {
         ...acc,
-        [product.productDetailID]: {
+        [product.productID]: {
           score: 5,
           review: '',
         },
@@ -30,9 +30,9 @@ export const ReviewModal = ({ products, orderID, closeModal }: Props) => {
   });
 
   const handleSubmitReview = (values: Record<string, AddReviewPayload>) => {
-    const rating = Object.entries(values).map(([productDetailID, value]) => {
+    const rating = Object.entries(values).map(([productID, value]) => {
       return {
-        productDetailID: parseInt(productDetailID),
+        productID: parseInt(productID),
         author: '',
         score: value.score,
         review: value.review,
@@ -57,7 +57,7 @@ export const ReviewModal = ({ products, orderID, closeModal }: Props) => {
   return (
     <form style={{ marginBottom: '30px' }} onSubmit={form.onSubmit((values) => handleSubmitReview(values))}>
       {products?.map((product) => (
-        <div key={product.productDetailID} style={{ marginBottom: '20px' }}>
+        <div key={product.productID} style={{ marginBottom: '20px' }}>
           <Grid mb={15}>
             <Col span={2}>
               <AspectRatio ratio={1 / 1}>
@@ -73,9 +73,9 @@ export const ReviewModal = ({ products, orderID, closeModal }: Props) => {
               </Stack>
             </Col>
           </Grid>
-          <Rating {...form.getInputProps(`${product.productDetailID}.score`)} />
+          <Rating {...form.getInputProps(`${product.productID}.score`)} />
           <Textarea
-            {...form.getInputProps(`${product.productDetailID}.review`)}
+            {...form.getInputProps(`${product.productID}.review`)}
             label="Bình luận"
             placeholder="Để lại bình luận của bạn"
           />
