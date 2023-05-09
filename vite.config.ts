@@ -7,4 +7,5 @@ export default defineConfig({
   server: {
     port: 5174,
   },
+  base: '/Money-Honey-LVT/ecommerce-customer-fe-2023',
 });

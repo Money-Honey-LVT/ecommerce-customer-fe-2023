@@ -2,7 +2,7 @@ import { showNotification } from '@mantine/notifications';
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://localhost:44358/api',
+  baseURL: 'https://ecomme.up.railway.app/api',
 });
 
 interface UseCallApiProps {

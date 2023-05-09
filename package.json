@@ -1,12 +1,15 @@
 {
   "name": "ecommerce-customer-fe-2023",
+  "homepage": "https://maiduc22.github.io/Money-Honey-LVT/ecommerce-customer-fe-2023",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -27,6 +30,7 @@
     "dns": "^0.2.2",
     "embla-carousel-react": "^7.1.0",
     "firebase": "^9.19.1",
+    "gh-pages": "^5.0.0",
     "lodash": "^4.17.21",
     "mantine-datatable": "^2.2.9",
     "pnpm": "^8.3.1",
